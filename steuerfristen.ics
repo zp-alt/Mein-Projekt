@@ -1,0 +1,121 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Steuerfristen DE//DE
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Steuerfristen Deutschland
+X-WR-TIMEZONE:Europe/Berlin
+
+BEGIN:VEVENT
+UID:ust-q1-dauerfrist@steuerfristen
+SUMMARY:⚠️ USt-Voranmeldung Q1 fällig (Dauerfristverlängerung)
+DESCRIPTION:Umsatzsteuer-Voranmeldung Q1 (Januar–März) fällig.\nMit Dauerfristverlängerung: Abgabe und Zahlung bis 10. Mai.\n\nElster: https://www.elster.de
+DTSTART;VALUE=DATE:20260510
+DTEND;VALUE=DATE:20260511
+RRULE:FREQ=YEARLY;BYMONTH=5;BYMONTHDAY=10
+BEGIN:VALARM
+TRIGGER:-P7D
+ACTION:DISPLAY
+DESCRIPTION:In 7 Tagen: USt-Voranmeldung Q1 fällig (10. Mai)
+END:VALARM
+END:VEVENT
+
+BEGIN:VEVENT
+UID:ust-q2-dauerfrist@steuerfristen
+SUMMARY:⚠️ USt-Voranmeldung Q2 fällig (Dauerfristverlängerung)
+DESCRIPTION:Umsatzsteuer-Voranmeldung Q2 (April–Juni) fällig.\nMit Dauerfristverlängerung: Abgabe und Zahlung bis 10. August.\n\nElster: https://www.elster.de
+DTSTART;VALUE=DATE:20260810
+DTEND;VALUE=DATE:20260811
+RRULE:FREQ=YEARLY;BYMONTH=8;BYMONTHDAY=10
+BEGIN:VALARM
+TRIGGER:-P7D
+ACTION:DISPLAY
+DESCRIPTION:In 7 Tagen: USt-Voranmeldung Q2 fällig (10. August)
+END:VALARM
+END:VEVENT
+
+BEGIN:VEVENT
+UID:ust-q3-dauerfrist@steuerfristen
+SUMMARY:⚠️ USt-Voranmeldung Q3 fällig (Dauerfristverlängerung)
+DESCRIPTION:Umsatzsteuer-Voranmeldung Q3 (Juli–September) fällig.\nMit Dauerfristverlängerung: Abgabe und Zahlung bis 10. November.\n\nElster: https://www.elster.de
+DTSTART;VALUE=DATE:20261110
+DTEND;VALUE=DATE:20261111
+RRULE:FREQ=YEARLY;BYMONTH=11;BYMONTHDAY=10
+BEGIN:VALARM
+TRIGGER:-P7D
+ACTION:DISPLAY
+DESCRIPTION:In 7 Tagen: USt-Voranmeldung Q3 fällig (10. November)
+END:VALARM
+END:VEVENT
+
+BEGIN:VEVENT
+UID:ust-q4-dauerfrist@steuerfristen
+SUMMARY:⚠️ USt-Voranmeldung Q4 fällig (Dauerfristverlängerung)
+DESCRIPTION:Umsatzsteuer-Voranmeldung Q4 (Oktober–Dezember) fällig.\nMit Dauerfristverlängerung: Abgabe und Zahlung bis 10. Februar.\n\nElster: https://www.elster.de
+DTSTART;VALUE=DATE:20270210
+DTEND;VALUE=DATE:20270211
+RRULE:FREQ=YEARLY;BYMONTH=2;BYMONTHDAY=10
+BEGIN:VALARM
+TRIGGER:-P7D
+ACTION:DISPLAY
+DESCRIPTION:In 7 Tagen: USt-Voranmeldung Q4 fällig (10. Februar)
+END:VALARM
+END:VEVENT
+
+BEGIN:VEVENT
+UID:est-vz-q1@steuerfristen
+SUMMARY:💶 Einkommensteuer-Vorauszahlung Q1 fällig
+DESCRIPTION:Einkommensteuer-Vorauszahlung Q1 fällig.\nZahlung bis 10. März an das Finanzamt.\n\nElster: https://www.elster.de
+DTSTART;VALUE=DATE:20260310
+DTEND;VALUE=DATE:20260311
+RRULE:FREQ=YEARLY;BYMONTH=3;BYMONTHDAY=10
+BEGIN:VALARM
+TRIGGER:-P7D
+ACTION:DISPLAY
+DESCRIPTION:In 7 Tagen: Einkommensteuer-Vorauszahlung Q1 fällig (10. März)
+END:VALARM
+END:VEVENT
+
+BEGIN:VEVENT
+UID:est-vz-q2@steuerfristen
+SUMMARY:💶 Einkommensteuer-Vorauszahlung Q2 fällig
+DESCRIPTION:Einkommensteuer-Vorauszahlung Q2 fällig.\nZahlung bis 10. Juni an das Finanzamt.\n\nElster: https://www.elster.de
+DTSTART;VALUE=DATE:20260610
+DTEND;VALUE=DATE:20260611
+RRULE:FREQ=YEARLY;BYMONTH=6;BYMONTHDAY=10
+BEGIN:VALARM
+TRIGGER:-P7D
+ACTION:DISPLAY
+DESCRIPTION:In 7 Tagen: Einkommensteuer-Vorauszahlung Q2 fällig (10. Juni)
+END:VALARM
+END:VEVENT
+
+BEGIN:VEVENT
+UID:est-vz-q3@steuerfristen
+SUMMARY:💶 Einkommensteuer-Vorauszahlung Q3 fällig
+DESCRIPTION:Einkommensteuer-Vorauszahlung Q3 fällig.\nZahlung bis 10. September an das Finanzamt.\n\nElster: https://www.elster.de
+DTSTART;VALUE=DATE:20260910
+DTEND;VALUE=DATE:20260911
+RRULE:FREQ=YEARLY;BYMONTH=9;BYMONTHDAY=10
+BEGIN:VALARM
+TRIGGER:-P7D
+ACTION:DISPLAY
+DESCRIPTION:In 7 Tagen: Einkommensteuer-Vorauszahlung Q3 fällig (10. September)
+END:VALARM
+END:VEVENT
+
+BEGIN:VEVENT
+UID:est-vz-q4@steuerfristen
+SUMMARY:💶 Einkommensteuer-Vorauszahlung Q4 fällig
+DESCRIPTION:Einkommensteuer-Vorauszahlung Q4 fällig.\nZahlung bis 10. Dezember an das Finanzamt.\n\nElster: https://www.elster.de
+DTSTART;VALUE=DATE:20261210
+DTEND;VALUE=DATE:20261211
+RRULE:FREQ=YEARLY;BYMONTH=12;BYMONTHDAY=10
+BEGIN:VALARM
+TRIGGER:-P7D
+ACTION:DISPLAY
+DESCRIPTION:In 7 Tagen: Einkommensteuer-Vorauszahlung Q4 fällig (10. Dezember)
+END:VALARM
+END:VEVENT
+
+END:VCALENDAR
