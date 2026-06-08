@@ -141,7 +141,7 @@
     .s2 .photo {
       position: absolute;
       inset: 0;
-      background: url('zyhra-2.png') center top / cover no-repeat;
+      background: url('zyhra-2-clean.png') center top / cover no-repeat;
       filter: grayscale(100%);
     }
     .s2 .overlay {
@@ -313,24 +313,48 @@
 
     /* ─────────────────────────────────────────
        STORY 4 — Produkt der Woche
-       Dark, product focus, editorial
+       Real product photo, dark editorial
     ───────────────────────────────────────── */
     .s4 {
-      background: #0e0e0e;
+      background: #0a0a0a;
       display: flex;
       flex-direction: column;
-      justify-content: space-between;
-      padding: 44px 36px 44px;
+      justify-content: flex-end;
     }
-    .s4 .top {
+    .s4 .product-photo {
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 62%;
+      background: url('davines-bottle-nobg.png') center 35% / 64% auto no-repeat;
+      background-color: #0a0a0a;
+    }
+    .s4 .product-glow {
+      position: absolute;
+      top: 6%; left: 50%;
+      transform: translateX(-50%);
+      width: 260px; height: 260px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(200,160,60,0.22) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .s4 .fade {
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      height: 55%;
+      background: linear-gradient(to bottom, transparent, #0a0a0a 45%);
+    }
+    .s4 .top-bar {
+      position: absolute;
+      top: 36px; left: 32px; right: 32px;
       display: flex;
       justify-content: space-between;
-      align-items: flex-start;
+      align-items: center;
+      z-index: 2;
     }
     .s4 .logo {
       font-family: 'Barlow', sans-serif;
       font-weight: 700;
-      font-size: 22px;
+      font-size: 20px;
       letter-spacing: 3px;
       color: #fff;
     }
@@ -338,71 +362,54 @@
       font-size: 9px;
       letter-spacing: 3px;
       text-transform: uppercase;
-      color: #555;
+      color: #666;
       text-align: right;
-      line-height: 1.6;
+      line-height: 1.7;
     }
-    .s4 .product-area {
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      justify-content: center;
+    .s4 .content {
+      position: relative;
+      z-index: 2;
+      padding: 0 32px 40px;
     }
-    .s4 .product-frame {
-      width: 100%;
-      height: 160px;
-      border: 1px solid #222;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      margin-bottom: 28px;
-      gap: 8px;
-    }
-    .s4 .product-frame .prod-emoji {
-      font-size: 48px;
-    }
-    .s4 .product-frame .prod-label {
+    .s4 .eyebrow {
       font-size: 9px;
       letter-spacing: 4px;
       text-transform: uppercase;
-      color: #444;
-    }
-    .s4 .product-frame .prod-name {
-      font-family: 'Cormorant Garamond', serif;
-      font-style: italic;
-      font-size: 26px;
-      font-weight: 400;
-      color: #fff;
+      color: #666;
+      margin-bottom: 12px;
     }
     .s4 .headline {
       font-family: 'Barlow', sans-serif;
-      font-size: 38px;
+      font-size: 40px;
       font-weight: 700;
       color: #fff;
-      line-height: 1.05;
+      line-height: 1.0;
       letter-spacing: -0.5px;
     }
     .s4 .headline em {
       font-family: 'Cormorant Garamond', serif;
       font-style: italic;
       font-weight: 400;
-      font-size: 42px;
+      font-size: 44px;
       color: #fff;
       display: block;
     }
+    .s4 .prod-name {
+      margin-top: 16px;
+      font-size: 11px;
+      letter-spacing: 2px;
+      color: #888;
+      text-transform: uppercase;
+      line-height: 1.6;
+    }
+    .s4 .prod-name span {
+      color: #bfa060;
+    }
     .s4 .body {
-      margin-top: 14px;
+      margin-top: 10px;
       font-size: 12px;
       color: #555;
       line-height: 1.8;
-    }
-    .s4 .url {
-      font-size: 10px;
-      letter-spacing: 2px;
-      color: #333;
-      text-transform: uppercase;
     }
 
     /* ─────────────────────────────────────────
@@ -418,7 +425,7 @@
     .s5 .photo {
       position: absolute;
       inset: 0;
-      background: url('zyhra-1.png') center 20% / cover no-repeat;
+      background: url('zyhra-5-clean.png') center 15% / cover no-repeat;
       filter: grayscale(100%);
     }
     .s5 .overlay {
@@ -581,26 +588,27 @@
     <div class="story-wrap">
       <div class="story-num">04 — Produkt</div>
       <div class="story s4">
-        <div class="top">
+        <div class="product-photo"></div>
+        <div class="product-glow"></div>
+        <div class="fade"></div>
+        <div class="top-bar">
           <div class="logo">PRE</div>
           <div class="tag">Produkt<br>der Woche</div>
         </div>
-        <div class="product-area">
-          <div class="product-frame">
-            <div class="prod-emoji">🫙</div>
-            <div class="prod-label">Darwinis</div>
-            <div class="prod-name">Medium Hold</div>
-          </div>
+        <div class="content">
+          <div class="eyebrow">Mein Favorit</div>
           <div class="headline">
             Das Produkt,
             <em>das ich liebe.</em>
           </div>
+          <div class="prod-name">
+            <span>Davines</span> · This is a Medium Hold<br>Modeling Gel
+          </div>
           <div class="body">
-            Perfekt für Locken und Wet Look —<br>
-            hält ohne zu kleben. Mein Favorit.
+            Perfekt für Locken &amp; Wet Look —<br>
+            hält, ohne zu kleben.
           </div>
         </div>
-        <div class="url">preartofhair.com</div>
       </div>
     </div>
 
