@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Rechnung – Benedikt Hödl</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    color: #222;
+    background: #f4f4f4;
+    padding: 30px;
+    line-height: 1.5;
+  }
+  .invoice {
+    max-width: 800px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 50px 55px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+  }
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    border-bottom: 3px solid #1a1a1a;
+    padding-bottom: 20px;
+    margin-bottom: 30px;
+  }
+  .brand h1 { font-size: 26px; letter-spacing: 1px; }
+  .brand .tagline { color: #888; font-size: 13px; margin-top: 4px; }
+  .sender-small { font-size: 11px; color: #777; margin-bottom: 4px; }
+  .meta { text-align: right; font-size: 13px; }
+  .meta h2 { font-size: 22px; margin-bottom: 8px; }
+  .meta table td { padding: 1px 0; }
+  .meta table td:first-child { color: #777; padding-right: 12px; text-align: left; }
+  .addresses { display: flex; justify-content: space-between; margin-bottom: 35px; }
+  .addr-block h3 { font-size: 11px; text-transform: uppercase; color: #999; margin-bottom: 6px; letter-spacing: 1px; }
+  table.items { width: 100%; border-collapse: collapse; margin-bottom: 25px; }
+  table.items th {
+    background: #1a1a1a; color: #fff; text-align: left;
+    padding: 10px 12px; font-size: 12px; text-transform: uppercase; letter-spacing: 0.5px;
+  }
+  table.items th.num, table.items td.num { text-align: right; }
+  table.items td { padding: 12px; border-bottom: 1px solid #eee; vertical-align: top; font-size: 14px; }
+  table.items .desc small { display: block; color: #888; font-size: 12px; margin-top: 2px; }
+  .totals { width: 320px; margin-left: auto; }
+  .totals table { width: 100%; border-collapse: collapse; }
+  .totals td { padding: 6px 12px; font-size: 14px; }
+  .totals td.num { text-align: right; }
+  .totals tr.grand td { border-top: 2px solid #1a1a1a; font-weight: bold; font-size: 17px; padding-top: 10px; }
+  .notes { margin-top: 40px; font-size: 13px; color: #555; }
+  .notes p { margin-bottom: 6px; }
+  footer {
+    margin-top: 45px; border-top: 1px solid #ddd; padding-top: 15px;
+    font-size: 11px; color: #888; display: flex; justify-content: space-between; gap: 20px;
+  }
+  footer div { flex: 1; }
+  .placeholder { color: #b00; }
+  @media print {
+    body { background: #fff; padding: 0; }
+    .invoice { box-shadow: none; padding: 20px; }
+  }
+</style>
+</head>
+<body>
+  <div class="invoice">
+    <header>
+      <div class="brand">
+        <h1>PRE ART OF HAIR</h1>
+        <div class="tagline">Zyhra · Hairstyling</div>
+      </div>
+      <div class="meta">
+        <h2>Rechnung</h2>
+        <table>
+          <tr><td>Rechnungs-Nr.</td><td>2026-0608</td></tr>
+          <tr><td>Datum</td><td>08.06.2026</td></tr>
+          <tr><td>Leistungsdatum</td><td>08.06.2026</td></tr>
+        </table>
+      </div>
+    </header>
+
+    <div class="addresses">
+      <div class="addr-block">
+        <div class="sender-small">PRE ART OF HAIR · <span class="placeholder">[Straße Nr., PLZ Ort]</span></div>
+        <h3>Rechnung an</h3>
+        <strong>Benedikt Hödl</strong><br />
+        Landrat-Krug-Str. 5<br />
+        94447 Plattling<br />
+        benhoedl@web.de
+      </div>
+      <div class="addr-block" style="text-align:right;">
+        <h3>Rechnungssteller</h3>
+        Pre Art of Hair<br />
+        Inh. Zyhra <span class="placeholder">[Nachname]</span><br />
+        <span class="placeholder">[Straße Nr.]</span><br />
+        <span class="placeholder">[PLZ Ort]</span><br />
+        zp@preartofhair.com
+      </div>
+    </div>
+
+    <table class="items">
+      <thead>
+        <tr>
+          <th style="width:40px;">Pos.</th>
+          <th>Leistung</th>
+          <th class="num" style="width:130px;">Einzelpreis</th>
+          <th class="num" style="width:110px;">Gesamt</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td class="desc">
+            Strähnen ganzer Kopf – Neukunde
+            <small>inkl. Glossing und Epres Haarbonding</small>
+          </td>
+          <td class="num">330,00 €</td>
+          <td class="num">330,00 €</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td class="desc">
+            Haarschnitt – Neukunde
+          </td>
+          <td class="num">110,00 €</td>
+          <td class="num">110,00 €</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="totals">
+      <table>
+        <tr>
+          <td>Nettobetrag</td>
+          <td class="num">369,75 €</td>
+        </tr>
+        <tr>
+          <td>zzgl. 19 % MwSt.</td>
+          <td class="num">70,25 €</td>
+        </tr>
+        <tr class="grand">
+          <td>Gesamtbetrag</td>
+          <td class="num">440,00 €</td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="notes">
+      <p>Vielen Dank für Ihren Besuch und Ihr Vertrauen!</p>
+      <p>Bitte überweisen Sie den Rechnungsbetrag innerhalb von 14 Tagen auf das unten genannte Konto bzw. der Betrag wurde bar/per EC beglichen.</p>
+    </div>
+
+    <footer>
+      <div>
+        <strong>Pre Art of Hair</strong><br />
+        Inh. Zyhra <span class="placeholder">[Nachname]</span><br />
+        zp@preartofhair.com
+      </div>
+      <div>
+        <strong>Steuer</strong><br />
+        Steuer-Nr.: <span class="placeholder">[___]</span><br />
+        USt-IdNr.: <span class="placeholder">[___]</span>
+      </div>
+      <div>
+        <strong>Bankverbindung</strong><br />
+        <span class="placeholder">[Bank]</span><br />
+        IBAN: <span class="placeholder">[DE__ ____ ____ ____ ____ __]</span>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>
