@@ -21,10 +21,12 @@ const path = require('path');
 
   const labels = [
     '01-opener',
-    '02-unterricht',
+    '02-hwk-salon',
     '03-termin',
     '04-produkt',
     '05-tipp',
+    '06-hwk',
+    '07-ciao',
   ];
 
   for (let i = 0; i < stories.length; i++) {

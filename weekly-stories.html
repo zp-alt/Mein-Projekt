@@ -11,7 +11,7 @@
     * { box-sizing: border-box; margin: 0; padding: 0; }
 
     body {
-      background: #e8e8e8;
+      background: #d8d8d8;
       font-family: 'Barlow', sans-serif;
       display: flex;
       flex-direction: column;
@@ -21,488 +21,248 @@
     }
 
     .page-label {
-      font-family: 'Barlow', sans-serif;
-      font-size: 11px;
-      font-weight: 500;
-      letter-spacing: 4px;
-      text-transform: uppercase;
-      color: #888;
-      margin-bottom: 24px;
+      font-size: 11px; font-weight: 500; letter-spacing: 4px;
+      text-transform: uppercase; color: #888; margin-bottom: 24px;
     }
 
     .story-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
-      justify-content: center;
+      display: flex; flex-wrap: wrap; gap: 24px; justify-content: center;
     }
 
     .story-wrap {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 10px;
+      display: flex; flex-direction: column; align-items: center; gap: 10px;
     }
 
     .story-num {
-      font-size: 10px;
-      letter-spacing: 3px;
-      text-transform: uppercase;
-      color: #aaa;
-      font-weight: 500;
+      font-size: 10px; letter-spacing: 3px; text-transform: uppercase;
+      color: #aaa; font-weight: 500;
     }
 
-    /* ── Base Story ── */
+    /* ── Base ── */
     .story {
-      width: 360px;
-      height: 640px;
-      border-radius: 14px;
-      overflow: hidden;
-      position: relative;
-      flex-shrink: 0;
-      box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+      width: 360px; height: 640px; border-radius: 14px;
+      overflow: hidden; position: relative; flex-shrink: 0;
+      box-shadow: 0 12px 40px rgba(0,0,0,0.22);
     }
 
-    /* ─────────────────────────────────────────
-       STORY 1 — Weekly Opener
-       Dark, big type, brand mark
-    ───────────────────────────────────────── */
+    /* ══════════════════════════════════════
+       STORY 1 — Opener: "Das läuft diese Woche"
+    ══════════════════════════════════════ */
     .s1 {
       background: #111;
-      display: flex;
-      flex-direction: column;
+      display: flex; flex-direction: column;
       justify-content: space-between;
       padding: 44px 36px 44px;
     }
     .s1 .top {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
+      display: flex; justify-content: space-between; align-items: flex-start;
     }
-    .s1 .logo {
-      font-family: 'Barlow', sans-serif;
-      font-weight: 700;
-      font-size: 22px;
-      letter-spacing: 3px;
-      color: #fff;
-    }
-    .s1 .kw {
-      font-size: 10px;
-      letter-spacing: 3px;
-      color: #555;
-      text-transform: uppercase;
-      text-align: right;
-      line-height: 1.6;
-    }
-    .s1 .mid {
-      flex: 1;
-      display: flex;
-      align-items: flex-end;
-      padding-bottom: 16px;
-    }
+    .s1 .logo { font-weight: 700; font-size: 22px; letter-spacing: 3px; color: #fff; }
+    .s1 .kw { font-size: 10px; letter-spacing: 3px; color: #444; text-transform: uppercase; text-align: right; line-height: 1.7; }
+    .s1 .mid { flex: 1; display: flex; align-items: flex-end; padding-bottom: 14px; }
     .s1 .headline {
-      font-family: 'Barlow', sans-serif;
-      font-size: 58px;
-      font-weight: 700;
-      color: #fff;
-      line-height: 1.0;
-      letter-spacing: -1px;
+      font-weight: 700; font-size: 54px; color: #fff;
+      line-height: 1.0; letter-spacing: -1px;
     }
     .s1 .headline em {
-      font-family: 'Cormorant Garamond', serif;
-      font-style: italic;
-      font-weight: 400;
-      font-size: 64px;
-      color: #fff;
-      display: block;
+      font-family: 'Cormorant Garamond', serif; font-style: italic;
+      font-weight: 400; font-size: 60px; color: #fff; display: block;
     }
-    .s1 .bottom {
-      border-top: 1px solid #2a2a2a;
-      padding-top: 20px;
+    .s1 .bottom { border-top: 1px solid #222; padding-top: 18px; }
+    .s1 .items {
+      display: flex; flex-wrap: wrap; gap: 8px; margin-top: 4px;
     }
-    .s1 .sub {
-      font-size: 12px;
-      font-weight: 400;
-      color: #666;
-      line-height: 1.9;
-      letter-spacing: 0.3px;
+    .s1 .item {
+      font-size: 10px; letter-spacing: 2px; text-transform: uppercase;
+      color: #555; border: 1px solid #2a2a2a; padding: 5px 10px;
+      border-radius: 2px; white-space: nowrap;
     }
 
-    /* ─────────────────────────────────────────
-       STORY 2 — Ich unterrichte
-       Photo of Zyhra, text overlay
-    ───────────────────────────────────────── */
-    .s2 {
-      background: #111;
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-end;
-    }
+    /* ══════════════════════════════════════
+       STORY 2 — HWK + Salon (photo overlay)
+    ══════════════════════════════════════ */
+    .s2 { background: #111; display: flex; flex-direction: column; justify-content: flex-end; }
     .s2 .photo {
-      position: absolute;
-      inset: 0;
+      position: absolute; inset: 0;
       background: url('zyhra-2-clean.png') center top / cover no-repeat;
       filter: grayscale(100%);
     }
     .s2 .overlay {
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(
-        to bottom,
-        rgba(0,0,0,0) 30%,
-        rgba(0,0,0,0.92) 100%
-      );
+      position: absolute; inset: 0;
+      background: linear-gradient(to bottom, rgba(0,0,0,0) 25%, rgba(0,0,0,0.95) 100%);
     }
-    .s2 .content {
-      position: relative;
-      padding: 0 32px 40px;
-    }
-    .s2 .logo {
-      font-family: 'Barlow', sans-serif;
-      font-weight: 700;
-      font-size: 11px;
-      letter-spacing: 4px;
-      color: #fff;
-      opacity: 0.5;
-      text-transform: uppercase;
-      margin-bottom: 18px;
-    }
+    .s2 .content { position: relative; padding: 0 32px 40px; }
+    .s2 .logo { font-weight: 700; font-size: 11px; letter-spacing: 4px; color: rgba(255,255,255,0.35); text-transform: uppercase; margin-bottom: 16px; }
     .s2 .tag {
-      display: inline-block;
-      font-size: 9px;
-      letter-spacing: 3px;
-      text-transform: uppercase;
-      color: #fff;
-      border: 1px solid rgba(255,255,255,0.3);
-      padding: 5px 12px;
-      margin-bottom: 16px;
-      border-radius: 2px;
+      display: inline-block; font-size: 9px; letter-spacing: 3px;
+      text-transform: uppercase; color: #fff; border: 1px solid rgba(255,255,255,0.25);
+      padding: 5px 12px; margin-bottom: 16px; border-radius: 2px;
     }
-    .s2 .headline {
-      font-family: 'Barlow', sans-serif;
-      font-size: 38px;
-      font-weight: 700;
-      color: #fff;
-      line-height: 1.1;
-      letter-spacing: -0.5px;
-      margin-bottom: 4px;
-    }
+    .s2 .headline { font-weight: 700; font-size: 40px; color: #fff; line-height: 1.05; letter-spacing: -0.5px; margin-bottom: 4px; }
     .s2 .headline em {
-      font-family: 'Cormorant Garamond', serif;
-      font-style: italic;
-      font-weight: 400;
-      font-size: 42px;
-      color: #fff;
-      display: block;
+      font-family: 'Cormorant Garamond', serif; font-style: italic;
+      font-weight: 400; font-size: 44px; color: #fff; display: block;
     }
-    .s2 .body {
-      margin-top: 14px;
-      font-size: 13px;
-      font-weight: 400;
-      color: rgba(255,255,255,0.55);
-      line-height: 1.7;
-    }
+    .s2 .body { margin-top: 14px; font-size: 13px; font-weight: 400; color: rgba(255,255,255,0.5); line-height: 1.7; }
 
-    /* ─────────────────────────────────────────
-       STORY 3 — Freier Slot Freitag
-       White, editorial, big contrast
-    ───────────────────────────────────────── */
+    /* ══════════════════════════════════════
+       STORY 3 — Freier Slot Freitag (white)
+    ══════════════════════════════════════ */
     .s3 {
       background: #fff;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
+      display: flex; flex-direction: column; justify-content: space-between;
       padding: 44px 36px 44px;
     }
-    .s3 .top {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-    .s3 .logo {
-      font-family: 'Barlow', sans-serif;
-      font-weight: 700;
-      font-size: 22px;
-      letter-spacing: 3px;
-      color: #111;
-    }
-    .s3 .dot {
-      width: 8px; height: 8px;
-      border-radius: 50%;
-      background: #111;
-    }
-    .s3 .mid {
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-    }
-    .s3 .eyebrow {
-      font-size: 10px;
-      letter-spacing: 4px;
-      text-transform: uppercase;
-      color: #aaa;
-      margin-bottom: 20px;
-    }
+    .s3 .top { display: flex; justify-content: space-between; align-items: center; }
+    .s3 .logo { font-weight: 700; font-size: 22px; letter-spacing: 3px; color: #111; }
+    .s3 .dot { width: 8px; height: 8px; border-radius: 50%; background: #111; }
+    .s3 .mid { flex: 1; display: flex; flex-direction: column; justify-content: center; }
+    .s3 .eyebrow { font-size: 10px; letter-spacing: 4px; text-transform: uppercase; color: #bbb; margin-bottom: 16px; }
     .s3 .big-fr {
-      font-family: 'Barlow', sans-serif;
-      font-weight: 700;
-      font-size: 112px;
-      color: #f0f0f0;
-      line-height: 1;
-      letter-spacing: -6px;
-      margin-left: -4px;
-      user-select: none;
+      font-weight: 700; font-size: 128px; color: #f0f0f0;
+      line-height: 1; letter-spacing: -6px; margin-left: -4px; user-select: none;
     }
     .s3 .headline {
-      font-family: 'Barlow', sans-serif;
-      font-size: 40px;
-      font-weight: 700;
-      color: #111;
-      line-height: 1.05;
-      letter-spacing: -0.5px;
-      margin-top: -16px;
-      margin-bottom: 6px;
+      font-weight: 700; font-size: 44px; color: #111;
+      line-height: 1.0; letter-spacing: -0.5px; margin-top: -14px; margin-bottom: 6px;
     }
     .s3 .headline em {
-      font-family: 'Cormorant Garamond', serif;
-      font-style: italic;
-      font-weight: 400;
-      font-size: 44px;
-      color: #111;
-      display: block;
+      font-family: 'Cormorant Garamond', serif; font-style: italic;
+      font-weight: 400; font-size: 48px; color: #111; display: block;
     }
-    .s3 .sub {
-      font-size: 13px;
-      font-weight: 400;
-      color: #888;
-      line-height: 1.7;
-      margin-top: 14px;
-    }
+    .s3 .sub { font-size: 14px; font-weight: 400; color: #888; line-height: 1.7; margin-top: 12px; }
     .s3 .cta {
-      margin-top: 28px;
-      display: inline-flex;
-      align-items: center;
-      gap: 12px;
-      font-size: 11px;
-      letter-spacing: 3px;
-      text-transform: uppercase;
-      font-weight: 600;
-      color: #111;
-      border: 1.5px solid #111;
-      padding: 13px 24px;
-      border-radius: 40px;
-      width: fit-content;
+      margin-top: 28px; display: inline-flex; align-items: center; gap: 12px;
+      font-size: 11px; letter-spacing: 3px; text-transform: uppercase; font-weight: 600;
+      color: #111; border: 1.5px solid #111; padding: 13px 24px;
+      border-radius: 40px; width: fit-content;
     }
-    .s3 .cta .arrow {
-      width: 22px; height: 22px;
-      border-radius: 50%;
-      background: #111;
-      color: #fff;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 12px;
+    .s3 .cta .arr {
+      width: 22px; height: 22px; border-radius: 50%; background: #111;
+      color: #fff; display: flex; align-items: center; justify-content: center; font-size: 12px;
     }
-    .s3 .bottom {
-      font-size: 10px;
-      letter-spacing: 2px;
-      color: #ccc;
-      text-transform: uppercase;
-    }
+    .s3 .bottom { font-size: 10px; letter-spacing: 2px; color: #ccc; text-transform: uppercase; }
 
-    /* ─────────────────────────────────────────
-       STORY 4 — Produkt der Woche
-       Real product photo, dark editorial
-    ───────────────────────────────────────── */
-    .s4 {
-      background: #0a0a0a;
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-end;
-    }
+    /* ══════════════════════════════════════
+       STORY 4 — Produkt: "Das Gel? Geil."
+    ══════════════════════════════════════ */
+    .s4 { background: #0a0a0a; display: flex; flex-direction: column; justify-content: flex-end; }
     .s4 .product-photo {
-      position: absolute;
-      top: 0; left: 0; right: 0;
-      height: 62%;
+      position: absolute; top: 0; left: 0; right: 0; height: 62%;
       background: url('davines-bottle-nobg.png') center 35% / 64% auto no-repeat;
       background-color: #0a0a0a;
     }
     .s4 .product-glow {
-      position: absolute;
-      top: 6%; left: 50%;
-      transform: translateX(-50%);
-      width: 260px; height: 260px;
-      border-radius: 50%;
+      position: absolute; top: 6%; left: 50%; transform: translateX(-50%);
+      width: 260px; height: 260px; border-radius: 50%;
       background: radial-gradient(circle, rgba(200,160,60,0.22) 0%, transparent 70%);
       pointer-events: none;
     }
     .s4 .fade {
-      position: absolute;
-      bottom: 0; left: 0; right: 0;
-      height: 55%;
+      position: absolute; bottom: 0; left: 0; right: 0; height: 55%;
       background: linear-gradient(to bottom, transparent, #0a0a0a 45%);
     }
     .s4 .top-bar {
-      position: absolute;
-      top: 36px; left: 32px; right: 32px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      z-index: 2;
+      position: absolute; top: 36px; left: 32px; right: 32px;
+      display: flex; justify-content: space-between; align-items: center; z-index: 2;
     }
-    .s4 .logo {
-      font-family: 'Barlow', sans-serif;
-      font-weight: 700;
-      font-size: 20px;
-      letter-spacing: 3px;
-      color: #fff;
-    }
-    .s4 .tag {
-      font-size: 9px;
-      letter-spacing: 3px;
-      text-transform: uppercase;
-      color: #666;
-      text-align: right;
-      line-height: 1.7;
-    }
-    .s4 .content {
-      position: relative;
-      z-index: 2;
-      padding: 0 32px 40px;
-    }
-    .s4 .eyebrow {
-      font-size: 9px;
-      letter-spacing: 4px;
-      text-transform: uppercase;
-      color: #666;
-      margin-bottom: 12px;
-    }
-    .s4 .headline {
-      font-family: 'Barlow', sans-serif;
-      font-size: 40px;
-      font-weight: 700;
-      color: #fff;
-      line-height: 1.0;
-      letter-spacing: -0.5px;
-    }
+    .s4 .logo { font-weight: 700; font-size: 20px; letter-spacing: 3px; color: #fff; }
+    .s4 .tag { font-size: 9px; letter-spacing: 3px; text-transform: uppercase; color: #555; text-align: right; line-height: 1.7; }
+    .s4 .content { position: relative; z-index: 2; padding: 0 32px 40px; }
+    .s4 .eyebrow { font-size: 9px; letter-spacing: 4px; text-transform: uppercase; color: #555; margin-bottom: 10px; }
+    .s4 .headline { font-weight: 700; font-size: 44px; color: #fff; line-height: 1.0; letter-spacing: -0.5px; }
     .s4 .headline em {
-      font-family: 'Cormorant Garamond', serif;
-      font-style: italic;
-      font-weight: 400;
-      font-size: 44px;
-      color: #fff;
-      display: block;
+      font-family: 'Cormorant Garamond', serif; font-style: italic;
+      font-weight: 400; font-size: 48px; color: #fff; display: block;
     }
-    .s4 .prod-name {
-      margin-top: 16px;
-      font-size: 11px;
-      letter-spacing: 2px;
-      color: #888;
-      text-transform: uppercase;
-      line-height: 1.6;
-    }
-    .s4 .prod-name span {
-      color: #bfa060;
-    }
-    .s4 .body {
-      margin-top: 10px;
-      font-size: 12px;
-      color: #555;
-      line-height: 1.8;
-    }
+    .s4 .prod-name { margin-top: 14px; font-size: 11px; letter-spacing: 2px; color: #666; text-transform: uppercase; line-height: 1.6; }
+    .s4 .prod-name span { color: #bfa060; }
+    .s4 .body { margin-top: 8px; font-size: 13px; color: #555; line-height: 1.8; }
 
-    /* ─────────────────────────────────────────
-       STORY 5 — Styling Tipp
-       White, photo right, text left
-    ───────────────────────────────────────── */
-    .s5 {
-      background: #fff;
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-end;
-    }
+    /* ══════════════════════════════════════
+       STORY 5 — Locken Tipp (curls photo)
+    ══════════════════════════════════════ */
+    .s5 { background: #fff; display: flex; flex-direction: column; justify-content: flex-end; }
     .s5 .photo {
-      position: absolute;
-      inset: 0;
+      position: absolute; inset: 0;
       background: url('zyhra-curls.png') center 20% / cover no-repeat;
       filter: grayscale(100%);
     }
     .s5 .overlay {
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(
-        to bottom,
-        rgba(255,255,255,0) 20%,
-        rgba(255,255,255,0.0) 45%,
-        rgba(255,255,255,0.97) 68%,
-        #fff 100%
-      );
+      position: absolute; inset: 0;
+      background: linear-gradient(to bottom, rgba(255,255,255,0) 20%, rgba(255,255,255,0.0) 42%, rgba(255,255,255,0.97) 66%, #fff 100%);
     }
     .s5 .top-logo {
-      position: absolute;
-      top: 36px;
-      left: 32px;
-      font-family: 'Barlow', sans-serif;
-      font-weight: 700;
-      font-size: 20px;
-      letter-spacing: 3px;
-      color: #fff;
-      mix-blend-mode: difference;
+      position: absolute; top: 36px; left: 32px;
+      font-weight: 700; font-size: 20px; letter-spacing: 3px; color: #fff; mix-blend-mode: difference;
     }
-    .s5 .content {
-      position: relative;
-      padding: 0 32px 40px;
-    }
-    .s5 .eyebrow {
-      font-size: 10px;
-      letter-spacing: 4px;
-      text-transform: uppercase;
-      color: #aaa;
-      margin-bottom: 14px;
-    }
-    .s5 .headline {
-      font-family: 'Barlow', sans-serif;
-      font-size: 36px;
-      font-weight: 700;
-      color: #111;
-      line-height: 1.05;
-      letter-spacing: -0.5px;
-      margin-bottom: 4px;
-    }
+    .s5 .content { position: relative; padding: 0 32px 40px; }
+    .s5 .eyebrow { font-size: 10px; letter-spacing: 4px; text-transform: uppercase; color: #aaa; margin-bottom: 12px; }
+    .s5 .headline { font-weight: 700; font-size: 38px; color: #111; line-height: 1.05; letter-spacing: -0.5px; margin-bottom: 4px; }
     .s5 .headline em {
-      font-family: 'Cormorant Garamond', serif;
-      font-style: italic;
-      font-weight: 400;
-      font-size: 40px;
-      color: #111;
-      display: block;
+      font-family: 'Cormorant Garamond', serif; font-style: italic;
+      font-weight: 400; font-size: 42px; color: #111; display: block;
     }
-    .s5 .tips {
-      margin-top: 18px;
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
+    .s5 .tips { margin-top: 18px; display: flex; flex-direction: column; gap: 12px; }
+    .s5 .tip { display: flex; gap: 12px; align-items: flex-start; }
+    .s5 .tip .num { font-size: 10px; letter-spacing: 1px; color: #ccc; font-weight: 600; padding-top: 2px; flex-shrink: 0; }
+    .s5 .tip .text { font-size: 12px; color: #555; line-height: 1.65; font-weight: 400; }
+
+    /* ══════════════════════════════════════
+       STORY 6 — HWK Energy (jump photo)
+    ══════════════════════════════════════ */
+    .s6 { background: #0a0a0a; display: flex; flex-direction: column; justify-content: flex-end; }
+    .s6 .photo {
+      position: absolute; inset: 0;
+      background: url('zyhra-jump.png') center 30% / cover no-repeat;
+      filter: grayscale(100%);
     }
-    .s5 .tip {
-      display: flex;
-      gap: 12px;
-      align-items: flex-start;
+    .s6 .overlay {
+      position: absolute; inset: 0;
+      background: linear-gradient(to bottom, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0) 30%, rgba(0,0,0,0.96) 100%);
     }
-    .s5 .tip .num {
-      font-size: 10px;
-      letter-spacing: 1px;
-      color: #bbb;
-      font-weight: 600;
-      padding-top: 2px;
-      flex-shrink: 0;
+    .s6 .top-bar {
+      position: absolute; top: 36px; left: 32px; right: 32px;
+      display: flex; justify-content: space-between; align-items: center; z-index: 2;
     }
-    .s5 .tip .text {
-      font-size: 12px;
-      color: #444;
-      line-height: 1.6;
-      font-weight: 400;
+    .s6 .logo { font-weight: 700; font-size: 11px; letter-spacing: 4px; color: rgba(255,255,255,0.35); text-transform: uppercase; }
+    .s6 .tag-pill {
+      font-size: 9px; letter-spacing: 3px; text-transform: uppercase;
+      color: #fff; border: 1px solid rgba(255,255,255,0.25); padding: 5px 12px; border-radius: 2px;
     }
+    .s6 .content { position: relative; z-index: 2; padding: 0 32px 40px; }
+    .s6 .eyebrow { font-size: 9px; letter-spacing: 4px; text-transform: uppercase; color: #555; margin-bottom: 12px; }
+    .s6 .headline { font-weight: 700; font-size: 52px; color: #fff; line-height: 1.0; letter-spacing: -1px; }
+    .s6 .headline em {
+      font-family: 'Cormorant Garamond', serif; font-style: italic;
+      font-weight: 400; font-size: 56px; color: #fff; display: block;
+    }
+    .s6 .body { margin-top: 16px; font-size: 13px; font-weight: 400; color: rgba(255,255,255,0.45); line-height: 1.7; }
+
+    /* ══════════════════════════════════════
+       STORY 7 — Ciao: Typography closer (dark)
+    ══════════════════════════════════════ */
+    .s7 {
+      background: #111;
+      display: flex; flex-direction: column; justify-content: space-between;
+      padding: 44px 36px 44px;
+    }
+    .s7 .top { display: flex; justify-content: space-between; align-items: flex-start; }
+    .s7 .logo { font-weight: 700; font-size: 22px; letter-spacing: 3px; color: #fff; }
+    .s7 .tag { font-size: 10px; letter-spacing: 3px; color: #333; text-transform: uppercase; text-align: right; line-height: 1.7; }
+    .s7 .mid { flex: 1; display: flex; flex-direction: column; justify-content: center; }
+    .s7 .headline {
+      font-weight: 700; font-size: 52px; color: #fff;
+      line-height: 1.0; letter-spacing: -1px;
+    }
+    .s7 .headline em {
+      font-family: 'Cormorant Garamond', serif; font-style: italic;
+      font-weight: 400; font-size: 56px; color: #fff; display: block; margin-top: 4px;
+    }
+    .s7 .divider { width: 36px; height: 1px; background: #2a2a2a; margin: 28px 0 24px; }
+    .s7 .body { font-size: 14px; font-weight: 400; color: #555; line-height: 1.8; }
+    .s7 .sig { margin-top: 20px; font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 22px; color: #fff; }
+    .s7 .bottom { font-size: 10px; letter-spacing: 3px; color: #2a2a2a; text-transform: uppercase; }
   </style>
 </head>
 <body>
@@ -511,7 +271,7 @@
 
   <div class="story-row">
 
-    <!-- ── Story 1: Opener ── -->
+    <!-- ══ Story 1: Opener ══ -->
     <div class="story-wrap">
       <div class="story-num">01 — Opener</div>
       <div class="story s1">
@@ -521,21 +281,23 @@
         </div>
         <div class="mid">
           <div class="headline">
-            Eine tolle<br>
-            Woche,
-            <em>wünsch ich euch!</em>
+            Das läuft<br>diese Woche,
+            <em>ciao.</em>
           </div>
         </div>
         <div class="bottom">
-          <div class="sub">
-            Diese Woche: HWK, ein freier<br>
-            Freitags-Slot &amp; mein Lieblingsprodukt.
+          <div class="items">
+            <div class="item">HWK</div>
+            <div class="item">Salon</div>
+            <div class="item">Freitags-Slot</div>
+            <div class="item">das Gel</div>
+            <div class="item">Locken-Tipp</div>
           </div>
         </div>
       </div>
     </div>
 
-    <!-- ── Story 2: Ich unterrichte ── -->
+    <!-- ══ Story 2: HWK + Salon ══ -->
     <div class="story-wrap">
       <div class="story-num">02 — Diese Woche</div>
       <div class="story s2">
@@ -545,19 +307,18 @@
           <div class="logo">PRE · Art of Hair</div>
           <div class="tag">Diese Woche</div>
           <div class="headline">
-            Ich bin an
-            <em>der HWK.</em>
+            Zwischen HWK
+            <em>und Salon.</em>
           </div>
           <div class="body">
-            Handwerkskammer München —<br>
-            Wissen auf höchstem Niveau<br>
-            weitergeben. Ich liebe das.
+            Krass viel los — aber genau so<br>
+            mag ich das. Ich geb alles.
           </div>
         </div>
       </div>
     </div>
 
-    <!-- ── Story 3: Freier Slot ── -->
+    <!-- ══ Story 3: Freitags-Slot ══ -->
     <div class="story-wrap">
       <div class="story-num">03 — Termin</div>
       <div class="story s3">
@@ -569,22 +330,20 @@
           <div class="eyebrow">Noch verfügbar</div>
           <div class="big-fr">FR</div>
           <div class="headline">
-            Ein freier Slot
-            <em>am Freitag.</em>
+            Ein Slot frei.
+            <em>Buch's.</em>
           </div>
-          <div class="sub">
-            Jetzt sichern, bevor er weg ist.
-          </div>
+          <div class="sub">Freitag — bevor er weg ist.</div>
           <div class="cta">
-            Termin buchen
-            <div class="arrow">→</div>
+            Termin sichern
+            <div class="arr">→</div>
           </div>
         </div>
         <div class="bottom">preartofhair.com</div>
       </div>
     </div>
 
-    <!-- ── Story 4: Produkt der Woche ── -->
+    <!-- ══ Story 4: Produkt ══ -->
     <div class="story-wrap">
       <div class="story-num">04 — Produkt</div>
       <div class="story s4">
@@ -598,23 +357,23 @@
         <div class="content">
           <div class="eyebrow">Mein Favorit</div>
           <div class="headline">
-            Das Produkt,
-            <em>das ich liebe.</em>
+            Das Gel?
+            <em>Geil.</em>
           </div>
           <div class="prod-name">
-            <span>Davines</span> · This is a Medium Hold<br>Modeling Gel
+            <span>Davines</span> · Medium Hold Modeling Gel
           </div>
           <div class="body">
-            Perfekt für Locken &amp; Wet Look —<br>
-            hält, ohne zu kleben.
+            Für Locken &amp; Wet Look —<br>
+            vertrau mir einfach.
           </div>
         </div>
       </div>
     </div>
 
-    <!-- ── Story 5: Styling Tipp ── -->
+    <!-- ══ Story 5: Locken Tipp ══ -->
     <div class="story-wrap">
-      <div class="story-num">05 — Tipp der Woche</div>
+      <div class="story-num">05 — Tipp</div>
       <div class="story s5">
         <div class="photo"></div>
         <div class="overlay"></div>
@@ -628,18 +387,66 @@
           <div class="tips">
             <div class="tip">
               <div class="num">01</div>
-              <div class="text">Produkt ins feuchte Haar — nicht ins trockene.</div>
+              <div class="text">Ins feuchte Haar — nie ins trockene. Bitte.</div>
             </div>
             <div class="tip">
               <div class="num">02</div>
-              <div class="text">Weniger ist mehr — mit den Fingern formen, nicht kämmen.</div>
+              <div class="text">Weniger ist mehr. Finger rein, nicht kämmen.</div>
             </div>
             <div class="tip">
               <div class="num">03</div>
-              <div class="text">Für definiertere Locken: Strähnen einzeln drehen und trocknen lassen.</div>
+              <div class="text">Einzeln drehen, kurz warten — krass geil was dann passiert.</div>
             </div>
           </div>
         </div>
+      </div>
+    </div>
+
+    <!-- ══ Story 6: HWK Energie ══ -->
+    <div class="story-wrap">
+      <div class="story-num">06 — HWK</div>
+      <div class="story s6">
+        <div class="photo"></div>
+        <div class="overlay"></div>
+        <div class="top-bar">
+          <div class="logo">PRE · Art of Hair</div>
+          <div class="tag-pill">HWK München</div>
+        </div>
+        <div class="content">
+          <div class="eyebrow">Meisterfriseurin</div>
+          <div class="headline">
+            Ich geb
+            <em>alles.</em>
+          </div>
+          <div class="body">
+            Azubis, Meisterklasse, volle<br>
+            Energie — voll mein Ding.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ══ Story 7: Ciao ══ -->
+    <div class="story-wrap">
+      <div class="story-num">07 — Ciao</div>
+      <div class="story s7">
+        <div class="top">
+          <div class="logo">PRE</div>
+          <div class="tag">KW 23<br>Weekly Update</div>
+        </div>
+        <div class="mid">
+          <div class="headline">
+            Noch Fragen?
+            <em>Slide in die DMs.</em>
+          </div>
+          <div class="divider"></div>
+          <div class="body">
+            Ich bin für alles offen —<br>
+            DM me, frag mich, komm vorbei.
+          </div>
+          <div class="sig">Ciao. 🖤</div>
+        </div>
+        <div class="bottom">preartofhair.com</div>
       </div>
     </div>
 
