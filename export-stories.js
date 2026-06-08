@@ -2,14 +2,19 @@ const { chromium } = require('/opt/node22/lib/node_modules/playwright');
 const path = require('path');
 
 (async () => {
+  // deviceScaleFactor: 3 → 360*3=1080px wide, 640*3=1920px tall (Instagram Story)
   const browser = await chromium.launch();
-  const page = await browser.newPage();
+  const context = await browser.newContext({
+    deviceScaleFactor: 3,
+    viewport: { width: 2400, height: 1800 },
+  });
+  const page = await context.newPage();
 
   const filePath = 'file://' + path.resolve(__dirname, 'weekly-stories.html');
   await page.goto(filePath, { waitUntil: 'networkidle' });
 
-  // Wait for Google Fonts to load (fallback after 3s)
-  await page.waitForTimeout(3000);
+  // Wait for fonts and images to fully render
+  await page.waitForTimeout(4000);
 
   const stories = await page.locator('.story').all();
   console.log(`Found ${stories.length} stories`);
