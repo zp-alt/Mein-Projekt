@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Weekly Stories – Pre Art of Hair</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Montserrat:wght@300;400;500;600&display=swap');
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: #111;
+      font-family: 'Montserrat', sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 40px 20px;
+      gap: 48px;
+    }
+
+    .week-header {
+      color: #c9a96e;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 300;
+      font-size: 13px;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      text-align: center;
+      margin-bottom: -24px;
+    }
+
+    .story-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 24px;
+      justify-content: center;
+    }
+
+    .story {
+      width: 320px;
+      height: 568px;
+      border-radius: 18px;
+      overflow: hidden;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      flex-shrink: 0;
+    }
+
+    .story-label {
+      color: #888;
+      font-size: 11px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      text-align: center;
+      margin-top: 12px;
+    }
+
+    /* ── Story 1: Monday Opener ── */
+    .s1 {
+      background: #0a0a0a;
+    }
+    .s1 .bg-text {
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 160px;
+      font-weight: 300;
+      color: rgba(201,169,110,0.07);
+      letter-spacing: -8px;
+      user-select: none;
+      line-height: 1;
+    }
+    .s1 .line-top {
+      position: absolute;
+      top: 40px; left: 40px; right: 40px;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, #c9a96e, transparent);
+    }
+    .s1 .line-bottom {
+      position: absolute;
+      bottom: 130px; left: 40px; right: 40px;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, #c9a96e, transparent);
+    }
+    .s1 .content {
+      position: relative;
+      padding: 0 40px 50px;
+      text-align: center;
+    }
+    .s1 .overline {
+      font-size: 10px;
+      letter-spacing: 5px;
+      text-transform: uppercase;
+      color: #c9a96e;
+      margin-bottom: 18px;
+    }
+    .s1 .headline {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 52px;
+      font-weight: 300;
+      color: #f5f0e8;
+      line-height: 1.1;
+      margin-bottom: 20px;
+    }
+    .s1 .sub {
+      font-size: 12px;
+      font-weight: 300;
+      color: #888;
+      letter-spacing: 1px;
+      line-height: 1.8;
+    }
+    .s1 .brand {
+      position: absolute;
+      top: 50px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 10px;
+      letter-spacing: 6px;
+      text-transform: uppercase;
+      color: #c9a96e;
+      white-space: nowrap;
+    }
+
+    /* ── Story 2: Ich unterrichte ── */
+    .s2 {
+      background: #0d0d0d;
+    }
+    .s2 .accent-bar {
+      position: absolute;
+      left: 0; top: 0; bottom: 0;
+      width: 3px;
+      background: linear-gradient(180deg, transparent, #c9a96e 30%, #c9a96e 70%, transparent);
+    }
+    .s2 .brand {
+      position: absolute;
+      top: 48px; left: 40px;
+      font-size: 10px;
+      letter-spacing: 6px;
+      text-transform: uppercase;
+      color: #c9a96e;
+    }
+    .s2 .icon-wrap {
+      position: absolute;
+      top: 120px;
+      left: 0; right: 0;
+      display: flex;
+      justify-content: center;
+    }
+    .s2 .icon-circle {
+      width: 90px; height: 90px;
+      border-radius: 50%;
+      border: 1px solid rgba(201,169,110,0.4);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 36px;
+    }
+    .s2 .content {
+      position: relative;
+      padding: 0 40px 54px;
+      text-align: left;
+    }
+    .s2 .tag {
+      display: inline-block;
+      font-size: 9px;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: #0d0d0d;
+      background: #c9a96e;
+      padding: 5px 14px;
+      margin-bottom: 22px;
+    }
+    .s2 .headline {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 44px;
+      font-weight: 300;
+      color: #f5f0e8;
+      line-height: 1.15;
+      margin-bottom: 20px;
+    }
+    .s2 .headline em {
+      font-style: italic;
+      color: #c9a96e;
+    }
+    .s2 .body {
+      font-size: 13px;
+      font-weight: 300;
+      color: #999;
+      line-height: 1.8;
+    }
+
+    /* ── Story 3: Freier Slot ── */
+    .s3 {
+      background: #f5f0e8;
+    }
+    .s3 .brand {
+      position: absolute;
+      top: 48px; left: 40px;
+      font-size: 10px;
+      letter-spacing: 6px;
+      text-transform: uppercase;
+      color: #1a1a1a;
+    }
+    .s3 .big-day {
+      position: absolute;
+      top: 100px;
+      left: 0; right: 0;
+      text-align: center;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 140px;
+      font-weight: 300;
+      color: rgba(26,26,26,0.06);
+      line-height: 1;
+      letter-spacing: -5px;
+      user-select: none;
+    }
+    .s3 .content {
+      position: relative;
+      padding: 0 40px 54px;
+      text-align: center;
+    }
+    .s3 .divider {
+      width: 40px;
+      height: 1px;
+      background: #1a1a1a;
+      margin: 0 auto 24px;
+    }
+    .s3 .headline {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 50px;
+      font-weight: 300;
+      color: #1a1a1a;
+      line-height: 1.1;
+      margin-bottom: 16px;
+    }
+    .s3 .sub {
+      font-size: 12px;
+      font-weight: 300;
+      color: #666;
+      letter-spacing: 1px;
+      line-height: 1.8;
+      margin-bottom: 32px;
+    }
+    .s3 .cta {
+      display: inline-block;
+      padding: 14px 32px;
+      background: #1a1a1a;
+      color: #f5f0e8;
+      font-size: 10px;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      font-weight: 500;
+    }
+
+    /* ── Story 4: Produkt der Woche ── */
+    .s4 {
+      background: #0a0a0a;
+    }
+    .s4 .top-stripe {
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, #c9a96e, #e8d5a3, #c9a96e);
+    }
+    .s4 .brand {
+      position: absolute;
+      top: 50px; left: 40px;
+      font-size: 10px;
+      letter-spacing: 6px;
+      text-transform: uppercase;
+      color: #c9a96e;
+    }
+    .s4 .product-box {
+      position: absolute;
+      top: 110px;
+      left: 40px; right: 40px;
+      height: 220px;
+      border: 1px solid rgba(201,169,110,0.25);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .s4 .product-box .prod-icon {
+      font-size: 52px;
+    }
+    .s4 .product-box .prod-brand {
+      font-size: 9px;
+      letter-spacing: 5px;
+      text-transform: uppercase;
+      color: #c9a96e;
+    }
+    .s4 .product-box .prod-name {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 28px;
+      color: #f5f0e8;
+      font-weight: 300;
+      letter-spacing: 2px;
+    }
+    .s4 .content {
+      position: relative;
+      padding: 0 40px 50px;
+    }
+    .s4 .tag {
+      font-size: 9px;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: #c9a96e;
+      margin-bottom: 16px;
+    }
+    .s4 .headline {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 40px;
+      font-weight: 300;
+      color: #f5f0e8;
+      line-height: 1.2;
+      margin-bottom: 16px;
+    }
+    .s4 .body {
+      font-size: 12px;
+      font-weight: 300;
+      color: #888;
+      line-height: 1.9;
+    }
+    .s4 .body strong {
+      color: #c9a96e;
+      font-weight: 400;
+    }
+
+    /* ── Story 5: Styling Tipp ── */
+    .s5 {
+      background: linear-gradient(160deg, #0a0a0a 0%, #1a1208 100%);
+    }
+    .s5 .corner-tl {
+      position: absolute;
+      top: 36px; left: 36px;
+      width: 40px; height: 40px;
+      border-top: 1px solid #c9a96e;
+      border-left: 1px solid #c9a96e;
+    }
+    .s5 .corner-br {
+      position: absolute;
+      bottom: 120px; right: 36px;
+      width: 40px; height: 40px;
+      border-bottom: 1px solid #c9a96e;
+      border-right: 1px solid #c9a96e;
+    }
+    .s5 .brand {
+      position: absolute;
+      top: 48px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 10px;
+      letter-spacing: 6px;
+      text-transform: uppercase;
+      color: #c9a96e;
+      white-space: nowrap;
+    }
+    .s5 .tip-number {
+      position: absolute;
+      top: 110px; right: 40px;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 120px;
+      font-weight: 300;
+      color: rgba(201,169,110,0.08);
+      line-height: 1;
+    }
+    .s5 .content {
+      position: relative;
+      padding: 0 40px 50px;
+    }
+    .s5 .tag {
+      font-size: 9px;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: #c9a96e;
+      margin-bottom: 18px;
+    }
+    .s5 .headline {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 44px;
+      font-weight: 300;
+      color: #f5f0e8;
+      line-height: 1.2;
+      margin-bottom: 24px;
+    }
+    .s5 .tip-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .s5 .tip-list li {
+      font-size: 12px;
+      font-weight: 300;
+      color: #aaa;
+      line-height: 1.7;
+      padding-left: 18px;
+      position: relative;
+    }
+    .s5 .tip-list li::before {
+      content: '—';
+      position: absolute;
+      left: 0;
+      color: #c9a96e;
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="week-header">Weekly Update — KW 23 · 9. Juni 2026</div>
+
+  <div class="story-grid">
+
+    <!-- Story 1: Monday Opener -->
+    <div>
+      <div class="story s1">
+        <div class="bg-text">PRE</div>
+        <div class="brand">Pre Art of Hair</div>
+        <div class="line-top"></div>
+        <div class="line-bottom"></div>
+        <div class="content">
+          <div class="overline">Weekly Update · KW 23</div>
+          <div class="headline">Gute<br>Woche,<br><em style="font-style:italic; color:#c9a96e;">alle.</em></div>
+          <div class="sub">
+            Diese Woche erwartet euch<br>
+            Unterricht, ein freier Freitags-Slot<br>
+            &amp; das Produkt das ich liebe.
+          </div>
+        </div>
+      </div>
+      <div class="story-label">Story 1 · Opener</div>
+    </div>
+
+    <!-- Story 2: Ich unterrichte -->
+    <div>
+      <div class="story s2">
+        <div class="accent-bar"></div>
+        <div class="brand">Pre Art of Hair</div>
+        <div class="icon-wrap">
+          <div class="icon-circle">✂️</div>
+        </div>
+        <div class="content">
+          <div class="tag">Diese Woche</div>
+          <div class="headline">Ich bin<br>diese Woche<br><em>am Unterrichten.</em></div>
+          <div class="body">
+            Wissen weitergeben ist das<br>
+            Schönste, was man tun kann —<br>
+            ich freue mich drauf.
+          </div>
+        </div>
+      </div>
+      <div class="story-label">Story 2 · Unterricht</div>
+    </div>
+
+    <!-- Story 3: Freier Slot -->
+    <div>
+      <div class="story s3">
+        <div class="brand">Pre Art of Hair</div>
+        <div class="big-day">FR</div>
+        <div class="content">
+          <div class="divider"></div>
+          <div class="headline">Noch ein<br>freier Slot<br>am Freitag.</div>
+          <div class="sub">
+            Dein Termin wartet.<br>
+            Jetzt sichern, bevor er weg ist.
+          </div>
+          <div class="cta">Termin buchen</div>
+        </div>
+      </div>
+      <div class="story-label">Story 3 · Freier Termin</div>
+    </div>
+
+    <!-- Story 4: Produkt der Woche -->
+    <div>
+      <div class="story s4">
+        <div class="top-stripe"></div>
+        <div class="brand">Pre Art of Hair</div>
+        <div class="product-box">
+          <div class="prod-icon">🫙</div>
+          <div class="prod-brand">Darwinis</div>
+          <div class="prod-name">Medium Hold</div>
+        </div>
+        <div class="content">
+          <div class="tag">Produkt der Woche</div>
+          <div class="headline">Das Produkt,<br>das ich wirklich<br>liebe.</div>
+          <div class="body">
+            Perfekt für <strong>Locken</strong> und den<br>
+            <strong>Wet Look</strong> — hält, ohne zu kleben.<br>
+            Mein absoluter Favorit.
+          </div>
+        </div>
+      </div>
+      <div class="story-label">Story 4 · Produkt der Woche</div>
+    </div>
+
+    <!-- Story 5: Styling Tipp -->
+    <div>
+      <div class="story s5">
+        <div class="corner-tl"></div>
+        <div class="corner-br"></div>
+        <div class="brand">Pre Art of Hair</div>
+        <div class="tip-number">01</div>
+        <div class="content">
+          <div class="tag">Tipp der Woche</div>
+          <div class="headline">Locken<br>&amp; Wet Look<br>richtig stylen.</div>
+          <ul class="tip-list">
+            <li>Produkt ins feuchte Haar einarbeiten — nicht ins trockene.</li>
+            <li>Medium Hold: weniger ist mehr — mit den Fingern formen.</li>
+            <li>Für definiertere Locken: Abschnitte drehen &amp; trocknen lassen.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="story-label">Story 5 · Styling Tipp</div>
+    </div>
+
+  </div>
+
+</body>
+</html>
