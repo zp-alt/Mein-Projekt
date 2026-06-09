@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8"/>
+  <title>Concept Cards – PRE Art of Hair</title>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;600;700;800;900&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: #bbb;
+      font-family: 'Barlow', sans-serif;
+      padding: 48px 24px 64px;
+      display: flex; flex-direction: column; align-items: center; gap: 16px;
+    }
+    .label { font-size: 11px; letter-spacing: 4px; text-transform: uppercase; color: #777; margin-bottom: 20px; }
+    .grid { display: flex; flex-wrap: wrap; gap: 4px; justify-content: center; max-width: 1092px; }
+    .wrap { display: flex; flex-direction: column; align-items: center; gap: 8px; }
+    .num { font-size: 10px; letter-spacing: 3px; text-transform: uppercase; color: #999; }
+
+    .card {
+      width: 360px; height: 360px;
+      overflow: hidden; position: relative; flex-shrink: 0;
+      display: flex; flex-direction: column; justify-content: space-between;
+    }
+
+    /* shared elements */
+    .brand { font-weight: 700; font-size: 11px; letter-spacing: 5px; text-transform: uppercase; }
+    .hl { font-weight: 900; text-transform: uppercase; letter-spacing: -1.5px; line-height: 0.88; }
+    .sub { font-family: 'Cormorant Garamond', serif; font-style: italic; letter-spacing: 0.5px; line-height: 1.4; }
+
+    /* dark variant */
+    .dark { background: #111; padding: 26px 26px 24px; }
+    .dark .brand { color: #2a2a2a; }
+    .dark .hl { color: #fff; }
+    .dark .sub { color: #3a3a3a; }
+
+    /* light variant */
+    .light { background: #f5f5f3; padding: 26px 26px 24px; }
+    .light .brand { color: #ddd; }
+    .light .hl { color: #111; }
+    .light .sub { color: #bbb; }
+
+    /* off-white warm */
+    .warm { background: #f0ece6; padding: 26px 26px 24px; }
+    .warm .brand { color: #d8d0c4; }
+    .warm .hl { color: #1a1a1a; }
+    .warm .sub { color: #b0a898; }
+
+    /* font sizes — varies per card */
+    .xl  { font-size: 58px; }
+    .lg  { font-size: 48px; }
+    .md  { font-size: 40px; }
+    .sm  { font-size: 32px; }
+
+    .sub-sm  { font-size: 13px; }
+    .sub-xs  { font-size: 11px; }
+
+    .divider { height: 1px; background: currentColor; opacity: 0.12; width: 32px; margin: 6px 0; }
+  </style>
+</head>
+<body>
+
+<div class="label">PRE Art of Hair — Concept Cards · Bauhaus · Kunst · Wissenschaft · Geschichte</div>
+
+<div class="grid">
+
+  <!-- ══ B1: BAUHAUS — HANDWERK IST KUNSTWERK ══ -->
+  <div class="wrap"><div class="num">B1 — Bauhaus</div>
+  <div class="card dark">
+    <div class="brand">PRE · Art of Hair</div>
+    <div>
+      <div class="hl xl">HAND-<br>WERK<br>IST<br>KUNST-<br>WERK.</div>
+    </div>
+    <div class="sub sub-sm">Bauhaus, 1919. PRE, heute.</div>
+  </div></div>
+
+  <!-- ══ B2: BAUHAUS — GESAMTKUNSTWERK ══ -->
+  <div class="wrap"><div class="num">B2 — Bauhaus</div>
+  <div class="card light">
+    <div class="brand">PRE · Art of Hair</div>
+    <div>
+      <div class="hl" style="font-size:46px;">GESAMT-<br>KUNST-<br>WERK.</div>
+    </div>
+    <div class="sub sub-sm">Jeder Schnitt ein Ganzes.<br>Gropius wusste es.</div>
+  </div></div>
+
+  <!-- ══ B3: BAUHAUS — FORM FOLGT GEFÜHL ══ -->
+  <div class="wrap"><div class="num">B3 — Bauhaus</div>
+  <div class="card dark">
+    <div class="brand">PRE · Art of Hair</div>
+    <div>
+      <div class="hl xl">FORM<br>FOLGT<br>GEFÜHL.</div>
+    </div>
+    <div class="sub sub-sm">Mies van der Rohe hatte es fast.</div>
+  </div></div>
+
+  <!-- ══ W1: WISSENSCHAFT — 100.000 FOLLIKEL ══ -->
+  <div class="wrap"><div class="num">W1 — Wissenschaft</div>
+  <div class="card light">
+    <div class="brand">PRE · Art of Hair</div>
+    <div>
+      <div class="hl lg">100.000<br>FOLLIKEL.<br>KEINE<br>ZWEI<br>GLEICH.</div>
+    </div>
+    <div class="sub sub-xs">Trichologie als Philosophie.</div>
+  </div></div>
+
+  <!-- ══ W2: WISSENSCHAFT — HAAR HAT EIN GEDÄCHTNIS ══ -->
+  <div class="wrap"><div class="num">W2 — Wissenschaft</div>
+  <div class="card dark">
+    <div class="brand">PRE · Art of Hair</div>
+    <div>
+      <div class="hl xl">JEDES<br>HAAR<br>HAT EIN<br>GEDÄCHT-<br>NIS.</div>
+    </div>
+    <div class="sub sub-xs">Protein erinnert sich an Schnitt,<br>Hitze und Zeit.</div>
+  </div></div>
+
+  <!-- ══ W3: WISSENSCHAFT — KERATINISIERUNG ══ -->
+  <div class="wrap"><div class="num">W3 — Wissenschaft</div>
+  <div class="card warm">
+    <div class="brand">PRE · Art of Hair</div>
+    <div>
+      <div class="hl md">KERATI-<br>NISIERUNG<br>IST<br>KEINE<br>KOSMETIK.</div>
+    </div>
+    <div class="sub sub-sm">Sie ist Biologie.<br>Wir machen Kunst daraus.</div>
+  </div></div>
+
+  <!-- ══ G1: GESCHICHTE — DER AFRO ALS MANIFEST ══ -->
+  <div class="wrap"><div class="num">G1 — Geschichte</div>
+  <div class="card dark">
+    <div class="brand">PRE · Art of Hair</div>
+    <div>
+      <div class="hl xl">1966.<br>DER<br>AFRO<br>ALS<br>MANIFEST.</div>
+    </div>
+    <div class="sub sub-xs">Haar war immer Politik.<br>Ist es noch.</div>
+  </div></div>
+
+  <!-- ══ G2: KUNST — KLIMT + FORM ══ -->
+  <div class="wrap"><div class="num">G2 — Kunst</div>
+  <div class="card light">
+    <div class="brand">PRE · Art of Hair</div>
+    <div>
+      <div class="hl md">WAS<br>KLIMT<br>IN GOLD<br>MALTE—<br>WIR<br>SCHNEIDEN.</div>
+    </div>
+    <div class="sub sub-xs">Gustav Klimt, 1907.<br>PRE Art of Hair, heute.</div>
+  </div></div>
+
+  <!-- ══ G3: LITERATUR — BAUDELAIRE CHEVELURE ══ -->
+  <div class="wrap"><div class="num">G3 — Literatur</div>
+  <div class="card dark">
+    <div class="brand">PRE · Art of Hair</div>
+    <div>
+      <div class="hl xl">CHEVE-<br>LURE.<br>BAUDE-<br>LAIRE<br>WUSSTE ES.</div>
+    </div>
+    <div class="sub sub-xs">Les Fleurs du Mal, 1857.<br>Haar als Gedicht.</div>
+  </div></div>
+
+</div>
+</body>
+</html>
