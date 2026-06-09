@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Feed Posts – PRE Art of Hair</title>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;600;700;800;900&family=Cormorant+Garamond:ital,wght@0,300;1,300;1,400&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: #c8c8c8;
+      font-family: 'Barlow', sans-serif;
+      padding: 48px 24px 64px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 16px;
+    }
+    .page-label {
+      font-size: 11px; letter-spacing: 4px; text-transform: uppercase;
+      color: #888; margin-bottom: 20px; font-weight: 500;
+    }
+    .grid {
+      display: flex; flex-wrap: wrap; gap: 4px; justify-content: center;
+      max-width: 1092px;
+    }
+    .post-wrap {
+      display: flex; flex-direction: column; align-items: center; gap: 8px;
+    }
+    .post-num {
+      font-size: 10px; letter-spacing: 3px; text-transform: uppercase; color: #aaa;
+    }
+
+    /* ── Base post: 360x360 → 1080x1080 @ 3x ── */
+    .post {
+      width: 360px; height: 360px;
+      overflow: hidden; position: relative; flex-shrink: 0;
+    }
+
+    /* ══════════════════════════
+       POST 1 — Foto: Bowl Cut
+    ══════════════════════════ */
+    .p1 { background: #111; }
+    .p1 .photo {
+      position: absolute; inset: 0;
+      background: url('feed-bowl-cut.jpg') center 15% / cover no-repeat;
+      filter: grayscale(100%) contrast(1.08);
+    }
+    .p1 .logo {
+      position: absolute; bottom: 20px; right: 22px;
+      font-weight: 700; font-size: 11px; letter-spacing: 4px;
+      color: rgba(255,255,255,0.55); text-transform: uppercase;
+    }
+
+    /* ══════════════════════════
+       POST 2 — Text: JEDE TEXTUR
+    ══════════════════════════ */
+    .p2 {
+      background: #111;
+      display: flex; flex-direction: column;
+      justify-content: space-between;
+      padding: 28px 28px 24px;
+    }
+    .p2 .pre { font-weight: 700; font-size: 13px; letter-spacing: 5px; color: #333; text-transform: uppercase; }
+    .p2 .headline {
+      font-weight: 900; font-size: 52px; color: #fff;
+      line-height: 0.92; letter-spacing: -1.5px; text-transform: uppercase;
+    }
+    .p2 .sub {
+      font-family: 'Cormorant Garamond', serif; font-style: italic;
+      font-size: 16px; color: #444; letter-spacing: 1px;
+    }
+
+    /* ══════════════════════════
+       POST 3 — Foto: Chess Editorial
+    ══════════════════════════ */
+    .p3 { background: #000; }
+    .p3 .photo {
+      position: absolute; inset: 0;
+      background: url('feed-chess-editorial.jpg') center 20% / cover no-repeat;
+      filter: grayscale(100%) contrast(1.12) brightness(0.9);
+    }
+    .p3 .overlay {
+      position: absolute; inset: 0;
+      background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, transparent 50%);
+    }
+    .p3 .bottom {
+      position: absolute; bottom: 20px; left: 22px; right: 22px;
+      display: flex; justify-content: space-between; align-items: flex-end;
+    }
+    .p3 .tag {
+      font-size: 9px; letter-spacing: 4px; text-transform: uppercase; color: rgba(255,255,255,0.5);
+    }
+    .p3 .logo {
+      font-weight: 700; font-size: 11px; letter-spacing: 4px;
+      color: rgba(255,255,255,0.5); text-transform: uppercase;
+    }
+
+    /* ══════════════════════════
+       POST 4 — Text: PRÄZISION
+    ══════════════════════════ */
+    .p4 {
+      background: #fff;
+      display: flex; flex-direction: column;
+      justify-content: space-between;
+      padding: 28px 28px 24px;
+    }
+    .p4 .pre { font-weight: 700; font-size: 13px; letter-spacing: 5px; color: #ddd; text-transform: uppercase; }
+    .p4 .headline {
+      font-weight: 900; font-size: 58px; color: #111;
+      line-height: 0.88; letter-spacing: -2px; text-transform: uppercase;
+    }
+    .p4 .sub {
+      font-family: 'Cormorant Garamond', serif; font-style: italic;
+      font-size: 15px; color: #bbb; letter-spacing: 1px;
+    }
+
+    /* ══════════════════════════
+       POST 5 — Foto: Hände bei der Arbeit
+    ══════════════════════════ */
+    .p5 { background: #000; }
+    .p5 .photo {
+      position: absolute; inset: 0;
+      background: url('feed-hands.jpg') center center / cover no-repeat;
+      filter: grayscale(100%) contrast(1.15) brightness(0.85);
+    }
+    .p5 .overlay {
+      position: absolute; inset: 0;
+      background: linear-gradient(135deg, rgba(0,0,0,0.15) 0%, transparent 60%);
+    }
+    .p5 .text {
+      position: absolute; top: 20px; left: 22px;
+      font-weight: 900; font-size: 13px; letter-spacing: 4px;
+      text-transform: uppercase; color: rgba(255,255,255,0.4);
+    }
+    .p5 .logo {
+      position: absolute; bottom: 20px; right: 22px;
+      font-weight: 700; font-size: 11px; letter-spacing: 4px;
+      color: rgba(255,255,255,0.45); text-transform: uppercase;
+    }
+
+    /* ══════════════════════════
+       POST 6 — Text: AFRO. ASIATISCH. FEIN.
+    ══════════════════════════ */
+    .p6 {
+      background: #111;
+      display: flex; flex-direction: column;
+      justify-content: space-between;
+      padding: 28px 28px 24px;
+    }
+    .p6 .pre { font-weight: 700; font-size: 13px; letter-spacing: 5px; color: #2a2a2a; text-transform: uppercase; }
+    .p6 .headline {
+      font-weight: 900; font-size: 46px; color: #fff;
+      line-height: 0.92; letter-spacing: -1px; text-transform: uppercase;
+    }
+    .p6 .divider { width: 32px; height: 1px; background: #333; }
+    .p6 .sub {
+      font-family: 'Cormorant Garamond', serif; font-style: italic;
+      font-size: 15px; color: #444; letter-spacing: 1px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="page-label">PRE Art of Hair — Feed Posts · 1080 × 1080</div>
+
+  <div class="grid">
+
+    <!-- POST 1: Bowl Cut Foto -->
+    <div class="post-wrap">
+      <div class="post-num">01</div>
+      <div class="post p1">
+        <div class="photo"></div>
+        <div class="logo">PRE</div>
+      </div>
+    </div>
+
+    <!-- POST 2: Text — JEDE TEXTUR -->
+    <div class="post-wrap">
+      <div class="post-num">02</div>
+      <div class="post p2">
+        <div class="pre">PRE · Art of Hair</div>
+        <div class="headline">JEDE<br>TEXTUR.<br>EINE<br>TECHNIK.</div>
+        <div class="sub">München · preartofhair.com</div>
+      </div>
+    </div>
+
+    <!-- POST 3: Chess Editorial Foto -->
+    <div class="post-wrap">
+      <div class="post-num">03</div>
+      <div class="post p3">
+        <div class="photo"></div>
+        <div class="overlay"></div>
+        <div class="bottom">
+          <div class="tag">Editorial · 17:23 Magazine</div>
+          <div class="logo">PRE</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- POST 4: Text — PRÄZISION -->
+    <div class="post-wrap">
+      <div class="post-num">04</div>
+      <div class="post p4">
+        <div class="pre">PRE · Art of Hair</div>
+        <div class="headline">PRÄ-<br>ZISION<br>IST<br>ALLES.</div>
+        <div class="sub">Kein Kompromiss.</div>
+      </div>
+    </div>
+
+    <!-- POST 5: Hände Foto -->
+    <div class="post-wrap">
+      <div class="post-num">05</div>
+      <div class="post p5">
+        <div class="photo"></div>
+        <div class="overlay"></div>
+        <div class="text">At Work</div>
+        <div class="logo">PRE</div>
+      </div>
+    </div>
+
+    <!-- POST 6: Text — AFRO. ASIATISCH. FEIN. -->
+    <div class="post-wrap">
+      <div class="post-num">06</div>
+      <div class="post p6">
+        <div class="pre">PRE · Art of Hair</div>
+        <div class="headline">AFRO.<br>ASIATISCH.<br>FEIN.<br>ALLES.</div>
+        <div class="divider"></div>
+        <div class="sub">Jede Textur. Jede Technik.</div>
+      </div>
+    </div>
+
+  </div>
+
+</body>
+</html>
