@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8"/>
+  <title>Karussell — MORPHOLOGIE</title>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;700;800;900&family=Cormorant+Garamond:ital,wght@0,300;1,300;1,400&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: #aaa;
+      font-family: 'Barlow', sans-serif;
+      padding: 48px 24px 64px;
+      display: flex; flex-direction: column; align-items: center; gap: 16px;
+    }
+    .label { font-size: 11px; letter-spacing: 4px; text-transform: uppercase; color: #777; margin-bottom: 20px; }
+    .row { display: flex; gap: 3px; align-items: flex-start; flex-wrap: wrap; justify-content: center; max-width: 1860px; }
+    .wrap { display: flex; flex-direction: column; align-items: center; gap: 6px; }
+    .num { font-size: 9px; letter-spacing: 3px; text-transform: uppercase; color: #bbb; }
+
+    .slide {
+      width: 360px; height: 360px;
+      overflow: hidden; position: relative; flex-shrink: 0;
+    }
+    /* connecting thread — diagonal line from upper-right to lower-left bleeds between slides */
+    .slide::after {
+      content: '';
+      position: absolute;
+      left: -20px; right: -20px;
+      top: 52px; height: 1px;
+      background: rgba(255,255,255,0.15);
+      z-index: 10;
+      transform: rotate(0deg);
+    }
+
+    .photo {
+      position: absolute; inset: 0;
+      background-size: cover; background-repeat: no-repeat;
+      filter: grayscale(100%) contrast(1.14) brightness(0.86);
+    }
+    .logo {
+      position: absolute; top: 22px; right: 22px;
+      font-weight: 700; font-size: 10px; letter-spacing: 4px;
+      text-transform: uppercase; color: rgba(255,255,255,0.28);
+      z-index: 5;
+    }
+    .bottom-fade {
+      position: absolute; inset: 0;
+      background: linear-gradient(to top, rgba(0,0,0,0.75) 0%, transparent 50%);
+    }
+    .cut-block {
+      position: absolute;
+      bottom: 22px; left: 24px;
+      z-index: 5;
+    }
+    .index {
+      font-size: 9px; letter-spacing: 4px; text-transform: uppercase;
+      color: rgba(255,255,255,0.3); margin-bottom: 4px;
+    }
+    .cut-name {
+      font-weight: 900; font-size: 26px;
+      letter-spacing: -0.5px; text-transform: uppercase;
+      color: #fff; line-height: 1;
+    }
+    .cut-italic {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic; font-weight: 300;
+      font-size: 12px; color: rgba(255,255,255,0.38);
+      letter-spacing: 1px; margin-top: 5px;
+    }
+
+    /* ── Slide 1: Opener ── */
+    .s1 { background: #0d0d0d; }
+    .s1 .counter {
+      position: absolute;
+      top: 28px; left: 26px;
+      font-size: 9px; letter-spacing: 5px; text-transform: uppercase;
+      color: rgba(255,255,255,0.2);
+    }
+    .s1 .big {
+      position: absolute;
+      bottom: 24px; left: 26px; right: 26px;
+    }
+    .s1 .word {
+      font-weight: 900; font-size: 56px;
+      letter-spacing: -2px; line-height: 0.85;
+      text-transform: uppercase; color: #fff;
+    }
+    .s1 .sub {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic; font-weight: 300;
+      font-size: 15px; color: rgba(255,255,255,0.38);
+      letter-spacing: 1px; margin-top: 12px;
+    }
+
+    /* Photos */
+    .s2 { background: #080808; }
+    .s2 .photo { background-image: url('feed-bowl-cut.jpg'); background-position: center 20%; }
+
+    .s3 { background: #080808; }
+    .s3 .photo { background-image: url('feed-shag-mullet.jpg'); background-position: center 10%; }
+
+    .s4 { background: #080808; }
+    .s4 .photo { background-image: url('feed-vintage-curls.jpg'); background-position: 55% 18%; }
+
+    .s5 { background: #080808; }
+    .s5 .photo { background-image: url('carousel-undercut.jpg'); background-position: center 12%; }
+
+    .s6 { background: #080808; }
+    .s6 .photo { background-image: url('feed-nape.jpg'); background-position: 35% center; }
+
+    /* ── Slide 7: Closer ── */
+    .s7 { background: #0d0d0d; }
+    .s7 .ghost {
+      position: absolute;
+      top: 22px; left: 22px; right: 22px; bottom: 22px;
+      border: 1px solid rgba(255,255,255,0.06);
+    }
+    .s7 .center-text {
+      position: absolute;
+      top: 50%; left: 26px; right: 26px;
+      transform: translateY(-50%);
+      text-align: center;
+    }
+    .s7 .big-italic {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic; font-weight: 300;
+      font-size: 40px; color: rgba(255,255,255,0.75);
+      letter-spacing: 1px; line-height: 1.15;
+    }
+    .s7 .divider {
+      width: 24px; height: 1px;
+      background: rgba(255,255,255,0.25);
+      margin: 16px auto;
+    }
+    .s7 .tagline {
+      font-weight: 700; font-size: 9px;
+      letter-spacing: 5px; text-transform: uppercase;
+      color: rgba(255,255,255,0.25);
+    }
+  </style>
+</head>
+<body>
+
+<div class="label">PRE Art of Hair — Karussell #2 · MORPHOLOGIE</div>
+
+<div class="row">
+
+  <!-- S1: Opener -->
+  <div class="wrap"><div class="num">1 / 7</div>
+  <div class="slide s1">
+    <div class="counter">PRE · Art of Hair</div>
+    <div class="big">
+      <div class="word">MORPH-<br>OLOGIE.</div>
+      <div class="sub">Sechs Formen.<br>Eine Praxis. Keine Hierarchie.</div>
+    </div>
+  </div></div>
+
+  <!-- S2: Bowl Cut -->
+  <div class="wrap"><div class="num">2 / 7</div>
+  <div class="slide s2">
+    <div class="photo"></div>
+    <div class="bottom-fade"></div>
+    <div class="cut-block">
+      <div class="index">01</div>
+      <div class="cut-name">Bowl Cut.</div>
+      <div class="cut-italic">Präzision ohne Gnade</div>
+    </div>
+    <div class="logo">PRE</div>
+  </div></div>
+
+  <!-- S3: Shag Mullet -->
+  <div class="wrap"><div class="num">3 / 7</div>
+  <div class="slide s3">
+    <div class="photo"></div>
+    <div class="bottom-fade"></div>
+    <div class="cut-block">
+      <div class="index">02</div>
+      <div class="cut-name">Shag.</div>
+      <div class="cut-italic">Struktur als Freiheit</div>
+    </div>
+    <div class="logo">PRE</div>
+  </div></div>
+
+  <!-- S4: Ondulation -->
+  <div class="wrap"><div class="num">4 / 7</div>
+  <div class="slide s4">
+    <div class="photo"></div>
+    <div class="bottom-fade"></div>
+    <div class="cut-block">
+      <div class="index">03</div>
+      <div class="cut-name">Ondulation.</div>
+      <div class="cut-italic">Welle seit 1920</div>
+    </div>
+    <div class="logo">PRE</div>
+  </div></div>
+
+  <!-- S5: Undercut -->
+  <div class="wrap"><div class="num">5 / 7</div>
+  <div class="slide s5">
+    <div class="photo"></div>
+    <div class="bottom-fade"></div>
+    <div class="cut-block">
+      <div class="index">04</div>
+      <div class="cut-name">Undercut.</div>
+      <div class="cut-italic">Kontur als Statement</div>
+    </div>
+    <div class="logo">PRE</div>
+  </div></div>
+
+  <!-- S6: Nape / Precision Bob -->
+  <div class="wrap"><div class="num">6 / 7</div>
+  <div class="slide s6">
+    <div class="photo"></div>
+    <div class="bottom-fade"></div>
+    <div class="cut-block">
+      <div class="index">05</div>
+      <div class="cut-name">Nackenlinie.</div>
+      <div class="cut-italic">Die Rückseite ist das Werk</div>
+    </div>
+    <div class="logo">PRE</div>
+  </div></div>
+
+  <!-- S7: Closer -->
+  <div class="wrap"><div class="num">7 / 7</div>
+  <div class="slide s7">
+    <div class="ghost"></div>
+    <div class="center-text">
+      <div class="big-italic">Jede Form<br>ist eine<br>Entscheidung.</div>
+      <div class="divider"></div>
+      <div class="tagline">PRE · Art of Hair · München</div>
+    </div>
+  </div></div>
+
+</div>
+</body>
+</html>
