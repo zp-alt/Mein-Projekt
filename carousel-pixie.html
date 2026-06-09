@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8"/>
+  <title>Karussell — PIXIE · 3 Seiten</title>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@700;900&family=Cormorant+Garamond:ital,wght@1,300&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: #aaa; font-family: 'Barlow', sans-serif;
+      padding: 48px 24px 64px;
+      display: flex; flex-direction: column; align-items: center; gap: 16px;
+    }
+    .label { font-size: 11px; letter-spacing: 4px; text-transform: uppercase; color: #777; margin-bottom: 20px; }
+    .row { display: flex; gap: 3px; flex-wrap: wrap; justify-content: center; }
+    .wrap { display: flex; flex-direction: column; align-items: center; gap: 6px; }
+    .num { font-size: 9px; letter-spacing: 3px; text-transform: uppercase; color: #bbb; }
+
+    .slide {
+      width: 360px; height: 360px;
+      overflow: hidden; position: relative; flex-shrink: 0;
+      background: #080808;
+    }
+    /* Connecting thread across all slides */
+    .slide::after {
+      content: ''; position: absolute;
+      left: 0; right: 0; top: 52px; height: 1px;
+      background: rgba(255,255,255,0.12); z-index: 10;
+    }
+    .photo {
+      position: absolute; inset: 0;
+      background-size: cover; background-repeat: no-repeat;
+      filter: grayscale(100%) contrast(1.16) brightness(0.85);
+    }
+    .bottom-fade {
+      position: absolute; inset: 0;
+      background: linear-gradient(to top, rgba(0,0,0,0.78) 0%, transparent 48%);
+    }
+    .logo {
+      position: absolute; top: 22px; right: 22px;
+      font-weight: 700; font-size: 10px; letter-spacing: 4px;
+      text-transform: uppercase; color: rgba(255,255,255,0.25); z-index: 5;
+    }
+    .cut-block {
+      position: absolute; bottom: 22px; left: 24px; z-index: 5;
+    }
+    .view-tag {
+      font-size: 9px; letter-spacing: 4px; text-transform: uppercase;
+      color: rgba(255,255,255,0.28); margin-bottom: 5px;
+    }
+    .cut-name {
+      font-weight: 900; font-size: 28px;
+      letter-spacing: -0.5px; text-transform: uppercase;
+      color: #fff; line-height: 1;
+    }
+    .cut-italic {
+      font-family: 'Cormorant Garamond', serif; font-style: italic; font-weight: 300;
+      font-size: 12px; color: rgba(255,255,255,0.35); letter-spacing: 1px; margin-top: 5px;
+    }
+
+    /* ── Opener ── */
+    .s1 { background: #0d0d0d; }
+    .s1 .big {
+      position: absolute; bottom: 24px; left: 26px; right: 26px;
+    }
+    .s1 .word {
+      font-weight: 900; font-size: 58px;
+      letter-spacing: -2px; line-height: 0.85;
+      text-transform: uppercase; color: #fff;
+    }
+    .s1 .sub {
+      font-family: 'Cormorant Garamond', serif; font-style: italic; font-weight: 300;
+      font-size: 15px; color: rgba(255,255,255,0.35);
+      letter-spacing: 1px; margin-top: 12px;
+    }
+    .s1 .brand {
+      position: absolute; top: 26px; left: 26px;
+      font-weight: 700; font-size: 9px;
+      letter-spacing: 5px; text-transform: uppercase;
+      color: rgba(255,255,255,0.18);
+    }
+
+    /* Photos */
+    .s2 .photo { background-image: url('carousel-pixie-front.jpg'); background-position: center 10%; }
+    .s3 .photo { background-image: url('carousel-pixie-side.jpg');  background-position: 55% 8%; }
+    .s4 .photo { background-image: url('carousel-pixie-back.jpg');  background-position: center 5%; }
+
+    /* ── Closer ── */
+    .s5 { background: #0d0d0d; }
+    .s5 .center {
+      position: absolute; top: 50%; left: 26px; right: 26px;
+      transform: translateY(-50%); text-align: center;
+    }
+    .s5 .big-italic {
+      font-family: 'Cormorant Garamond', serif; font-style: italic; font-weight: 300;
+      font-size: 36px; color: rgba(255,255,255,0.7);
+      letter-spacing: 0.5px; line-height: 1.2;
+    }
+    .s5 .divider { width: 24px; height: 1px; background: rgba(255,255,255,0.2); margin: 14px auto; }
+    .s5 .small {
+      font-weight: 700; font-size: 9px;
+      letter-spacing: 5px; text-transform: uppercase;
+      color: rgba(255,255,255,0.2);
+    }
+  </style>
+</head>
+<body>
+<div class="label">PRE Art of Hair — Karussell · PIXIE · 3 Perspektiven</div>
+<div class="row">
+
+  <!-- Opener -->
+  <div class="wrap"><div class="num">1 / 5</div>
+  <div class="slide s1">
+    <div class="brand">PRE · Art of Hair</div>
+    <div class="big">
+      <div class="word">EIN<br>SCHNITT.<br>DREI<br>SEITEN.</div>
+      <div class="sub">Vorne. Seitlich. Hinten.<br>Alles zählt.</div>
+    </div>
+  </div></div>
+
+  <!-- Front -->
+  <div class="wrap"><div class="num">2 / 5</div>
+  <div class="slide s2">
+    <div class="photo"></div>
+    <div class="bottom-fade"></div>
+    <div class="cut-block">
+      <div class="view-tag">vorne</div>
+      <div class="cut-name">Pixie.</div>
+      <div class="cut-italic">Der erste Eindruck</div>
+    </div>
+    <div class="logo">PRE</div>
+  </div></div>
+
+  <!-- Side -->
+  <div class="wrap"><div class="num">3 / 5</div>
+  <div class="slide s3">
+    <div class="photo"></div>
+    <div class="bottom-fade"></div>
+    <div class="cut-block">
+      <div class="view-tag">seitlich</div>
+      <div class="cut-name">Silhouette.</div>
+      <div class="cut-italic">Wo der Schnitt erzählt</div>
+    </div>
+    <div class="logo">PRE</div>
+  </div></div>
+
+  <!-- Back -->
+  <div class="wrap"><div class="num">4 / 5</div>
+  <div class="slide s4">
+    <div class="photo"></div>
+    <div class="bottom-fade"></div>
+    <div class="cut-block">
+      <div class="view-tag">hinten</div>
+      <div class="cut-name">Nacken.</div>
+      <div class="cut-italic">Die ehrlichste Ansicht</div>
+    </div>
+    <div class="logo">PRE</div>
+  </div></div>
+
+  <!-- Closer -->
+  <div class="wrap"><div class="num">5 / 5</div>
+  <div class="slide s5">
+    <div class="center">
+      <div class="big-italic">Kein Winkel<br>wird<br>versteckt.</div>
+      <div class="divider"></div>
+      <div class="small">PRE · Art of Hair · München</div>
+    </div>
+  </div></div>
+
+</div>
+</body>
+</html>
