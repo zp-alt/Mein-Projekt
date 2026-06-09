@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8"/>
+  <title>Feed Posts 2 – PRE Art of Hair</title>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;600;700;800;900&family=Cormorant+Garamond:ital,wght@0,300;1,300;1,400&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: #c0c0c0;
+      font-family: 'Barlow', sans-serif;
+      padding: 48px 24px 64px;
+      display: flex; flex-direction: column; align-items: center; gap: 16px;
+    }
+    .page-label {
+      font-size: 11px; letter-spacing: 4px; text-transform: uppercase;
+      color: #888; margin-bottom: 20px;
+    }
+    .grid { display: flex; flex-wrap: wrap; gap: 4px; justify-content: center; max-width: 1092px; }
+    .wrap { display: flex; flex-direction: column; align-items: center; gap: 8px; }
+    .num { font-size: 10px; letter-spacing: 3px; text-transform: uppercase; color: #aaa; }
+
+    .post {
+      width: 360px; height: 360px;
+      overflow: hidden; position: relative; flex-shrink: 0;
+    }
+    .photo {
+      position: absolute; inset: 0;
+      background-size: cover; background-repeat: no-repeat;
+    }
+    .logo {
+      position: absolute;
+      font-weight: 700; font-size: 11px; letter-spacing: 4px;
+      text-transform: uppercase;
+    }
+
+    /* ══ P7: ONDULATION — Vintage curls profile ══ */
+    .p7 { background: #1a1814; }
+    .p7 .photo {
+      background-image: url('feed-vintage-curls.jpg');
+      background-position: 55% 20%;
+      filter: grayscale(100%) contrast(1.12) brightness(0.92);
+    }
+    .p7 .label {
+      position: absolute;
+      top: 24px; left: 24px;
+      font-size: 9px; letter-spacing: 5px; text-transform: uppercase;
+      color: rgba(255,255,255,0.35);
+      writing-mode: horizontal-tb;
+    }
+    .p7 .word {
+      position: absolute;
+      bottom: 0; right: 0;
+      font-weight: 900; font-size: 62px;
+      letter-spacing: -2px; line-height: 0.88;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.08);
+      text-align: right;
+      padding-right: 10px;
+      padding-bottom: 6px;
+      pointer-events: none;
+    }
+    .p7 .logo { bottom: 22px; left: 24px; color: rgba(255,255,255,0.4); }
+
+    /* ══ P8: ZYHRA — Fashion editorial ══ */
+    .p8 { background: #f8f8f6; }
+    .p8 .photo {
+      background-image: url('feed-zyhra-lying.jpg');
+      background-position: 15% 35%;
+      filter: grayscale(100%) contrast(1.05) brightness(1.02);
+    }
+    /* Gradient to bleed photo into right text zone */
+    .p8 .fade {
+      position: absolute; inset: 0;
+      background: linear-gradient(to right, transparent 45%, #f8f8f6 72%);
+    }
+    .p8 .big-text {
+      position: absolute;
+      right: 18px; top: 50%;
+      transform: translateY(-50%);
+      font-weight: 900; font-size: 48px;
+      letter-spacing: -1.5px; line-height: 0.88;
+      text-transform: uppercase;
+      color: #111;
+      text-align: right;
+    }
+    .p8 .logo { bottom: 22px; right: 24px; color: rgba(0,0,0,0.3); }
+
+    /* ══ P9: STRATEGIE — Chess/LV still life ══ */
+    .p9 { background: #000; }
+    .p9 .photo {
+      background-image: url('feed-chess-still.jpg');
+      background-position: center 30%;
+      filter: grayscale(100%) contrast(1.2) brightness(0.88);
+    }
+    .p9 .overlay {
+      position: absolute; inset: 0;
+      background: linear-gradient(to top, rgba(0,0,0,0.65) 0%, transparent 45%);
+    }
+    .p9 .caption {
+      position: absolute; bottom: 20px; left: 24px;
+      font-size: 9px; letter-spacing: 5px; text-transform: uppercase;
+      color: rgba(255,255,255,0.45);
+    }
+    .p9 .logo { bottom: 20px; right: 24px; color: rgba(255,255,255,0.45); }
+
+    /* ══ P10: SHAG — Shag mullet ══ */
+    .p10 { background: #111; }
+    .p10 .photo {
+      background-image: url('feed-shag-mullet.jpg');
+      background-position: center 10%;
+      filter: grayscale(100%) contrast(1.1) brightness(0.9);
+    }
+    .p10 .overlay {
+      position: absolute; inset: 0;
+      background: linear-gradient(to top, rgba(0,0,0,0.72) 0%, transparent 55%);
+    }
+    .p10 .big {
+      position: absolute;
+      bottom: 14px; left: 20px;
+      font-weight: 900; font-size: 72px;
+      letter-spacing: -3px; line-height: 0.82;
+      text-transform: uppercase;
+      color: #fff;
+    }
+    .p10 .logo { top: 22px; right: 24px; color: rgba(255,255,255,0.4); }
+
+    /* ══ P11: NACKENLINIE — Precision nape ══ */
+    .p11 { background: #000; }
+    .p11 .photo {
+      background-image: url('feed-nape.jpg');
+      background-position: 35% center;
+      filter: grayscale(100%) contrast(1.18) brightness(0.85);
+    }
+    .p11 .diagram {
+      position: absolute;
+      bottom: 24px; left: 24px;
+      display: flex; flex-direction: column; gap: 5px;
+    }
+    .p11 .diag-line {
+      width: 28px; height: 1px;
+      background: rgba(255,255,255,0.3);
+    }
+    .p11 .diag-label {
+      font-size: 8px; letter-spacing: 5px; text-transform: uppercase;
+      color: rgba(255,255,255,0.35);
+    }
+    .p11 .logo { top: 22px; right: 24px; color: rgba(255,255,255,0.35); }
+
+    /* ══ P12: 17:23 MAGAZIN — Selective color ══ */
+    .p12 { background: #f4f4f2; }
+    .p12 .photo {
+      background-image: url('feed-magazine-selective.jpg');
+      background-position: center 15%;
+      /* No grayscale — already processed */
+      filter: contrast(1.05) brightness(1.02);
+    }
+    .p12 .overlay {
+      position: absolute; inset: 0;
+      background: linear-gradient(to top, rgba(244,244,242,0.55) 0%, transparent 30%);
+    }
+    .p12 .tag {
+      position: absolute;
+      bottom: 22px; left: 24px;
+      font-size: 9px; letter-spacing: 4px; text-transform: uppercase;
+      color: rgba(0,0,0,0.45);
+    }
+    .p12 .logo { bottom: 22px; right: 24px; color: rgba(0,0,0,0.4); }
+  </style>
+</head>
+<body>
+
+<div class="page-label">PRE Art of Hair — Feed Posts Batch 2 · 1080 × 1080</div>
+<div class="grid">
+
+  <!-- P7: Vintage Ondulation -->
+  <div class="wrap"><div class="num">07</div>
+  <div class="post p7">
+    <div class="photo"></div>
+    <div class="label">PRE · Art of Hair</div>
+    <div class="word">ONDU-<br>LA-<br>TION.</div>
+    <div class="logo">PRE</div>
+  </div></div>
+
+  <!-- P8: Zyhra — Die Schöpferin -->
+  <div class="wrap"><div class="num">08</div>
+  <div class="post p8">
+    <div class="photo"></div>
+    <div class="fade"></div>
+    <div class="big-text">DIE<br>SCHÖP-<br>FERIN.</div>
+    <div class="logo">PRE</div>
+  </div></div>
+
+  <!-- P9: Chess/LV Still Life -->
+  <div class="wrap"><div class="num">09</div>
+  <div class="post p9">
+    <div class="photo"></div>
+    <div class="overlay"></div>
+    <div class="caption">Jedes Spiel hat seine Strategie.</div>
+    <div class="logo">PRE</div>
+  </div></div>
+
+  <!-- P10: Shag Mullet -->
+  <div class="wrap"><div class="num">10</div>
+  <div class="post p10">
+    <div class="photo"></div>
+    <div class="overlay"></div>
+    <div class="big">SHAG.</div>
+    <div class="logo">PRE</div>
+  </div></div>
+
+  <!-- P11: Nackenlinie -->
+  <div class="wrap"><div class="num">11</div>
+  <div class="post p11">
+    <div class="photo"></div>
+    <div class="diagram">
+      <div class="diag-line"></div>
+      <div class="diag-label">Nackenlinie</div>
+    </div>
+    <div class="logo">PRE</div>
+  </div></div>
+
+  <!-- P12: 17:23 Magazin — Selective Color -->
+  <div class="wrap"><div class="num">12</div>
+  <div class="post p12">
+    <div class="photo"></div>
+    <div class="overlay"></div>
+    <div class="tag">17:23 Magazin · Editorial</div>
+    <div class="logo">PRE</div>
+  </div></div>
+
+</div>
+</body>
+</html>
