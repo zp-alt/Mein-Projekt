@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8"/>
+  <title>Zyhra Portrait – PRE Art of Hair</title>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;600;700;800;900&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: #b8b0a8;
+      font-family: 'Barlow', sans-serif;
+      padding: 48px 24px 64px;
+      display: flex; flex-direction: column; align-items: center; gap: 16px;
+    }
+    .page-label {
+      font-size: 11px; letter-spacing: 4px; text-transform: uppercase;
+      color: #888; margin-bottom: 20px;
+    }
+    .grid { display: flex; flex-wrap: wrap; gap: 4px; justify-content: center; max-width: 1092px; }
+    .wrap { display: flex; flex-direction: column; align-items: center; gap: 8px; }
+    .num { font-size: 10px; letter-spacing: 3px; text-transform: uppercase; color: #aaa; }
+
+    .post {
+      width: 360px; height: 360px;
+      overflow: hidden; position: relative; flex-shrink: 0;
+    }
+    .photo {
+      position: absolute; inset: 0;
+      background-size: cover; background-repeat: no-repeat;
+    }
+
+    /* ══════════════════════════════════════
+       Z1 — "Haar als Heimat."
+       Full sepia · bottom text with Cormorant
+    ══════════════════════════════════════ */
+    .z1 { background: #2a1e12; }
+    .z1 .photo {
+      background-image: url('zyhra-portrait-B.jpg');
+      background-position: center 18%;
+    }
+    .z1 .vignette {
+      position: absolute; inset: 0;
+      background:
+        radial-gradient(ellipse at center top, transparent 40%, rgba(20,12,5,0.4) 100%),
+        linear-gradient(to top, rgba(20,12,5,0.85) 0%, rgba(20,12,5,0.1) 45%, transparent 65%);
+    }
+    .z1 .text {
+      position: absolute;
+      bottom: 26px; left: 26px; right: 26px;
+    }
+    .z1 .italic-main {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-weight: 300;
+      font-size: 42px;
+      color: rgba(255, 248, 235, 0.92);
+      letter-spacing: 0.3px;
+      line-height: 1.1;
+    }
+    .z1 .divider {
+      width: 24px; height: 1px;
+      background: rgba(255,248,235,0.3);
+      margin: 10px 0 8px;
+    }
+    .z1 .brand {
+      font-weight: 700; font-size: 9px;
+      letter-spacing: 5px; text-transform: uppercase;
+      color: rgba(255,248,235,0.3);
+    }
+
+    /* ══════════════════════════════════════
+       Z2 — "la créatrice."
+       Near-B&W · split layout · italic left panel
+    ══════════════════════════════════════ */
+    .z2 { background: #0e0e0e; }
+    .z2 .photo {
+      background-image: url('zyhra-portrait-C.jpg');
+      background-position: 55% 18%;
+      filter: contrast(1.08) brightness(0.85);
+    }
+    /* fade left side to reveal dark panel */
+    .z2 .fade {
+      position: absolute; inset: 0;
+      background: linear-gradient(to right, rgba(14,14,14,0.92) 0%, rgba(14,14,14,0.55) 34%, transparent 60%);
+    }
+    .z2 .text {
+      position: absolute;
+      top: 50%; left: 22px;
+      transform: translateY(-50%);
+    }
+    .z2 .italic-main {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-weight: 300;
+      font-size: 50px;
+      color: rgba(240,234,225,0.9);
+      letter-spacing: 0.5px;
+      line-height: 1.05;
+    }
+    .z2 .caption {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: 13px;
+      color: rgba(240,234,225,0.38);
+      letter-spacing: 1px;
+      margin-top: 10px;
+    }
+    .z2 .logo {
+      position: absolute;
+      bottom: 22px; right: 22px;
+      font-weight: 700; font-size: 10px;
+      letter-spacing: 4px; text-transform: uppercase;
+      color: rgba(255,255,255,0.25);
+    }
+
+    /* ══════════════════════════════════════
+       Z3 — "Locken sind kein Zufall."
+       Sepia tones · centered italic title card
+    ══════════════════════════════════════ */
+    .z3 { background: #1c140c; }
+    .z3 .photo {
+      background-image: url('zyhra-portrait-A.jpg');
+      background-position: center 15%;
+      filter: contrast(1.06) brightness(0.9);
+    }
+    .z3 .top-fade {
+      position: absolute; inset: 0;
+      background:
+        linear-gradient(to bottom, rgba(28,20,12,0.45) 0%, transparent 30%),
+        linear-gradient(to top, rgba(28,20,12,0.75) 0%, transparent 42%);
+    }
+    .z3 .top-text {
+      position: absolute;
+      top: 22px; left: 24px;
+      font-weight: 700; font-size: 9px;
+      letter-spacing: 5px; text-transform: uppercase;
+      color: rgba(255,245,225,0.3);
+    }
+    .z3 .bottom-text {
+      position: absolute;
+      bottom: 24px; left: 24px; right: 24px;
+    }
+    .z3 .italic-main {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-weight: 400;
+      font-size: 32px;
+      color: rgba(255,245,225,0.88);
+      letter-spacing: 0.5px;
+      line-height: 1.25;
+    }
+    .z3 .italic-sub {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-weight: 300;
+      font-size: 14px;
+      color: rgba(255,245,225,0.38);
+      letter-spacing: 1.5px;
+      margin-top: 8px;
+    }
+  </style>
+</head>
+<body>
+<div class="page-label">PRE Art of Hair — Zyhra Portrait · 3 Varianten</div>
+<div class="grid">
+
+  <!-- Z1: Haar als Heimat -->
+  <div class="wrap"><div class="num">Z1</div>
+  <div class="post z1">
+    <div class="photo"></div>
+    <div class="vignette"></div>
+    <div class="text">
+      <div class="italic-main">Haar als<br>Heimat.</div>
+      <div class="divider"></div>
+      <div class="brand">PRE · Art of Hair</div>
+    </div>
+  </div></div>
+
+  <!-- Z2: la créatrice -->
+  <div class="wrap"><div class="num">Z2</div>
+  <div class="post z2">
+    <div class="photo"></div>
+    <div class="fade"></div>
+    <div class="text">
+      <div class="italic-main">la<br>créa-<br>trice.</div>
+      <div class="caption">PRE · Art of Hair</div>
+    </div>
+    <div class="logo">PRE</div>
+  </div></div>
+
+  <!-- Z3: Locken sind kein Zufall -->
+  <div class="wrap"><div class="num">Z3</div>
+  <div class="post z3">
+    <div class="photo"></div>
+    <div class="top-fade"></div>
+    <div class="top-text">PRE · Art of Hair</div>
+    <div class="bottom-text">
+      <div class="italic-main">Locken sind<br>kein Zufall.</div>
+      <div class="italic-sub">— Zyhra Pici</div>
+    </div>
+  </div></div>
+
+</div>
+</body>
+</html>
