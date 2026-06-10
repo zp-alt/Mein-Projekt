@@ -195,6 +195,95 @@ Welche Hilfsmittel benutzt du regelmäßig?
 
 ---
 
+### Deine Porosität — wie dein Haar Feuchtigkeit aufnimmt
+
+*Die Porosität zeigt, wie gut dein Haar Wasser und Pflege aufnimmt und hält — wichtig für Farbe und Pflege.*
+
+**Der Wasser-Test:** Lege ein sauberes, trockenes Haar in ein Glas Wasser und warte ein paar Minuten.
+
+- ☐ Es **schwimmt oben** → eher niedrige Porosität (nimmt schwer auf)
+- ☐ Es **schwebt in der Mitte** → ausgewogene Porosität
+- ☐ Es **sinkt schnell** → eher hohe Porosität (nimmt auf, verliert aber schnell)
+- ☐ Test noch nicht gemacht
+
+---
+
+### Deine Kopfhaut — der Boden, auf dem alles wächst
+
+*Schönes Haar beginnt an einer gesunden Kopfhaut.*
+
+- ☐ **Normal** — fühlt sich unauffällig an
+- ☐ **Trocken** — spannt, juckt, schuppt fein
+- ☐ **Fettig** — wird schnell ölig am Ansatz
+- ☐ **Empfindlich** — reagiert gereizt, gerötet
+- ☐ **Schuppen** — sichtbare Schuppung
+
+---
+
+### Dein Wuchs — Wirbel, Scheitel & Eigenheiten
+
+*Dein Haar hat einen eigenen Willen — und der bestimmt mit, was gut fällt.*
+
+- ☐ Ich habe einen oder mehrere **Wirbel** (z. B. am Oberkopf, im Nacken)
+- ☐ Mein **Scheitel** sitzt fast immer an derselben Stelle: ____________
+- ☐ Mein Haar **steht** an manchen Stellen ab oder lässt sich schwer legen
+- ☐ Meine **Haarlinie** / Geheimratsecken sind mir wichtig
+- ☐ Nichts Besonderes
+
+---
+
+### Deine Länge — wo du stehst und wo du hinmöchtest
+
+- Aktuelle Länge: ____________________________________
+- Wunschlänge: ____________________________________
+- ☐ Ich möchte **Länge halten** und nur Form/Gesundheit verbessern
+- ☐ Ich möchte **kürzer** — bin offen für Veränderung
+- ☐ Ich möchte **wachsen lassen** — brauche eine Strategie dafür
+
+---
+
+### Deine Haargesundheit — Kraft & Bruch
+
+*Gesundes Haar ist dehnbar und elastisch. Geschädigtes bricht.*
+
+- ☐ Mein Haar **bricht** leicht ab (kurze abgebrochene Härchen)
+- ☐ Meine **Spitzen** sind gespalten oder fühlen sich rau an
+- ☐ Mein Haar fühlt sich nach dem Waschen **strohig** an
+- ☐ Mein Haar ist **gesund** und kräftig
+- ☐ Ich verliere zurzeit **mehr Haare** als sonst
+
+---
+
+### Graues Haar — wenn es ein Thema für dich ist
+
+- ☐ Ich habe **kein** graues Haar
+- ☐ **Erste graue** Haare — noch kein Muss, es abzudecken
+- ☐ Ich möchte Grau **komplett abdecken**
+- ☐ Ich möchte mein Grau **bewusst tragen** / schön herausarbeiten
+
+---
+
+### Dein Lebensstil — was dein Haar mitmacht
+
+*Dein Alltag formt dein Haar mit — das gehört in die Beratung.*
+
+- ☐ Ich treibe regelmäßig **Sport** / schwitze viel
+- ☐ Ich **schwimme** oft (Chlor/Salzwasser)
+- ☐ Ich bin viel in der **Sonne**
+- ☐ Ich trage oft **Mütze, Helm oder Kopftuch**
+- ☐ Ich **binde** mein Haar fast täglich zusammen
+
+---
+
+### Empfindlichkeiten — damit ich auf dich achten kann
+
+- ☐ Ich habe **Allergien** oder reagiere empfindlich auf Produkte: ____________
+- ☐ Ich bevorzuge **schonende / nachhaltige** Produkte
+- ☐ Meine Kopfhaut reagiert auf Farbe/Blondierung mit **Kribbeln/Brennen**
+- ☐ Nichts bekannt
+
+---
+
 ### Dein Wunsch — was du dir erträumst
 
 *Hier darfst du frei sein. Träum ruhig groß — den Weg dahin finden wir gemeinsam.*
