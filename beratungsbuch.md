@@ -19,9 +19,10 @@
 4. Ich höre zuerst zu
 5. Millimeterarbeit
 6. Dein Haar, deine Geschichte
-7. Schönheit, die bleibt
-8. PRE für zuhause
-9. Eine Einladung
+7. Dein Haar verstehen — Fragen an dich
+8. Schönheit, die bleibt
+9. PRE für zuhause
+10. Eine Einladung
 
 ---
 
@@ -105,7 +106,112 @@ Dein Haar trägt deine Herkunft, deine Kultur, deinen Ausdruck. Es ist ein Stüc
 
 ---
 
-## 7 · Schönheit, die bleibt
+## 7 · Dein Haar verstehen — Fragen an dich
+
+Bevor wir uns sehen, lade ich dich ein, dein Haar einmal mit neuen Augen zu betrachten.
+
+Die meisten Menschen kennen ihr Haar nur als „glatt", „lockig" oder „schwer zu bändigen". Doch dein Haar hat mehrere Eigenschaften, die zusammen ergeben, was möglich ist — und was zu dir passt. Je mehr du davon verstehst, desto besser können wir gemeinsam entscheiden.
+
+Nimm dir ein paar Minuten. Es gibt keine falschen Antworten — nur deine.
+
+---
+
+### Deine Struktur — wie dein Haar wächst
+
+*Die Struktur beschreibt die natürliche Form deines Haares, so wie es lufttrocknet — ganz ohne Hilfsmittel.*
+
+Wenn du dein Haar wäschst und ohne Föhn oder Glätteisen trocknen lässt, was passiert?
+
+- ☐ Es bleibt **glatt** und fällt gerade
+- ☐ Es wird **wellig** (sanfte S-Formen)
+- ☐ Es bildet **Locken** (Spiralen, Ringel)
+- ☐ Es wird **kraus / coily** (enge Locken, viel Volumen)
+- ☐ Es ist **gemischt** (z. B. oben glatter, unten lockiger)
+
+---
+
+### Deine Textur — wie fein oder kräftig das einzelne Haar ist
+
+*Die Textur meint nicht die Menge, sondern die Dicke einer einzelnen Strähne.*
+
+Nimm ein einzelnes Haar zwischen die Finger. Spürst du es kaum, oder fühlt es sich wie ein fester Faden an?
+
+- ☐ **Fein** — ich spüre es kaum, es wirkt zart
+- ☐ **Mittel** — ich spüre es, ohne dass es kräftig wirkt
+- ☐ **Kräftig / dick** — es fühlt sich wie ein deutlicher Faden an
+- ☐ Ich bin mir nicht sicher
+
+---
+
+### Deine Dichte — wie viel Haar du hast
+
+*Die Dichte beschreibt, wie viele Haare auf deinem Kopf wachsen — unabhängig von ihrer Dicke.*
+
+Wenn du dein Haar im trockenen Zustand teilst: Wie viel Kopfhaut scheint durch?
+
+- ☐ **Viel** Kopfhaut sichtbar — eher dünnes Haar
+- ☐ **Etwas** Kopfhaut sichtbar — mittlere Dichte
+- ☐ **Kaum** Kopfhaut sichtbar — sehr dichtes Haar
+
+---
+
+### Dein Verhalten im Alltag — wie dein Haar wirklich lebt
+
+*Oft verrät der Alltag mehr als jede Theorie.*
+
+- ☐ Mein Haar wird schnell **fettig** (innerhalb von 1 Tag)
+- ☐ Mein Haar ist eher **trocken** in den Längen/Spitzen
+- ☐ Mein Haar **kraust** oder fliegt bei Feuchtigkeit/Wetter
+- ☐ Mein Haar verliert schnell seine **Form** (Locken fallen aus, Volumen sackt zusammen)
+- ☐ Mein Haar lässt sich **schwer stylen** / macht, was es will
+
+---
+
+### Deine Geschichte — was dein Haar schon erlebt hat
+
+*Frühere Behandlungen verändern, was heute möglich ist — gerade bei Farbe.*
+
+- ☐ Ich habe **gefärbt / getönt** (zuletzt vor: __________)
+- ☐ Ich habe **blondiert / aufgehellt**
+- ☐ Ich hatte eine **Dauerwelle / Glättung / Keratin**
+- ☐ Mein Haar ist **unbehandelt / naturbelassen**
+- ☐ Ich nehme **Medikamente** oder hatte hormonelle Veränderungen, die mein Haar beeinflusst haben
+
+---
+
+### Dein Leben — wie viel Zeit du wirklich hast
+
+*Der schönste Look ist der, den du auch zuhause halten kannst.*
+
+Wie viel Zeit möchtest du morgens für dein Haar aufwenden?
+
+- ☐ **Fast keine** — waschen, trocknen, fertig
+- ☐ **5–10 Minuten** — ein bisschen Styling ist okay
+- ☐ **Ich nehme mir gern Zeit** — Styling gehört für mich dazu
+
+Welche Hilfsmittel benutzt du regelmäßig?
+
+- ☐ Nur Föhn ☐ Glätteisen ☐ Lockenstab/Diffusor ☐ Keine
+
+---
+
+### Dein Wunsch — was du dir erträumst
+
+*Hier darfst du frei sein. Träum ruhig groß — den Weg dahin finden wir gemeinsam.*
+
+- Was stört dich aktuell an deinem Haar? ____________________________________
+- Was liebst du an deinem Haar? ____________________________________
+- Wie möchtest du dich fühlen, wenn du aus dem Salon gehst? ____________________________________
+- Gibt es ein Vorbild / Foto, das dich inspiriert? ____________________________________
+
+---
+
+> Bring dieses Buch — oder einfach deine Gedanken dazu — gerne mit zu unserem Termin.
+> Dann beginnen wir nicht bei Null, sondern mittendrin in deiner Geschichte.
+
+---
+
+## 8 · Schönheit, die bleibt
 
 Ein schönes Ergebnis ist leicht für einen Tag. Die wahre Kunst ist, dass es bleibt.
 
@@ -117,7 +223,7 @@ Nachhaltige Schönheit ist kein Zufall. Sie ist geplant — mit jedem Millimeter
 
 ---
 
-## 8 · PRE für zuhause
+## 9 · PRE für zuhause
 
 Der Look entsteht im Salon. Gepflegt wird er bei dir.
 
@@ -133,7 +239,7 @@ So nimmst du ein Stück PRE mit nach Hause — und das Gefühl bleibt, auch zwis
 
 ---
 
-## 9 · Eine Einladung
+## 10 · Eine Einladung
 
 Ein Schnitt ist ein Moment. Vertrauen ist eine Geschichte, die wächst.
 
