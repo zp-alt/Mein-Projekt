@@ -133,6 +133,19 @@
   .recline{ border-bottom:1px solid var(--line); height:5mm; margin-top:1mm; }
   .routinebox{ border:1.4px solid var(--petrol); padding:5mm 5.5mm; margin-top:6mm; }
   .routinebox .rt{ font-weight:700; font-size:8pt; letter-spacing:.16em; text-transform:uppercase; color:var(--petrol); margin-bottom:3mm; }
+
+  /* ---------- Textur-Spektrum ---------- */
+  .spectrum{ display:flex; flex-wrap:wrap; gap:2mm 0; align-items:center; margin:4mm 0 5mm; }
+  .spectrum span{ font-weight:700; font-size:8pt; letter-spacing:.14em; text-transform:uppercase; color:var(--petrol); }
+  .spectrum i{ display:inline-block; width:3mm; height:3mm; border-radius:50%; background:var(--ink); margin:0 3mm; }
+
+  /* ---------- Partner-Schriftzug ---------- */
+  .partner{ border-top:1px solid var(--line); border-bottom:1px solid var(--line); padding:5mm 0; margin:1mm 0 0;
+            display:flex; align-items:center; justify-content:center; gap:9mm; }
+  .partner .plab{ position:absolute; font-weight:500; font-size:6.6pt; letter-spacing:.3em; text-transform:uppercase; color:var(--petrol-soft); transform:translateY(-7mm); }
+  .wm-davines{ font-family:"Roboto",sans-serif; font-weight:300; font-size:16pt; letter-spacing:.04em; color:var(--ink); }
+  .wm-km{ font-family:"Liberation Serif","FreeSerif",serif; font-weight:400; font-size:13pt; letter-spacing:.14em; color:var(--ink); }
+  .partner .sep{ width:1px; height:9mm; background:var(--line); }
 </style>
 </head>
 <body>
@@ -249,10 +262,11 @@
 <section class="page split">
   <div class="head"><span class="chapno">06</span><span class="kicker">Dein Haar, deine Geschichte</span></div>
   <div class="bmotif"><span class="c"></span><span class="s"></span><span class="t"></span><span class="l"></span></div>
-  <p class="body">Kein Haar gleicht dem anderen. Glatt, wellig, lockig, kraus — jede Struktur hat ihren eigenen Rhythmus, ihre eigene Schönheit. Und jede verdient, verstanden zu werden, nicht in eine fremde Form gezwungen.</p>
-  <p class="body">Curly Hair und Afro-Texturen liegen mir besonders am Herzen. Sie sind kraftvoll, lebendig, voller Charakter — und brauchen ein Können, das ihre Eigenart feiert statt sie zu bändigen.</p>
-  <p class="body">Dein Haar trägt deine Herkunft, deine Kultur, deinen Ausdruck. Bei mir musst du dich nicht anpassen, um schön zu sein. Bei mir wird das, was dich ausmacht, zum Ausgangspunkt.</p>
-  <div class="imgband" style="background-image:url('assets/pre_texture.jpg');height:56mm"></div>
+  <h2 style="font-size:20pt;margin-bottom:3mm">Schnitt ist mein<br>Handwerk.</h2>
+  <p class="body">Meine Spezialität ist der <strong>Schnitt</strong> — und meine Expertise sind <strong>Texturen</strong>. Von fein und glatt über asiatisches Haar bis zu Locken und krausem Haar: Jede Struktur hat ihren eigenen Rhythmus, ihre eigene Schönheit. Und jede verdient, verstanden zu werden — nicht in eine fremde Form gezwungen.</p>
+  <div class="spectrum"><span>Fein</span><i></i><span>Glatt</span><i></i><span>Asiatisch</span><i></i><span>Wellig</span><i></i><span>Lockig</span><i></i><span>Kraus</span></div>
+  <p class="body">Dein Haar trägt deine Herkunft, deine Kultur, deinen Ausdruck. Bei mir musst du dich nicht anpassen, um schön zu sein — das, was dich ausmacht, wird zum Ausgangspunkt.</p>
+  <div class="imgband" style="background-image:url('assets/pre_texture.jpg');height:50mm"></div>
   <div class="footer"><span>Dein Haar, deine Geschichte</span><span>07</span></div>
 </section>
 
@@ -427,7 +441,13 @@
   <div class="bmotif"><span class="c"></span><span class="s"></span><span class="t"></span><span class="l"></span></div>
   <h2 style="font-size:19pt;margin-bottom:3mm">Deine Produkte</h2>
   <p class="qhint" style="font-size:8.4pt;margin-bottom:3mm">Pflege ist die halbe Miete. Hier halten wir gemeinsam fest, was wirklich zu deinem Haar passt — ehrlich und auf das Nötige reduziert.</p>
-  <p class="body" style="font-size:9pt;margin-bottom:5mm;max-width:none">Ich arbeite mit <strong>Davines</strong> und <strong>Kevin&nbsp;Murphy</strong> — zwei Häusern, die für wirksame Pflege und Verantwortung gegenüber Mensch und Natur stehen. Schön für dein Haar, schonend zur Welt.</p>
+  <p class="body" style="font-size:9pt;margin-bottom:4mm;max-width:none">Ich arbeite mit zwei Häusern, die für wirksame Pflege und Verantwortung gegenüber Mensch und Natur stehen — schön für dein Haar, schonend zur Welt:</p>
+  <div class="partner">
+    <span class="plab">In Zusammenarbeit mit</span>
+    <span class="wm-davines">davines</span>
+    <span class="sep"></span>
+    <span class="wm-km">KEVIN.MURPHY</span>
+  </div>
   <div class="prod-grid">
     <div class="prod-item"><div class="lab"><span class="num">01</span>Shampoo</div><div class="recline"></div></div>
     <div class="prod-item"><div class="lab"><span class="num">02</span>Spülung / Conditioner</div><div class="recline"></div></div>
