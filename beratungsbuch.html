@@ -94,12 +94,53 @@
   .backcover .pre{ font-weight:900; font-size:46pt; letter-spacing:-.03em; color:var(--paper); }
   .backcover .meta{ margin-top:8mm; font-size:7.5pt; letter-spacing:.3em; text-transform:uppercase; color:#b9c4c1; line-height:2; }
   .backcover .dot{ color:var(--petrol-soft); }
+
+  /* ---------- Bauhaus-Motive ---------- */
+  .bmotif{ display:flex; align-items:center; gap:2.6mm; margin:5mm 0; }
+  .bmotif .c{ width:3.6mm; height:3.6mm; border-radius:50%; background:var(--petrol); }
+  .bmotif .s{ width:3.2mm; height:3.2mm; background:var(--ink); }
+  .bmotif .t{ width:0; height:0; border-left:1.9mm solid transparent; border-right:1.9mm solid transparent;
+              border-bottom:3.4mm solid var(--petrol); }
+  .bmotif .l{ width:11mm; height:2px; background:var(--ink); }
+  /* dekorative Hintergrund-Geometrie */
+  .geo{ position:absolute; pointer-events:none; }
+  .geo-ring{ border-radius:50%; border:2px solid var(--petrol); }
+  .geo-disc{ border-radius:50%; background:var(--petrol); }
+  .geo-quarter{ background:var(--petrol); border-bottom-right-radius:100%; }
+  .geo-sq{ background:var(--ink); }
+  .geo-tri{ width:0; height:0; }
+
+  /* ---------- PRE – der Name ---------- */
+  .name-grid{ display:grid; grid-template-columns:1fr 1fr; gap:5mm 7mm; margin-top:2mm; }
+  .facet{ position:relative; padding-left:8mm; }
+  .facet .gm{ position:absolute; left:0; top:1mm; }
+  .facet .gm.c{ width:4.2mm;height:4.2mm;border-radius:50%;background:var(--petrol); }
+  .facet .gm.s{ width:4mm;height:4mm;background:var(--ink); }
+  .facet .gm.t{ width:0;height:0;border-left:2.3mm solid transparent;border-right:2.3mm solid transparent;border-bottom:4.2mm solid var(--petrol); }
+  .facet .gm.r{ width:4.2mm;height:4.2mm;border-radius:50%;border:1.6px solid var(--ink); }
+  .facet .fw{ font-weight:900; font-size:13pt; text-transform:uppercase; letter-spacing:.01em; line-height:1; }
+  .facet .ft{ font-weight:300; font-size:8.6pt; line-height:1.4; margin-top:1.6mm; color:#48453e; }
+  .facet .ft em{ font-style:italic; color:var(--petrol); }
+  .backstage{ margin-top:auto; background:var(--petrol); color:var(--paper);
+              padding:7mm 8mm; width:calc(100% + 30mm); margin-left:-15mm; }
+  .backstage .bq{ font-weight:900; font-size:16pt; line-height:1.08; text-transform:uppercase; letter-spacing:-.01em; }
+  .backstage .bs{ font-weight:300; font-size:9pt; line-height:1.5; margin-top:3mm; color:#cfe0dd; max-width:100mm; }
+
+  /* ---------- Produktberatung ---------- */
+  .prod-grid{ display:grid; grid-template-columns:1fr 1fr; gap:4mm 8mm; }
+  .prod-item .lab{ font-weight:700; font-size:8.4pt; letter-spacing:.12em; text-transform:uppercase; }
+  .prod-item .lab .num{ color:var(--petrol); margin-right:2mm; }
+  .recline{ border-bottom:1px solid var(--line); height:5mm; margin-top:1mm; }
+  .routinebox{ border:1.4px solid var(--petrol); padding:5mm 5.5mm; margin-top:6mm; }
+  .routinebox .rt{ font-weight:700; font-size:8pt; letter-spacing:.16em; text-transform:uppercase; color:var(--petrol); margin-bottom:3mm; }
 </style>
 </head>
 <body>
 
 <!-- 1 · COVER -->
 <section class="page cover">
+  <div class="geo geo-disc" style="width:14mm;height:14mm;top:20mm;right:15mm"></div>
+  <div class="geo geo-ring" style="width:9mm;height:9mm;top:42mm;right:30mm"></div>
   <div class="top">
     <div class="pre">PRE</div>
     <div class="sub">Die Kunst, dich zu sehen</div>
@@ -113,6 +154,9 @@
 
 <!-- 2 · MANIFEST -->
 <section class="page manifest">
+  <div class="geo geo-ring" style="width:46mm;height:46mm;top:-12mm;right:-10mm"></div>
+  <div class="geo geo-disc" style="width:9mm;height:9mm;bottom:34mm;left:15mm"></div>
+  <div class="geo geo-sq" style="width:7mm;height:7mm;bottom:30mm;left:28mm"></div>
   <div class="kicker">Manifest</div>
   <div class="spacer" style="max-height:14mm"></div>
   <h1 class="title manifest" >Haar ist kein&nbsp;Trend.<br><span class="pet">Es ist eine Entscheidung.</span></h1>
@@ -125,7 +169,7 @@
   <div class="head" style="display:flex;gap:6mm;align-items:baseline">
     <span class="chapno">01</span><span class="kicker">Willkommen</span>
   </div>
-  <div class="rule"></div>
+  <div class="bmotif"><span class="c"></span><span class="s"></span><span class="t"></span><span class="l"></span></div>
   <h2>Schön, dass<br>du da bist.</h2>
   <p class="body">Bevor wir auch nur eine Strähne berühren, möchte ich dich kennenlernen.</p>
   <p class="body">Denn ein Haarschnitt beginnt nicht mit der Schere. Er beginnt mit einem Blick, einem Gespräch, einem Moment des Zuhörens. Er beginnt mit dir.</p>
@@ -134,17 +178,27 @@
 </section>
 
 <!-- 4 · PRE – DER NAME -->
-<section class="page">
+<section class="page" style="padding-bottom:0">
+  <div class="geo geo-ring" style="width:34mm;height:34mm;top:118mm;right:14mm"></div>
+  <div class="geo geo-sq" style="width:9mm;height:9mm;top:131mm;right:42mm"></div>
+  <div class="geo geo-tri" style="border-left:5mm solid transparent;border-right:5mm solid transparent;border-bottom:9mm solid var(--petrol);top:120mm;left:16mm"></div>
   <div class="head" style="display:flex;gap:6mm;align-items:baseline">
     <span class="chapno">02</span><span class="kicker">PRE — der Name</span>
   </div>
-  <div class="rule"></div>
-  <h2>Ein Name,<br>der <span class="pet">schneidet.</span></h2>
-  <p class="body">Jeder Name trägt eine Geschichte. Meiner trägt meine Wurzeln.</p>
-  <p class="body"><strong>PRE</strong> bedeutet in meiner Muttersprache, dem Albanischen, <strong>„schneiden"</strong>.</p>
-  <p class="body">Ein kleines Wort — und doch sagt es alles über das, was ich tue. Es erinnert mich jeden Tag daran, woher ich komme, und daran, dass jeder Schnitt Bedeutung trägt. Kein Schnitt ist beiläufig. Keiner ist zufällig.</p>
-  <p class="body">Aus diesem einen Wort wurde ein Versprechen: <em>Art of Hair</em> — die Kunst des Haares. Handwerk und Herkunft, in einem Namen vereint.</p>
-  <div class="footer"><span>PRE — der Name</span><span>03</span></div>
+  <div class="bmotif"><span class="c"></span><span class="s"></span><span class="t"></span><span class="l"></span></div>
+  <h2 style="margin-bottom:3mm">Mehr als<br>ein <span class="pet">Schnitt.</span></h2>
+  <p class="body" style="font-size:9.6pt;margin-bottom:5mm">In meiner Muttersprache, dem Albanischen, bedeutet <strong>PRE „schneiden"</strong>. Doch PRE ist auch die Silbe des Anfangs — alles, was <em>davor</em> kommt:</p>
+  <div class="name-grid">
+    <div class="facet"><span class="gm c"></span><div class="fw">Vorbereiten</div><div class="ft"><em>pre-parare.</em> Bevor etwas Schönes entsteht.</div></div>
+    <div class="facet"><span class="gm s"></span><div class="fw">Precisione</div><div class="ft"><em>Präzision.</em> Jede Linie mit Bedacht gesetzt.</div></div>
+    <div class="facet"><span class="gm t"></span><div class="fw">Predigt</div><div class="ft"><em>Überzeugung.</em> Ich predige keine Trends — sondern Haltung.</div></div>
+    <div class="facet"><span class="gm r"></span><div class="fw">Schneiden</div><div class="ft"><em>pre.</em> Meine Wurzeln, in jedem Schnitt.</div></div>
+  </div>
+  <div class="backstage">
+    <div class="bq">PRE ist dein Backstage.<br>Dein Leben ist die Bühne.</div>
+    <div class="bs">Was hier passiert, passiert hinter dem Vorhang — Vorbereitung, Präzision, Haltung. Damit du draußen strahlst.</div>
+  </div>
+  <div class="footer" style="bottom:5mm;color:#cfe0dd"><span>PRE — der Name</span><span>03</span></div>
 </section>
 
 <!-- 5 · FOTO (Philosophie-Auftakt) -->
@@ -158,7 +212,7 @@
   <div class="head" style="display:flex;gap:6mm;align-items:baseline">
     <span class="chapno">03</span><span class="kicker">Meine Philosophie</span>
   </div>
-  <div class="rule"></div>
+  <div class="bmotif"><span class="c"></span><span class="s"></span><span class="t"></span><span class="l"></span></div>
   <p class="lead">Ich liebe den Moment, in dem sich ein Mensch im Spiegel ansieht — und sich schön findet.</p>
   <p class="body" style="margin-top:5mm">Denn wer sich schön fühlt, startet anders in den Tag. Aufrechter. Leichter. Freier. Es ist, als würde ein Licht angehen, das vorher nur gedimmt war.</p>
   <p class="body">Für mich ist Haar niemals nur Haar. Es ist Leinwand und Sprache zugleich. Es erzählt, woran du glaubst, woher du kommst, wie du gesehen werden möchtest.</p>
@@ -171,7 +225,7 @@
   <div class="head" style="display:flex;gap:6mm;align-items:baseline">
     <span class="chapno">04</span><span class="kicker">Ich höre zuerst zu</span>
   </div>
-  <div class="rule"></div>
+  <div class="bmotif"><span class="c"></span><span class="s"></span><span class="t"></span><span class="l"></span></div>
   <h2>Erst sehen.<br>Dann schneiden.</h2>
   <p class="body">Die meisten Verwandlungen scheitern nicht an der Schere. Sie scheitern daran, dass niemand richtig zugehört hat.</p>
   <p class="body">Deshalb beginne ich anders. Ich frage. Ich schaue. Ich nehme mir Zeit — für deinen Alltag, deine Wünsche, und dafür, was wirklich zu deinem Leben passt.</p>
@@ -183,7 +237,7 @@
 <!-- 8 · MILLIMETERARBEIT (Split mit Foto) -->
 <section class="page split">
   <div class="head"><span class="chapno">05</span><span class="kicker">Millimeterarbeit</span></div>
-  <div class="rule"></div>
+  <div class="bmotif"><span class="c"></span><span class="s"></span><span class="t"></span><span class="l"></span></div>
   <h2>Der <span class="pet">Millimeter</span><br>macht alles.</h2>
   <p class="body">Es gibt einen Unterschied zwischen <em>schnell</em> und <em>richtig</em>. Ein Schnitt lebt von Linien, die das Auge nicht bewusst wahrnimmt — die aber alles verändern: wie das Haar fällt, wie es sich bewegt, wie es mit deinem Gesicht spricht.</p>
   <p class="body">Jede Linie folgt dem Kopf selbst, nicht äußeren Erwartungen. Kunst gibt die Idee. Das Handwerk macht sie haltbar.</p>
@@ -194,7 +248,7 @@
 <!-- 9 · DEIN HAAR, DEINE GESCHICHTE (Split) -->
 <section class="page split">
   <div class="head"><span class="chapno">06</span><span class="kicker">Dein Haar, deine Geschichte</span></div>
-  <div class="rule"></div>
+  <div class="bmotif"><span class="c"></span><span class="s"></span><span class="t"></span><span class="l"></span></div>
   <p class="body">Kein Haar gleicht dem anderen. Glatt, wellig, lockig, kraus — jede Struktur hat ihren eigenen Rhythmus, ihre eigene Schönheit. Und jede verdient, verstanden zu werden, nicht in eine fremde Form gezwungen.</p>
   <p class="body">Curly Hair und Afro-Texturen liegen mir besonders am Herzen. Sie sind kraftvoll, lebendig, voller Charakter — und brauchen ein Können, das ihre Eigenart feiert statt sie zu bändigen.</p>
   <p class="body">Dein Haar trägt deine Herkunft, deine Kultur, deinen Ausdruck. Bei mir musst du dich nicht anpassen, um schön zu sein. Bei mir wird das, was dich ausmacht, zum Ausgangspunkt.</p>
@@ -207,7 +261,7 @@
   <div class="head" style="display:flex;gap:6mm;align-items:baseline">
     <span class="chapno">07</span><span class="kicker">Dein Haar verstehen</span>
   </div>
-  <div class="rule"></div>
+  <div class="bmotif"><span class="c"></span><span class="s"></span><span class="t"></span><span class="l"></span></div>
   <h2 style="font-size:18pt;margin-bottom:4mm">Fragen an dich</h2>
   <p class="q-intro">Nimm dir ein paar Minuten und betrachte dein Haar mit neuen Augen. Es gibt keine falschen Antworten — nur deine. Bring dieses Buch gern mit zu unserem Termin.</p>
   <div class="qgrid">
@@ -266,7 +320,7 @@
   <div class="head" style="display:flex;gap:6mm;align-items:baseline">
     <span class="chapno">07</span><span class="kicker">Dein Haar verstehen</span>
   </div>
-  <div class="rule"></div>
+  <div class="bmotif"><span class="c"></span><span class="s"></span><span class="t"></span><span class="l"></span></div>
   <div class="qgrid">
     <div class="qblock">
       <div class="lab">Deine Geschichte</div>
@@ -320,7 +374,7 @@
   <div class="head" style="display:flex;gap:6mm;align-items:baseline">
     <span class="chapno">07</span><span class="kicker">Dein Haar verstehen</span>
   </div>
-  <div class="rule"></div>
+  <div class="bmotif"><span class="c"></span><span class="s"></span><span class="t"></span><span class="l"></span></div>
   <h2 style="font-size:18pt;margin-bottom:3mm">Dein Wunsch</h2>
   <p class="qhint" style="font-size:8.4pt;margin-bottom:6mm">Hier darfst du frei sein. Träum ruhig groß — den Weg dahin finden wir gemeinsam.</p>
   <div style="font-weight:500;font-size:8.5pt;letter-spacing:.04em;margin-bottom:1.5mm">Was stört dich aktuell an deinem Haar?</div>
@@ -339,7 +393,7 @@
   <div class="head" style="display:flex;gap:6mm;align-items:baseline">
     <span class="chapno">08</span><span class="kicker">Schönheit, die bleibt</span>
   </div>
-  <div class="rule"></div>
+  <div class="bmotif"><span class="c"></span><span class="s"></span><span class="t"></span><span class="l"></span></div>
   <h2>Gemacht,<br>um zu <span class="pet">bleiben.</span></h2>
   <p class="body">Ein schönes Ergebnis ist leicht für einen Tag. Die wahre Kunst ist, dass es bleibt.</p>
   <p class="body">Mir geht es nicht um den schnellen Effekt, der nach einer Woche verschwindet — sondern um Ergebnisse, die mit dir leben: die nachwachsen, ohne ihre Form zu verlieren, die sich pflegen lassen, ohne deinen Morgen zu rauben.</p>
@@ -352,7 +406,7 @@
   <div class="head" style="display:flex;gap:6mm;align-items:baseline">
     <span class="chapno">09</span><span class="kicker">PRE für zuhause</span>
   </div>
-  <div class="rule"></div>
+  <div class="bmotif"><span class="c"></span><span class="s"></span><span class="t"></span><span class="l"></span></div>
   <h2>PRE für<br>zuhause.</h2>
   <p class="body">Der Look entsteht im Salon. Gepflegt wird er bei dir. Du musst keine Expertin sein — du brauchst nur das Richtige für <em>dein</em> Haar und ein paar einfache Handgriffe, die ich dir zeige.</p>
   <div style="margin-top:5mm">
@@ -364,7 +418,35 @@
   <div class="footer"><span>PRE für zuhause</span><span>12</span></div>
 </section>
 
-<!-- 15 · FOTO -->
+<!-- 15 · PRODUKTBERATUNG (Arbeitsblatt) -->
+<section class="page">
+  <div class="geo geo-ring" style="width:30mm;height:30mm;top:-8mm;right:-6mm"></div>
+  <div class="head" style="display:flex;gap:6mm;align-items:baseline">
+    <span class="chapno">10</span><span class="kicker">Produktberatung</span>
+  </div>
+  <div class="bmotif"><span class="c"></span><span class="s"></span><span class="t"></span><span class="l"></span></div>
+  <h2 style="font-size:19pt;margin-bottom:3mm">Deine Produkte</h2>
+  <p class="qhint" style="font-size:8.4pt;margin-bottom:6mm">Pflege ist die halbe Miete. Hier halten wir gemeinsam fest, was wirklich zu deinem Haar passt — ehrlich und auf das Nötige reduziert.</p>
+  <div class="prod-grid">
+    <div class="prod-item"><div class="lab"><span class="num">01</span>Shampoo</div><div class="recline"></div></div>
+    <div class="prod-item"><div class="lab"><span class="num">02</span>Spülung / Conditioner</div><div class="recline"></div></div>
+    <div class="prod-item"><div class="lab"><span class="num">03</span>Maske / Treatment</div><div class="recline"></div></div>
+    <div class="prod-item"><div class="lab"><span class="num">04</span>Leave-in / Pflege</div><div class="recline"></div></div>
+    <div class="prod-item"><div class="lab"><span class="num">05</span>Styling (Creme/Gel/Öl)</div><div class="recline"></div></div>
+    <div class="prod-item"><div class="lab"><span class="num">06</span>Hitzeschutz</div><div class="recline"></div></div>
+    <div class="prod-item"><div class="lab"><span class="num">07</span>Tools (Bürste/Diffusor)</div><div class="recline"></div></div>
+    <div class="prod-item"><div class="lab"><span class="num">08</span>Mein Extra-Tipp</div><div class="recline"></div></div>
+  </div>
+  <div class="routinebox">
+    <div class="rt">Deine Routine</div>
+    <div class="opt"><span class="box"></span>Waschen: <span style="display:inline-block;border-bottom:1px solid var(--line);width:14mm;margin:0 2mm">&nbsp;</span> × pro Woche</div>
+    <div class="opt" style="margin-top:1.5mm"><span class="box"></span>Maske / Kur: <span style="display:inline-block;border-bottom:1px solid var(--line);width:14mm;margin:0 2mm">&nbsp;</span> × pro Woche</div>
+    <div class="opt" style="margin-top:1.5mm"><span class="box"></span>Nächster Termin in <span style="display:inline-block;border-bottom:1px solid var(--line);width:14mm;margin:0 2mm">&nbsp;</span> Wochen</div>
+  </div>
+  <div class="footer"><span>Produktberatung</span><span>13</span></div>
+</section>
+
+<!-- 16 · FOTO -->
 <section class="page photo-full">
   <div class="img" style="background-image:url('assets/pre_invitation.jpg');background-position:center 20%"></div>
   <div class="caption">Komm so, wie du bist</div>
@@ -373,14 +455,14 @@
 <!-- 16 · EINE EINLADUNG -->
 <section class="page">
   <div class="head" style="display:flex;gap:6mm;align-items:baseline">
-    <span class="chapno">10</span><span class="kicker">Eine Einladung</span>
+    <span class="chapno">11</span><span class="kicker">Eine Einladung</span>
   </div>
-  <div class="rule"></div>
+  <div class="bmotif"><span class="c"></span><span class="s"></span><span class="t"></span><span class="l"></span></div>
   <p class="lead">Ein Schnitt ist ein Moment.<br>Vertrauen ist eine Geschichte, die wächst.</p>
   <p class="body" style="margin-top:5mm">Ich freue mich darauf, deine kennenzulernen — und sie über die Zeit mit dir weiterzuschreiben. Komm mit deinen Wünschen, deinen Zweifeln, deinen Ideen. Komm so, wie du bist. Den Rest gestalten wir gemeinsam.</p>
   <p class="body">Bis dahin: Sieh dich im Spiegel an. Und denk daran, wie schön es ist, sich schön zu fühlen.</p>
   <div class="sign">Deine Zyhra</div>
-  <div class="footer"><span>Eine Einladung</span><span>13</span></div>
+  <div class="footer"><span>Eine Einladung</span><span>14</span></div>
 </section>
 
 <!-- 17 · RÜCKSEITE -->
