@@ -51,7 +51,7 @@
   /* ---------- Cover ---------- */
   .cover{ background:var(--paper); justify-content:flex-start; padding:0; }
   .cover .top{ padding:18mm 15mm 0; }
-  .cover .pre{ font-weight:900; font-size:74pt; letter-spacing:-.03em; line-height:.8; color:var(--ink); }
+  .cover .logo{ width:38mm; height:38mm; display:block; }
   .cover .sub{ margin-top:7mm; font-weight:500; font-size:8.5pt; letter-spacing:.34em; text-transform:uppercase; color:var(--petrol); }
   .cover .img{ flex:1; margin:11mm 15mm 0; background-size:cover; background-position:center 18%;
                border-top:2px solid var(--petrol); }
@@ -90,10 +90,10 @@
   .sign{ font-weight:900; font-size:16pt; color:var(--petrol); margin-top:6mm; text-transform:uppercase; letter-spacing:.02em; }
 
   /* ---------- Rückseite ---------- */
-  .backcover{ background:var(--ink); color:var(--paper); align-items:center; justify-content:center; text-align:center; }
-  .backcover .pre{ font-weight:900; font-size:46pt; letter-spacing:-.03em; color:var(--paper); }
-  .backcover .meta{ margin-top:8mm; font-size:7.5pt; letter-spacing:.3em; text-transform:uppercase; color:#b9c4c1; line-height:2; }
-  .backcover .dot{ color:var(--petrol-soft); }
+  .backcover{ background:var(--paper); color:var(--ink); align-items:center; justify-content:center; text-align:center; }
+  .backcover .logo{ width:34mm; height:34mm; }
+  .backcover .meta{ margin-top:9mm; font-size:7.5pt; letter-spacing:.3em; text-transform:uppercase; color:#6b675f; line-height:2; }
+  .backcover .dot{ color:var(--petrol); }
 
   /* ---------- Bauhaus-Motive ---------- */
   .bmotif{ display:flex; align-items:center; gap:2.6mm; margin:5mm 0; }
@@ -139,10 +139,10 @@
 
 <!-- 1 · COVER -->
 <section class="page cover">
-  <div class="geo geo-disc" style="width:14mm;height:14mm;top:20mm;right:15mm"></div>
-  <div class="geo geo-ring" style="width:9mm;height:9mm;top:42mm;right:30mm"></div>
+  <div class="geo geo-sq" style="width:8mm;height:8mm;top:24mm;right:16mm"></div>
+  <div class="geo geo-tri" style="border-left:4mm solid transparent;border-right:4mm solid transparent;border-bottom:7mm solid var(--petrol);top:40mm;right:18mm"></div>
   <div class="top">
-    <div class="pre">PRE</div>
+    <img class="logo" src="assets/pre_logo.png" alt="PRE" />
     <div class="sub">Die Kunst, dich zu sehen</div>
   </div>
   <div class="img" style="background-image:url('assets/pre_cover.jpg')"></div>
@@ -191,7 +191,7 @@
   <div class="name-grid">
     <div class="facet"><span class="gm c"></span><div class="fw">Vorbereiten</div><div class="ft"><em>pre-parare.</em> Bevor etwas Schönes entsteht.</div></div>
     <div class="facet"><span class="gm s"></span><div class="fw">Precisione</div><div class="ft"><em>Präzision.</em> Jede Linie mit Bedacht gesetzt.</div></div>
-    <div class="facet"><span class="gm t"></span><div class="fw">Predigt</div><div class="ft"><em>Überzeugung.</em> Ich predige keine Trends — sondern Haltung.</div></div>
+    <div class="facet"><span class="gm t"></span><div class="fw">Haltung</div><div class="ft"><em>Überzeugung.</em> Keine Trends — sondern echte Haltung.</div></div>
     <div class="facet"><span class="gm r"></span><div class="fw">Schneiden</div><div class="ft"><em>pre.</em> Meine Wurzeln, in jedem Schnitt.</div></div>
   </div>
   <div class="backstage">
@@ -426,7 +426,8 @@
   </div>
   <div class="bmotif"><span class="c"></span><span class="s"></span><span class="t"></span><span class="l"></span></div>
   <h2 style="font-size:19pt;margin-bottom:3mm">Deine Produkte</h2>
-  <p class="qhint" style="font-size:8.4pt;margin-bottom:6mm">Pflege ist die halbe Miete. Hier halten wir gemeinsam fest, was wirklich zu deinem Haar passt — ehrlich und auf das Nötige reduziert.</p>
+  <p class="qhint" style="font-size:8.4pt;margin-bottom:3mm">Pflege ist die halbe Miete. Hier halten wir gemeinsam fest, was wirklich zu deinem Haar passt — ehrlich und auf das Nötige reduziert.</p>
+  <p class="body" style="font-size:9pt;margin-bottom:5mm;max-width:none">Ich arbeite mit <strong>Davines</strong> und <strong>Kevin&nbsp;Murphy</strong> — zwei Häusern, die für wirksame Pflege und Verantwortung gegenüber Mensch und Natur stehen. Schön für dein Haar, schonend zur Welt.</p>
   <div class="prod-grid">
     <div class="prod-item"><div class="lab"><span class="num">01</span>Shampoo</div><div class="recline"></div></div>
     <div class="prod-item"><div class="lab"><span class="num">02</span>Spülung / Conditioner</div><div class="recline"></div></div>
@@ -467,7 +468,8 @@
 
 <!-- 17 · RÜCKSEITE -->
 <section class="page backcover">
-  <div class="pre">PRE</div>
+  <div class="geo geo-ring" style="width:50mm;height:50mm;bottom:-16mm;left:-14mm;border-color:var(--line)"></div>
+  <img class="logo" src="assets/pre_logo.png" alt="PRE" />
   <div class="meta">
     Art of Hair<br>
     München · Glockenbachviertel<br>
