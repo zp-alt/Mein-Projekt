@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>PRE — Die Kunst, dich zu sehen</title>
+<meta name="theme-color" content="#11514c" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="apple-mobile-web-app-title" content="PRE" />
+<style>
+  @font-face{font-family:"Roboto";font-weight:300;src:url("assets/fonts/Roboto-Light.ttf")}
+  @font-face{font-family:"Roboto";font-weight:400;src:url("assets/fonts/Roboto-Regular.ttf")}
+  @font-face{font-family:"Roboto";font-weight:500;src:url("assets/fonts/Roboto-Medium.ttf")}
+  @font-face{font-family:"Roboto";font-weight:700;src:url("assets/fonts/Roboto-Bold.ttf")}
+  @font-face{font-family:"Roboto";font-weight:900;src:url("assets/fonts/Roboto-Black.ttf")}
+
+  :root{
+    --ink:#1a1a1a; --paper:#faf8f4; --petrol:#11514c; --petrol-soft:#5d8b86; --line:#ddd8cd;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
+  html{scroll-behavior:smooth}
+  body{font-family:"Roboto",system-ui,sans-serif;background:var(--paper);color:var(--ink);
+       line-height:1.6;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:560px;margin:0 auto;background:var(--paper);min-height:100vh}
+  section{padding:34px 24px}
+  .pet{color:var(--petrol)}
+  .kicker{font-weight:500;font-size:11px;letter-spacing:.32em;text-transform:uppercase;color:var(--petrol)}
+  h1{font-weight:900;font-size:34px;line-height:1.02;letter-spacing:-.02em;text-transform:uppercase}
+  h2{font-weight:900;font-size:25px;line-height:1.05;letter-spacing:-.01em;text-transform:uppercase;margin:14px 0}
+  p{font-weight:300;font-size:16px;margin:10px 0}
+  p strong{font-weight:700}
+  em{color:var(--petrol);font-style:italic}
+  .bmotif{display:flex;align-items:center;gap:9px;margin:14px 0}
+  .bmotif .c{width:13px;height:13px;border-radius:50%;background:var(--petrol)}
+  .bmotif .s{width:12px;height:12px;background:var(--ink)}
+  .bmotif .t{width:0;height:0;border-left:7px solid transparent;border-right:7px solid transparent;border-bottom:12px solid var(--petrol)}
+  .bmotif .l{width:40px;height:2px;background:var(--ink)}
+
+  .hero{background:var(--paper);padding:0}
+  .hero .head{padding:40px 24px 18px;display:flex;flex-direction:column;align-items:flex-start}
+  .hero img.logo{width:108px;height:108px}
+  .hero .sub{margin-top:16px;font-weight:500;font-size:12px;letter-spacing:.3em;text-transform:uppercase;color:var(--petrol)}
+  .hero .photo{width:100%;height:58vh;min-height:360px;object-fit:cover;display:block;border-top:3px solid var(--petrol)}
+  .hero .scroll{padding:16px 24px 30px;font-size:11px;letter-spacing:.28em;text-transform:uppercase;color:var(--petrol-soft);text-align:center}
+
+  .photo-band{width:100%;height:300px;object-fit:cover;display:block}
+  .quote{font-weight:300;font-size:20px;line-height:1.35;color:var(--petrol);margin:8px 0}
+
+  .facets{display:grid;grid-template-columns:1fr 1fr;gap:18px 16px;margin:18px 0}
+  .facet{position:relative;padding-left:26px}
+  .facet .gm{position:absolute;left:0;top:4px}
+  .facet .gm.c{width:15px;height:15px;border-radius:50%;background:var(--petrol)}
+  .facet .gm.s{width:14px;height:14px;background:var(--ink)}
+  .facet .gm.t{width:0;height:0;border-left:8px solid transparent;border-right:8px solid transparent;border-bottom:15px solid var(--petrol)}
+  .facet .gm.r{width:15px;height:15px;border-radius:50%;border:2px solid var(--ink)}
+  .facet b{font-weight:900;font-size:16px;text-transform:uppercase;display:block}
+  .facet small{font-weight:300;font-size:13px;color:#55524a;line-height:1.4;display:block;margin-top:3px}
+  .backstage{background:var(--petrol);color:var(--paper);padding:26px 24px;margin:22px -24px 0}
+  .backstage .bq{font-weight:900;font-size:21px;line-height:1.1;text-transform:uppercase}
+  .backstage .bs{font-weight:300;font-size:14px;color:#cfe0dd;margin-top:10px}
+
+  .spectrum{display:flex;flex-wrap:wrap;gap:8px;margin:16px 0}
+  .spectrum span{font-weight:700;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--petrol);
+                 border:1px solid var(--petrol);border-radius:40px;padding:6px 13px}
+
+  .q{padding-top:30px}
+  .qcard{margin:0 0 26px}
+  .qcard .lab{font-weight:700;font-size:14px;letter-spacing:.1em;text-transform:uppercase;
+              border-bottom:1px solid var(--line);padding-bottom:8px;margin-bottom:6px}
+  .qcard .hint{font-weight:300;font-style:italic;font-size:13px;color:#7a766c;margin:6px 0 12px}
+  .chips{display:flex;flex-wrap:wrap;gap:9px}
+  .chip{font-size:15px;font-weight:400;padding:11px 16px;border:1.5px solid var(--line);border-radius:40px;
+        cursor:pointer;user-select:none;transition:.15s;background:#fff}
+  .chip:active{transform:scale(.97)}
+  .chip.sel{background:var(--petrol);border-color:var(--petrol);color:#fff;font-weight:500}
+  textarea,input[type=text],input[type=date]{width:100%;font-family:inherit;font-size:16px;font-weight:300;
+        border:none;border-bottom:1.5px solid var(--line);background:transparent;padding:11px 2px;color:var(--ink);
+        margin-top:6px;resize:vertical}
+  textarea:focus,input:focus{outline:none;border-bottom-color:var(--petrol)}
+  .field-label{font-weight:500;font-size:14px;letter-spacing:.04em;margin-top:20px;display:block}
+
+  .panel{background:#fff;border:1.5px solid var(--petrol);border-radius:14px;padding:20px;margin-top:16px}
+  .panel .pt{font-weight:700;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--petrol);margin-bottom:10px}
+  .row2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  .histlist{margin-top:14px}
+  .hist{border-left:3px solid var(--petrol);padding:4px 0 4px 14px;margin:14px 0}
+  .hist .hd{font-weight:700;font-size:13px;color:var(--petrol);letter-spacing:.04em}
+  .hist .ht{font-weight:300;font-size:15px;margin-top:2px;white-space:pre-wrap}
+  .hist .del{float:right;color:#b9b3a6;font-size:12px;cursor:pointer;letter-spacing:.1em}
+  .addbtn{margin-top:14px;background:none;border:1.5px dashed var(--petrol-soft);color:var(--petrol);
+          font-family:inherit;font-weight:500;font-size:14px;padding:12px;border-radius:10px;width:100%;cursor:pointer;letter-spacing:.04em}
+
+  .partner{border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:22px 0;margin:18px 0;
+           display:flex;align-items:center;justify-content:center;gap:22px;text-align:center}
+  .wm-davines{font-weight:300;font-size:24px;letter-spacing:.04em}
+  .wm-km{font-family:"Liberation Serif",Georgia,serif;font-size:19px;letter-spacing:.12em}
+  .partner .sep{width:1px;height:30px;background:var(--line)}
+  .plabel{font-weight:500;font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:var(--petrol-soft);text-align:center;margin-bottom:14px}
+
+  .cta{position:sticky;bottom:0;background:linear-gradient(transparent,var(--paper) 24%);padding:22px 24px calc(22px + env(safe-area-inset-bottom));}
+  .send{display:block;width:100%;background:var(--petrol);color:#fff;border:none;font-family:inherit;font-weight:700;
+        font-size:16px;letter-spacing:.06em;text-transform:uppercase;padding:18px;border-radius:14px;cursor:pointer}
+  .send:active{opacity:.9}
+  .saved{text-align:center;font-size:12px;color:var(--petrol-soft);margin-top:10px;letter-spacing:.08em}
+
+  footer{background:var(--ink);color:#b9c4c1;text-align:center;padding:40px 24px calc(40px + env(safe-area-inset-bottom))}
+  footer img{width:78px;height:78px;filter:invert(1) brightness(1.4)}
+  footer .meta{font-size:11px;letter-spacing:.28em;text-transform:uppercase;line-height:2.2;margin-top:16px}
+  .tip{background:#efece4;border-radius:12px;padding:16px 18px;margin-top:18px;font-size:13px;color:#55524a;font-weight:300}
+  .tip b{color:var(--petrol)}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="hero">
+    <div class="head">
+      <img class="logo" src="assets/pre_logo.png" alt="PRE" />
+      <div class="sub">Die Kunst, dich zu sehen</div>
+    </div>
+    <img class="photo" src="assets/pre_cover.jpg" alt="" />
+    <div class="scroll">Willkommen · nach unten wischen</div>
+  </header>
+
+  <section>
+    <div class="kicker">Manifest</div>
+    <h1 style="margin-top:14px">Haar ist kein&nbsp;Trend.<br><span class="pet">Es ist eine Entscheidung.</span></h1>
+    <p>Bevor wir auch nur eine Strähne berühren, möchte ich dich kennenlernen. Nimm dir ein paar Minuten — fülle aus, was du magst. Der Rest entsteht gemeinsam beim Termin.</p>
+  </section>
+
+  <section>
+    <div class="kicker">PRE — der Name</div>
+    <div class="bmotif"><span class="c"></span><span class="s"></span><span class="t"></span><span class="l"></span></div>
+    <h2>Mehr als<br>ein <span class="pet">Schnitt.</span></h2>
+    <p>In meiner Muttersprache, dem Albanischen, bedeutet <strong>PRE „schneiden"</strong>. Doch PRE ist auch die Silbe des Anfangs — alles, was <em>davor</em> kommt:</p>
+    <div class="facets">
+      <div class="facet"><span class="gm c"></span><b>Vorbereiten</b><small><em>pre-parare.</em> Bevor etwas Schönes entsteht.</small></div>
+      <div class="facet"><span class="gm s"></span><b>Precisione</b><small><em>Präzision.</em> Jede Linie mit Bedacht.</small></div>
+      <div class="facet"><span class="gm t"></span><b>Haltung</b><small><em>Überzeugung.</em> Keine Trends — echte Haltung.</small></div>
+      <div class="facet"><span class="gm r"></span><b>Schneiden</b><small><em>pre.</em> Meine Wurzeln, in jedem Schnitt.</small></div>
+    </div>
+    <div class="backstage">
+      <div class="bq">PRE ist dein Backstage.<br>Dein Leben ist die Bühne.</div>
+      <div class="bs">Was hier passiert, passiert hinter dem Vorhang — damit du draußen strahlst.</div>
+    </div>
+  </section>
+
+  <img class="photo-band" src="assets/pre_philosophy.jpg" alt="" />
+
+  <section>
+    <div class="kicker">Meine Expertise</div>
+    <div class="bmotif"><span class="c"></span><span class="s"></span><span class="t"></span><span class="l"></span></div>
+    <h2>Schnitt ist mein Handwerk.</h2>
+    <p>Meine Spezialität ist der <strong>Schnitt</strong> — und meine Expertise sind <strong>Texturen</strong>. Von fein und glatt über asiatisches Haar bis zu Locken und krausem Haar: Jede Struktur hat ihren eigenen Rhythmus. Und jede verdient, verstanden zu werden — nicht in eine fremde Form gezwungen.</p>
+    <div class="spectrum">
+      <span>Fein</span><span>Glatt</span><span>Asiatisch</span><span>Wellig</span><span>Lockig</span><span>Kraus</span>
+    </div>
+  </section>
+
+  <section class="q" id="fragebogen">
+    <div class="kicker">Dein Haar verstehen</div>
+    <h2>Fragen an dich</h2>
+    <p style="margin-bottom:8px">Tippe an, was zutrifft — Mehrfachauswahl ist möglich. Es gibt keine falschen Antworten, nur deine.</p>
+
+    <div class="qcard" data-q="struktur" data-multi="0">
+      <div class="lab">Deine Struktur</div>
+      <div class="hint">Wie dein Haar lufttrocknet — ohne Hilfsmittel.</div>
+      <div class="chips">
+        <div class="chip">Glatt</div><div class="chip">Wellig</div><div class="chip">Lockig</div>
+        <div class="chip">Kraus / coily</div><div class="chip">Gemischt</div>
+      </div>
+    </div>
+
+    <div class="qcard" data-q="textur" data-multi="0">
+      <div class="lab">Deine Textur</div>
+      <div class="hint">Die Dicke einer einzelnen Strähne.</div>
+      <div class="chips"><div class="chip">Fein</div><div class="chip">Mittel</div><div class="chip">Kräftig / dick</div></div>
+    </div>
+
+    <div class="qcard" data-q="dichte" data-multi="0">
+      <div class="lab">Deine Dichte</div>
+      <div class="chips"><div class="chip">Eher dünn</div><div class="chip">Mittel</div><div class="chip">Sehr dicht</div></div>
+    </div>
+
+    <div class="qcard" data-q="kopfhaut" data-multi="1">
+      <div class="lab">Deine Kopfhaut</div>
+      <div class="chips"><div class="chip">Normal</div><div class="chip">Trocken</div><div class="chip">Fettig am Ansatz</div>
+        <div class="chip">Empfindlich</div><div class="chip">Schuppen</div></div>
+    </div>
+
+    <div class="qcard" data-q="alltag" data-multi="1">
+      <div class="lab">Im Alltag</div>
+      <div class="chips"><div class="chip">Wird schnell fettig</div><div class="chip">Trockene Spitzen</div>
+        <div class="chip">Kraust bei Feuchtigkeit</div><div class="chip">Verliert die Form</div><div class="chip">Schwer zu stylen</div></div>
+    </div>
+
+    <div class="qcard" data-q="geschichte" data-multi="1">
+      <div class="lab">Deine Geschichte</div>
+      <div class="hint">Frühere Behandlungen verändern, was heute möglich ist.</div>
+      <div class="chips"><div class="chip">Gefärbt / getönt</div><div class="chip">Blondiert</div>
+        <div class="chip">Dauerwelle / Glättung</div><div class="chip">Naturbelassen</div></div>
+    </div>
+
+    <div class="qcard" data-q="grau" data-multi="0">
+      <div class="lab">Graues Haar</div>
+      <div class="chips"><div class="chip">Keins</div><div class="chip">Erste graue Haare</div>
+        <div class="chip">Komplett abdecken</div><div class="chip">Bewusst tragen</div></div>
+    </div>
+
+    <div class="qcard" data-q="lebensstil" data-multi="1">
+      <div class="lab">Dein Lebensstil</div>
+      <div class="chips"><div class="chip">Viel Sport</div><div class="chip">Schwimmen</div><div class="chip">Viel Sonne</div>
+        <div class="chip">Mütze / Helm / Tuch</div><div class="chip">Oft zusammengebunden</div></div>
+    </div>
+
+    <div class="qcard" data-q="zeit" data-multi="0">
+      <div class="lab">Deine Zeit am Morgen</div>
+      <div class="chips"><div class="chip">Fast keine</div><div class="chip">5–10 Min</div><div class="chip">Styling gehört dazu</div></div>
+    </div>
+
+    <label class="field-label">Was stört dich aktuell an deinem Haar?</label>
+    <textarea data-q="stört" rows="2"></textarea>
+    <label class="field-label">Was liebst du an deinem Haar?</label>
+    <textarea data-q="liebe" rows="2"></textarea>
+    <label class="field-label">Wie möchtest du dich fühlen, wenn du gehst?</label>
+    <textarea data-q="gefühl" rows="2"></textarea>
+    <label class="field-label">Ein Vorbild oder Foto, das dich inspiriert?</label>
+    <textarea data-q="vorbild" rows="2"></textarea>
+  </section>
+
+  <img class="photo-band" src="assets/pre_curly.jpg" alt="" style="object-position:center 30%" />
+
+  <section>
+    <div class="kicker">Produktberatung</div>
+    <div class="bmotif"><span class="c"></span><span class="s"></span><span class="t"></span><span class="l"></span></div>
+    <h2>Pflege, die wirkt.</h2>
+    <p>Der Look entsteht im Salon — gepflegt wird er bei dir. Beim Termin halten wir gemeinsam fest, was wirklich zu deinem Haar passt.</p>
+    <div class="plabel" style="margin-top:24px">In Zusammenarbeit mit</div>
+    <div class="partner">
+      <span class="wm-davines">davines</span>
+      <span class="sep"></span>
+      <span class="wm-km">KEVIN.MURPHY</span>
+    </div>
+    <p style="font-size:14px;color:#55524a">Zwei Häuser, die für wirksame Pflege und Verantwortung gegenüber Mensch und Natur stehen — schön für dein Haar, schonend zur Welt.</p>
+  </section>
+
+  <section>
+    <div class="kicker">Mein Termin</div>
+    <div class="bmotif"><span class="c"></span><span class="s"></span><span class="t"></span><span class="l"></span></div>
+    <div class="panel">
+      <div class="pt">Dein gebuchter Termin</div>
+      <div class="row2">
+        <div><label class="field-label" style="margin-top:0">Datum</label><input type="date" data-q="termin_datum" /></div>
+        <div><label class="field-label" style="margin-top:0">Uhrzeit</label><input type="text" data-q="termin_zeit" placeholder="z. B. 14:30" /></div>
+      </div>
+      <label class="field-label">Wunsch / Ziel für diesen Termin</label>
+      <input type="text" data-q="termin_ziel" placeholder="z. B. Curly Cut, Beratung Farbe …" />
+    </div>
+  </section>
+
+  <section style="padding-top:8px">
+    <div class="panel">
+      <div class="pt">Was wurde gemacht — dein Verlauf</div>
+      <p style="font-size:13px;color:#7a766c;margin:0 0 6px">Hier hältst du (oder wir gemeinsam beim Termin) fest, was gemacht wurde — damit beim nächsten Mal alles dabei ist.</p>
+      <div class="histlist" id="histlist"></div>
+      <button class="addbtn" id="addHist">＋ Eintrag hinzufügen</button>
+    </div>
+    <div class="tip">💡 <b>Tipp:</b> Tippe im Browser-Menü auf „Zum Startbildschirm hinzufügen" — dann hast du dein PRE-Buch wie eine App immer dabei. Deine Eingaben bleiben auf diesem Gerät gespeichert.</div>
+  </section>
+
+  <footer>
+    <img src="assets/pre_logo.png" alt="PRE" />
+    <div class="meta">Art of Hair · München<br>Glockenbachviertel<br>preartofhair.com</div>
+  </footer>
+
+  <div class="cta">
+    <button class="send" id="sendBtn">Zusammenfassung an PRE senden</button>
+    <div class="saved" id="savedNote">Deine Eingaben werden automatisch gespeichert</div>
+  </div>
+
+</div>
+
+<script>
+  const KEY = "pre_book_v1";
+  const SALON_EMAIL = "zp@preartofhair.com";
+  let data = JSON.parse(localStorage.getItem(KEY) || "{}");
+  if(!data.choices) data.choices = {};
+  if(!data.fields)  data.fields  = {};
+  if(!data.history) data.history = [];
+
+  function save(){ localStorage.setItem(KEY, JSON.stringify(data)); flashSaved(); }
+  let st;
+  function flashSaved(){ const n=document.getElementById('savedNote');
+    n.textContent="✓ Gespeichert"; clearTimeout(st);
+    st=setTimeout(()=>n.textContent="Deine Eingaben werden automatisch gespeichert",1500); }
+
+  document.querySelectorAll('.qcard').forEach(card=>{
+    const q = card.dataset.q, multi = card.dataset.multi==="1";
+    const sel = data.choices[q] || [];
+    card.querySelectorAll('.chip').forEach(chip=>{
+      if(sel.includes(chip.textContent)) chip.classList.add('sel');
+      chip.addEventListener('click',()=>{
+        let cur = data.choices[q] || [];
+        const t = chip.textContent;
+        if(chip.classList.contains('sel')){
+          chip.classList.remove('sel'); cur = cur.filter(x=>x!==t);
+        } else {
+          if(!multi){ card.querySelectorAll('.chip').forEach(c=>c.classList.remove('sel')); cur=[]; }
+          chip.classList.add('sel'); cur.push(t);
+        }
+        data.choices[q]=cur; save();
+      });
+    });
+  });
+
+  document.querySelectorAll('[data-q]').forEach(el=>{
+    if(el.tagName==='TEXTAREA'||el.tagName==='INPUT'){
+      const q=el.dataset.q;
+      if(data.fields[q]) el.value=data.fields[q];
+      el.addEventListener('input',()=>{ data.fields[q]=el.value; save(); });
+    }
+  });
+
+  const histList=document.getElementById('histlist');
+  function renderHist(){
+    histList.innerHTML='';
+    if(data.history.length===0){
+      histList.innerHTML='<p style="font-size:14px;color:#a7a294;font-style:italic;margin:8px 0">Noch keine Einträge.</p>';
+    }
+    data.history.forEach((h,i)=>{
+      const d=document.createElement('div'); d.className='hist';
+      d.innerHTML='<span class="del" data-i="'+i+'">Löschen</span><div class="hd"></div><div class="ht"></div>';
+      d.querySelector('.hd').textContent=h.date||'';
+      d.querySelector('.ht').textContent=h.text||'';
+      histList.appendChild(d);
+    });
+    histList.querySelectorAll('.del').forEach(b=>b.addEventListener('click',()=>{
+      data.history.splice(+b.dataset.i,1); save(); renderHist();
+    }));
+  }
+  document.getElementById('addHist').addEventListener('click',()=>{
+    const today=new Date().toLocaleDateString('de-DE',{day:'2-digit',month:'long',year:'numeric'});
+    const date=prompt('Datum des Termins:',today); if(date===null) return;
+    const text=prompt('Was wurde gemacht? (Schnitt, Farbe, Pflege, Produkte …)'); if(text===null) return;
+    data.history.push({date,text}); save(); renderHist();
+  });
+  renderHist();
+
+  document.getElementById('sendBtn').addEventListener('click',()=>{
+    let L=["PRE — Mein Beratungsbogen","========================",""];
+    const labels={struktur:"Struktur",textur:"Textur",dichte:"Dichte",kopfhaut:"Kopfhaut",alltag:"Im Alltag",
+      geschichte:"Geschichte",grau:"Graues Haar",lebensstil:"Lebensstil",zeit:"Zeit am Morgen"};
+    for(const k in labels){ const v=(data.choices[k]||[]); if(v.length) L.push(labels[k]+": "+v.join(", ")); }
+    const tf={stört:"Stört mich",liebe:"Ich liebe",gefühl:"So will ich mich fühlen",vorbild:"Inspiration",
+      termin_datum:"Termin-Datum",termin_zeit:"Uhrzeit",termin_ziel:"Ziel"};
+    L.push("");
+    for(const k in tf){ if(data.fields[k]) L.push(tf[k]+": "+data.fields[k]); }
+    if(data.history.length){ L.push("","Verlauf:"); data.history.forEach(h=>L.push("• "+h.date+": "+h.text)); }
+    const body=encodeURIComponent(L.join("\n"));
+    const subject=encodeURIComponent("Mein PRE-Beratungsbogen"+(data.fields.termin_datum?" · "+data.fields.termin_datum:""));
+    window.location.href="mailto:"+SALON_EMAIL+"?subject="+subject+"&body="+body;
+  });
+</script>
+</body>
+</html>
