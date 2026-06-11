@@ -23,9 +23,10 @@ def spaced(x, y, text, font, size, space, color=BLACK):
     return x
 
 
-# ---------- Kopf / Wortmarke ----------
-spaced(M, H - 62, "PRE", "Helvetica-Bold", 34, 6)
-spaced(M, H - 80, "ART OF HAIR  ·  MÜNCHEN", "Helvetica", 9, 2.2, GRAY)
+# ---------- Kopf / Logo ----------
+c.drawImage("/home/user/Mein-Projekt/logo_pre.png", M, H - 94, width=64, height=64,
+            mask="auto", preserveAspectRatio=True)
+spaced(M + 78, H - 68, "ART OF HAIR  ·  MÜNCHEN", "Helvetica", 9.5, 2.4, GRAY)
 
 # Rechnungstitel + Meta rechts
 c.setFont("Helvetica-Bold", 24)
