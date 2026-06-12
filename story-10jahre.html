@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8"/>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@700;800;900&family=Cormorant+Garamond:ital,wght@1,300;1,400&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body {
+      width: 360px; height: 640px;
+      background: transparent;
+      font-family: 'Barlow', sans-serif;
+      overflow: hidden;
+    }
+    .story {
+      width: 360px; height: 640px;
+      padding: 48px 32px 44px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .brand {
+      font-weight: 700; font-size: 10px;
+      letter-spacing: 5px; text-transform: uppercase;
+      color: rgba(255,255,255,0.2);
+    }
+    .body {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+    .tag {
+      font-weight: 700; font-size: 11px;
+      letter-spacing: 4px; text-transform: uppercase;
+      color: rgba(255,255,255,0.35);
+    }
+    .big {
+      font-weight: 900; font-size: 52px;
+      line-height: 0.9; letter-spacing: -2px;
+      text-transform: uppercase; color: #fff;
+    }
+    .emoji-line {
+      font-size: 32px; line-height: 1;
+    }
+    .check {
+      font-weight: 800; font-size: 22px;
+      letter-spacing: -0.5px;
+      color: rgba(255,255,255,0.85);
+      text-transform: uppercase;
+    }
+    .divider {
+      width: 28px; height: 1px;
+      background: rgba(255,255,255,0.2);
+    }
+    .italic {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic; font-weight: 300;
+      font-size: 20px; line-height: 1.35;
+      color: rgba(255,255,255,0.65);
+      letter-spacing: 0.3px;
+    }
+    .bottom {
+      font-weight: 700; font-size: 10px;
+      letter-spacing: 5px; text-transform: uppercase;
+      color: rgba(255,255,255,0.12);
+    }
+  </style>
+</head>
+<body>
+<div class="story">
+  <div class="brand">PRE · Art of Hair</div>
+  <div class="body">
+    <div class="tag">Stammkunde</div>
+    <div class="big">10<br>JAHRE.</div>
+    <div class="emoji-line">🚀</div>
+    <div class="check">Faden ✅</div>
+    <div class="divider"></div>
+    <div class="italic">Nächstes Mal — endlich hab<br>ich ihn überzeugt einen<br>anderen Haarschnitt zu machen.</div>
+  </div>
+  <div class="bottom">München · PRE Art of Hair</div>
+</div>
+</body>
+</html>
