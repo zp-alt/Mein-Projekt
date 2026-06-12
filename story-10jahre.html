@@ -11,64 +11,86 @@
       font-family: 'Barlow', sans-serif;
       overflow: hidden;
     }
-    .story {
-      width: 360px; height: 640px;
-      padding: 48px 32px 44px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
+
+    /* Gradient unten — Text lesbar über jedem Video */
+    .gradient {
+      position: absolute;
+      left: 0; right: 0; bottom: 0;
+      height: 400px;
+      background: linear-gradient(to top,
+        rgba(0,0,0,0.78) 0%,
+        rgba(0,0,0,0.45) 55%,
+        transparent 100%);
     }
-    .brand {
+
+    /* PRE Logo oben links */
+    .logo {
+      position: absolute;
+      top: 26px; left: 28px;
       font-weight: 700; font-size: 10px;
       letter-spacing: 5px; text-transform: uppercase;
-      color: rgba(255,255,255,0.5);
+      color: rgba(255,255,255,0.45);
     }
-    .body {
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
+
+    /* Text Block unten */
+    .text-block {
+      position: absolute;
+      bottom: 42px; left: 28px; right: 28px;
     }
-    .line-italic {
+
+    .tag {
       font-family: 'Cormorant Garamond', serif;
       font-style: italic; font-weight: 300;
-      font-size: 26px;
-      color: rgba(255,255,255,0.5);
+      font-size: 20px;
+      color: rgba(255,255,255,0.6);
       letter-spacing: 0.5px;
-      line-height: 1.3;
+      margin-bottom: 8px;
     }
-    .line-big {
+
+    .main {
       font-weight: 900;
-      font-size: 46px;
-      line-height: 0.92;
-      letter-spacing: -1.5px;
-      text-transform: uppercase;
+      font-size: 52px;
+      line-height: 0.88;
+      letter-spacing: -2px;
       color: #fff;
+      text-transform: uppercase;
+      margin-bottom: 14px;
     }
-    .line-warm {
+
+    .faden {
       font-family: 'Cormorant Garamond', serif;
       font-style: italic; font-weight: 400;
       font-size: 22px;
-      color: rgba(255,255,255,0.6);
+      color: rgba(255,255,255,0.7);
       letter-spacing: 0.5px;
-      line-height: 1.4;
+      margin-bottom: 14px;
     }
-    .bottom {
-      font-weight: 700; font-size: 10px;
-      letter-spacing: 5px; text-transform: uppercase;
-      color: rgba(255,255,255,0.15);
+
+    .divider {
+      width: 28px; height: 1px;
+      background: rgba(255,255,255,0.3);
+      margin-bottom: 14px;
+    }
+
+    .accent {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic; font-weight: 300;
+      font-size: 18px;
+      color: rgba(255,255,255,0.6);
+      letter-spacing: 0.3px;
+      line-height: 1.45;
     }
   </style>
 </head>
 <body>
-<div class="story">
-  <div class="brand">PRE · Art of Hair</div>
-  <div class="body">
-    <div class="line-italic">Stammkunde seit</div>
-    <div class="line-big">10<br>JAHRE.</div>
-    <div class="line-warm">Faden.</div>
-    <div class="line-italic">Nächstes Mal — endlich hab<br>ich ihn überzeugt einen<br>anderen Haarschnitt zu machen.</div>
+  <div class="gradient"></div>
+  <div class="logo">PRE · Art of Hair</div>
+  <div class="text-block">
+    <div class="tag">Stammkunde seit</div>
+    <div class="main">10<br>Jahre.</div>
+    <div class="faden">Faden.</div>
+    <div class="divider"></div>
+    <div class="accent">Nächstes Mal — endlich hab<br>ich ihn überzeugt einen<br>anderen Haarschnitt zu machen.</div>
   </div>
-  <div class="bottom">München · PRE Art of Hair</div>
-</div>
 </body>
 </html>
