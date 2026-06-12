@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8"/>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@700;800;900&family=Cormorant+Garamond:ital,wght@1,300;1,400&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body {
+      width: 360px; height: 640px;
+      background: transparent;
+      font-family: 'Barlow', sans-serif;
+      overflow: hidden;
+    }
+
+    /* Subtiler Gradient unten — damit Text lesbar ist */
+    .gradient {
+      position: absolute;
+      left: 0; right: 0; bottom: 0;
+      height: 320px;
+      background: linear-gradient(to top,
+        rgba(0,0,0,0.72) 0%,
+        rgba(0,0,0,0.35) 55%,
+        transparent 100%);
+    }
+
+    /* PRE Logo oben rechts */
+    .logo {
+      position: absolute;
+      top: 26px; right: 26px;
+      font-weight: 700; font-size: 11px;
+      letter-spacing: 5px; text-transform: uppercase;
+      color: rgba(255,255,255,0.5);
+    }
+
+    /* Text Block unten */
+    .text-block {
+      position: absolute;
+      bottom: 38px; left: 28px; right: 28px;
+    }
+
+    .greeting {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic; font-weight: 300;
+      font-size: 22px;
+      color: rgba(255,255,255,0.7);
+      letter-spacing: 1px;
+      margin-bottom: 10px;
+    }
+
+    .main {
+      font-weight: 900;
+      font-size: 36px;
+      line-height: 1.0;
+      letter-spacing: -0.5px;
+      color: #fff;
+      text-transform: uppercase;
+    }
+
+    .accent {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic; font-weight: 400;
+      font-size: 28px;
+      color: rgba(255,255,255,0.85);
+      letter-spacing: 0.5px;
+      margin-top: 6px;
+      line-height: 1.2;
+      text-transform: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="gradient"></div>
+  <div class="logo">PRE</div>
+  <div class="text-block">
+    <div class="greeting">Guten Tag leude,</div>
+    <div class="main">Heute nur<br>schöne Mensch<br>an meinem Stuhl</div>
+    <div class="accent">freu mich soooooo ✦</div>
+  </div>
+</body>
+</html>
