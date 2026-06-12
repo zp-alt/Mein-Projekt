@@ -4,7 +4,7 @@ const path = require('path');
 (async () => {
   const browser = await chromium.launch();
   const page = await browser.newPage();
-  await page.setViewportSize({ width: 360, height: 640, deviceScaleFactor: 4 });
+  await page.setViewportSize({ width: 360, height: 640, deviceScaleFactor: 3 });
 
   const file = path.resolve(__dirname, 'story-look-girl.html');
   await page.goto('file://' + file);
