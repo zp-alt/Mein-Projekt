@@ -84,7 +84,32 @@
     .s3 .bottom-logo { position: absolute; bottom: 40px; left: 36px; font-weight: 700; font-size: 11px; letter-spacing: 4px; color: #333; }
 
     /* ══════════════════════════════════════
-       STORY 4 — Closer (Kalender + Beratungsbuch + Ciao)
+       STORY 4 — Kunden-Review (warm, persönlich)
+    ══════════════════════════════════════ */
+    .s5 { background: #0a0a0a; display: flex; flex-direction: column; justify-content: flex-end; }
+    .s5 .photo {
+      position: absolute; inset: 0;
+      background: url('zyhra-curls.png') center 22% / cover no-repeat;
+    }
+    .s5 .overlay {
+      position: absolute; inset: 0;
+      background: linear-gradient(to bottom, rgba(10,8,6,0.15) 0%, rgba(10,8,6,0.25) 38%, rgba(10,8,6,0.97) 100%);
+    }
+    .s5 .top-bar { position: absolute; top: 36px; left: 32px; right: 32px; display: flex; justify-content: space-between; align-items: center; z-index: 2; }
+    .s5 .logo { font-weight: 700; font-size: 11px; letter-spacing: 4px; color: rgba(255,255,255,0.55); text-transform: uppercase; }
+    .s5 .stars { font-size: 16px; letter-spacing: 2px; color: #f5c451; }
+    .s5 .content { position: relative; z-index: 2; padding: 0 32px 40px; }
+    .s5 .eyebrow { font-size: 9px; letter-spacing: 4px; text-transform: uppercase; color: #d9a441; margin-bottom: 14px; }
+    .s5 .review-quote {
+      font-family: 'Cormorant Garamond', serif; font-style: italic; font-weight: 400;
+      font-size: 27px; color: #fff; line-height: 1.32; letter-spacing: 0.2px;
+    }
+    .s5 .divider { width: 30px; height: 1px; background: rgba(255,255,255,0.25); margin: 20px 0 16px; }
+    .s5 .warm-note { font-size: 14px; font-weight: 400; color: rgba(255,255,255,0.6); line-height: 1.7; }
+    .s5 .warm-note b { color: #fff; font-weight: 600; }
+
+    /* ══════════════════════════════════════
+       STORY 5 — Closer (Kalender + Beratungsbuch + Ciao)
     ══════════════════════════════════════ */
     .s4 { background: #111; display: flex; flex-direction: column; justify-content: space-between; padding: 44px 36px 44px; }
     .s4 .top { display: flex; justify-content: space-between; align-items: flex-start; }
@@ -171,9 +196,28 @@
       </div>
     </div>
 
-    <!-- ══ Story 4: Closer ══ -->
+    <!-- ══ Story 4: Kunden-Review ══ -->
     <div class="story-wrap">
-      <div class="story-num">04 — Ciao</div>
+      <div class="story-num">04 — Review</div>
+      <div class="story s5">
+        <div class="photo"></div>
+        <div class="overlay"></div>
+        <div class="top-bar">
+          <div class="logo">PRE Art of Hair</div>
+          <div class="stars">★★★★★</div>
+        </div>
+        <div class="content">
+          <div class="eyebrow">Frisch reingekommen</div>
+          <div class="review-quote">„Der Haarschnitt bei Zyhra ist Ausdruck purer Perfektion und Präzision. Ich werde oft auf den Schnitt angesprochen, weil er so perfekt passt.“</div>
+          <div class="divider"></div>
+          <div class="warm-note"><b>Das hier hat mich richtig glücklich gemacht.</b><br>Danke, dass du mir dein Vertrauen schenkst — genau dafür mache ich das.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ══ Story 5: Closer ══ -->
+    <div class="story-wrap">
+      <div class="story-num">05 — Ciao</div>
       <div class="story s4">
         <div class="top">
           <div class="logo">PRE</div>

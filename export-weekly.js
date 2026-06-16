@@ -12,7 +12,7 @@ const path = require('path');
   await page.evaluate(() => document.fonts.ready);
   await page.waitForTimeout(1000);
 
-  const nums = ['s1','s2','s3','s4'];
+  const nums = ['s1','s2','s3','s5','s4'];
   for (const sel of nums) {
     const el = await page.$('.' + sel);
     const box = await el.boundingBox();
