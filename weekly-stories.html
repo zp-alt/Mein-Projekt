@@ -36,7 +36,7 @@
     }
 
     /* ══════════════════════════════════════
-       Sticker — persönliche Foto-Snapshots
+       Sticker
     ══════════════════════════════════════ */
     .sticker {
       position: absolute; z-index: 8;
@@ -60,87 +60,87 @@
     .s1 .greeting { font-family: 'Cormorant Garamond', serif; font-style: italic; font-weight: 400; font-size: 26px; color: rgba(255,255,255,0.75); letter-spacing: 0.3px; margin-bottom: 18px; }
     .s1 .eyebrow { font-size: 10px; letter-spacing: 4px; text-transform: uppercase; color: #555; margin-bottom: 16px; }
     .s1 .headline { font-weight: 700; font-size: 50px; color: #fff; line-height: 1.0; letter-spacing: -1px; }
-    .s1 .headline em { font-family: 'Cormorant Garamond', serif; font-style: italic; font-weight: 400; font-size: 56px; color: #fff; display: block; }
+    .s1 .headline em { font-family: 'Cormorant Garamond', serif; font-style: italic; font-weight: 400; font-size: 56px; color: #c8a96e; display: block; }
     .s1 .sub { font-size: 14px; font-weight: 400; color: #666; line-height: 1.7; margin-top: 18px; }
     .s1 .bottom { border-top: 1px solid #222; padding-top: 18px; }
     .s1 .items { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 4px; }
     .s1 .item { font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: #555; border: 1px solid #2a2a2a; padding: 5px 10px; border-radius: 2px; white-space: nowrap; }
 
     /* ══════════════════════════════════════
-       STORY 2 — Donnerstag + Freitag (Doppel-Karte)
+       STORY 2 — Sommer-Tipps
     ══════════════════════════════════════ */
-    .s2 { background: #fff; display: flex; flex-direction: column; justify-content: space-between; padding: 44px 36px 40px; }
+    .s2 { background: #faf9f6; display: flex; flex-direction: column; justify-content: space-between; padding: 44px 36px 40px; }
     .s2 .top { display: flex; justify-content: space-between; align-items: center; }
     .s2 .logo { font-weight: 700; font-size: 22px; letter-spacing: 3px; color: #111; }
-    .s2 .dot { width: 8px; height: 8px; border-radius: 50%; background: #111; }
-    .s2 .mid { flex: 1; display: flex; flex-direction: column; justify-content: center; gap: 22px; margin-top: 10px; }
-    .s2 .day-card { border: 1.5px solid #eee; border-radius: 14px; padding: 22px 22px; position: relative; overflow: hidden; }
-    .s2 .day-card.dark { background: #111; border-color: #111; }
-    .s2 .day-big { font-weight: 700; font-size: 64px; letter-spacing: -3px; line-height: 1; color: #f0f0f0; position: absolute; top: 8px; right: 14px; }
-    .s2 .day-card.dark .day-big { color: #1c1c1c; }
-    .s2 .eyebrow { font-size: 9px; letter-spacing: 3px; text-transform: uppercase; color: #aaa; margin-bottom: 8px; position: relative; z-index: 2; }
-    .s2 .day-card.dark .eyebrow { color: #555; }
-    .s2 .day-headline { font-weight: 700; font-size: 26px; color: #111; line-height: 1.1; letter-spacing: -0.3px; position: relative; z-index: 2; }
-    .s2 .day-card.dark .day-headline { color: #fff; }
-    .s2 .day-headline em { font-family: 'Cormorant Garamond', serif; font-style: italic; font-weight: 400; }
-    .s2 .day-sub { font-size: 12.5px; color: #888; line-height: 1.6; margin-top: 8px; position: relative; z-index: 2; }
-    .s2 .day-card.dark .day-sub { color: #777; }
+    .s2 .season-tag { font-size: 9px; letter-spacing: 3px; text-transform: uppercase; color: #c8a96e; font-weight: 600; border: 1px solid #c8a96e; padding: 4px 10px; border-radius: 2px; }
+    .s2 .mid { flex: 1; display: flex; flex-direction: column; justify-content: center; gap: 18px; margin-top: 16px; }
+    .s2 .section-label { font-size: 9px; letter-spacing: 4px; text-transform: uppercase; color: #bbb; margin-bottom: 4px; }
+    .s2 .tip-card { border: 1.5px solid #eeebe4; border-radius: 14px; padding: 20px 22px; position: relative; overflow: hidden; }
+    .s2 .tip-card.warm { background: #111; border-color: #111; }
+    .s2 .tip-icon { font-size: 28px; margin-bottom: 10px; }
+    .s2 .tip-headline { font-weight: 700; font-size: 20px; color: #111; line-height: 1.1; letter-spacing: -0.3px; }
+    .s2 .tip-card.warm .tip-headline { color: #fff; }
+    .s2 .tip-sub { font-size: 12.5px; color: #888; line-height: 1.6; margin-top: 6px; }
+    .s2 .tip-card.warm .tip-sub { color: #666; }
+    .s2 .tip-product { font-size: 11px; letter-spacing: 1px; color: #c8a96e; font-weight: 600; margin-top: 8px; }
     .s2 .bottom { font-size: 10px; letter-spacing: 2px; color: #ccc; text-transform: uppercase; text-align: center; }
 
     /* ══════════════════════════════════════
-       STORY 3 — Zitat
+       STORY 3 — Persönliche Note
     ══════════════════════════════════════ */
     .s3 { background: #111; display: flex; flex-direction: column; justify-content: center; padding: 44px 36px 44px; position: relative; }
     .s3 .quote-mark { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 90px; color: #1c1c1c; line-height: 1; position: absolute; top: 30px; left: 30px; }
-    .s3 .quote { font-family: 'Cormorant Garamond', serif; font-style: italic; font-weight: 400; font-size: 38px; color: #fff; line-height: 1.25; letter-spacing: 0.3px; position: relative; z-index: 2; }
-    .s3 .divider { width: 36px; height: 1px; background: #333; margin: 26px 0 18px; position: relative; z-index: 2; }
-    .s3 .sig { font-size: 11px; letter-spacing: 3px; text-transform: uppercase; color: #555; position: relative; z-index: 2; }
-    .s3 .bottom-logo { position: absolute; bottom: 40px; left: 36px; font-weight: 700; font-size: 11px; letter-spacing: 4px; color: #333; }
+    .s3 .eyebrow { font-size: 9px; letter-spacing: 4px; text-transform: uppercase; color: #c8a96e; margin-bottom: 20px; position: relative; z-index: 2; }
+    .s3 .message { font-size: 18px; font-weight: 400; color: rgba(255,255,255,0.85); line-height: 1.75; position: relative; z-index: 2; }
+    .s3 .message strong { color: #fff; font-weight: 700; }
+    .s3 .divider { width: 36px; height: 1px; background: #2a2a2a; margin: 26px 0 18px; position: relative; z-index: 2; }
+    .s3 .sig { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 22px; color: rgba(255,255,255,0.6); position: relative; z-index: 2; }
+    .s3 .bottom-logo { position: absolute; bottom: 40px; left: 36px; font-weight: 700; font-size: 11px; letter-spacing: 4px; color: #2a2a2a; }
 
     /* ══════════════════════════════════════
-       STORY 4 — Kunden-Review (warm, persönlich)
+       STORY 4 — Buchungs-Update
     ══════════════════════════════════════ */
-    .s5 { background: #0a0a0a; display: flex; flex-direction: column; }
-    .s5 .photo {
-      position: relative; flex-shrink: 0; width: 100%; height: 330px;
-      background: url('zyhra-curls.png') center 20% / cover no-repeat;
-    }
-    .s5 .photo::after {
-      content: ''; position: absolute; left: 0; right: 0; bottom: 0; height: 90px;
-      background: linear-gradient(to bottom, rgba(10,10,10,0) 0%, #0a0a0a 100%);
-    }
-    .s5 .top-label {
-      position: absolute; top: 28px; left: 28px; z-index: 2;
-      font-weight: 700; font-size: 11px; letter-spacing: 4px; color: rgba(255,255,255,0.75); text-transform: uppercase;
-    }
-    .s5 .body { flex: 1; display: flex; flex-direction: column; justify-content: center; padding: 6px 30px 40px; }
-    .s5 .review-card { position: relative; background: #fff; border-radius: 16px; padding: 22px 20px; box-shadow: 0 16px 34px rgba(0,0,0,0.4); }
-    .s5 .review-card img { display: block; width: 100%; }
-    .s5 .source { font-size: 9px; letter-spacing: 2px; text-transform: uppercase; color: #aaa; font-weight: 700; margin-bottom: 12px; }
-    .s5 .warm-note { margin-top: 22px; font-size: 14px; font-weight: 400; color: rgba(255,255,255,0.6); line-height: 1.7; }
-    .s5 .warm-note b { color: #fff; font-weight: 600; }
-
-    /* ══════════════════════════════════════
-       STORY 5 — Closer (Kalender + Beratungsbuch + Ciao)
-    ══════════════════════════════════════ */
-    .s4 { background: #111; display: flex; flex-direction: column; justify-content: space-between; padding: 44px 36px 44px; }
+    .s4 { background: #faf9f6; display: flex; flex-direction: column; justify-content: space-between; padding: 44px 36px 44px; }
     .s4 .top { display: flex; justify-content: space-between; align-items: flex-start; }
-    .s4 .logo { font-weight: 700; font-size: 22px; letter-spacing: 3px; color: #fff; }
-    .s4 .tag { font-size: 10px; letter-spacing: 3px; color: #333; text-transform: uppercase; text-align: right; line-height: 1.7; }
+    .s4 .logo { font-weight: 700; font-size: 22px; letter-spacing: 3px; color: #111; }
+    .s4 .tag { font-size: 10px; letter-spacing: 3px; color: #bbb; text-transform: uppercase; text-align: right; line-height: 1.7; }
     .s4 .mid { flex: 1; display: flex; flex-direction: column; justify-content: center; }
-    .s4 .headline { font-weight: 700; font-size: 48px; color: #fff; line-height: 1.0; letter-spacing: -1px; }
-    .s4 .headline em { font-family: 'Cormorant Garamond', serif; font-style: italic; font-weight: 400; font-size: 52px; color: #fff; display: block; margin-top: 4px; }
-    .s4 .divider { width: 36px; height: 1px; background: #2a2a2a; margin: 22px 0 18px; }
-    .s4 .ps-list { display: flex; flex-direction: column; gap: 12px; margin-bottom: 6px; }
-    .s4 .ps { font-size: 13px; font-weight: 400; color: #777; line-height: 1.6; }
-    .s4 .ps b { color: #fff; font-weight: 600; }
-    .s4 .sig { margin-top: 18px; font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 22px; color: #fff; }
-    .s4 .bottom { font-size: 10px; letter-spacing: 3px; color: #2a2a2a; text-transform: uppercase; }
+    .s4 .headline { font-weight: 700; font-size: 42px; color: #111; line-height: 1.05; letter-spacing: -1px; }
+    .s4 .headline em { font-family: 'Cormorant Garamond', serif; font-style: italic; font-weight: 400; font-size: 46px; color: #111; display: block; margin-top: 2px; }
+    .s4 .alert { margin-top: 22px; background: #111; border-radius: 10px; padding: 16px 18px; }
+    .s4 .alert-text { font-size: 13px; font-weight: 600; color: #fff; line-height: 1.5; }
+    .s4 .alert-text span { color: #c8a96e; }
+    .s4 .divider { width: 36px; height: 1px; background: #e8e4dc; margin: 22px 0 18px; }
+    .s4 .channel-list { display: flex; flex-direction: column; gap: 12px; }
+    .s4 .channel { display: flex; align-items: center; gap: 14px; }
+    .s4 .channel-dot { width: 6px; height: 6px; border-radius: 50%; background: #c8a96e; flex-shrink: 0; }
+    .s4 .channel-text { font-size: 14px; color: #111; font-weight: 500; }
+    .s4 .channel-text span { color: #aaa; font-weight: 400; font-size: 12px; display: block; margin-top: 1px; }
+    .s4 .avail { margin-top: 22px; font-size: 13px; color: #888; line-height: 1.6; }
+    .s4 .avail b { color: #111; font-weight: 600; }
+    .s4 .bottom { font-size: 10px; letter-spacing: 3px; color: #ccc; text-transform: uppercase; }
+
+    /* ══════════════════════════════════════
+       STORY 5 — Closer
+    ══════════════════════════════════════ */
+    .s5 { background: #111; display: flex; flex-direction: column; justify-content: space-between; padding: 44px 36px 44px; }
+    .s5 .top { display: flex; justify-content: space-between; align-items: flex-start; }
+    .s5 .logo { font-weight: 700; font-size: 22px; letter-spacing: 3px; color: #fff; }
+    .s5 .kw-tag { font-size: 10px; letter-spacing: 3px; color: #333; text-transform: uppercase; text-align: right; line-height: 1.7; }
+    .s5 .mid { flex: 1; display: flex; flex-direction: column; justify-content: center; }
+    .s5 .headline { font-weight: 700; font-size: 48px; color: #fff; line-height: 1.0; letter-spacing: -1px; }
+    .s5 .headline em { font-family: 'Cormorant Garamond', serif; font-style: italic; font-weight: 400; font-size: 54px; color: #c8a96e; display: block; margin-top: 4px; }
+    .s5 .divider { width: 36px; height: 1px; background: #2a2a2a; margin: 22px 0 18px; }
+    .s5 .ps-list { display: flex; flex-direction: column; gap: 14px; }
+    .s5 .ps { font-size: 14px; font-weight: 400; color: #666; line-height: 1.6; }
+    .s5 .ps b { color: #fff; font-weight: 600; }
+    .s5 .sig { margin-top: 20px; font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 22px; color: rgba(255,255,255,0.7); }
+    .s5 .bottom { font-size: 10px; letter-spacing: 3px; color: #2a2a2a; text-transform: uppercase; }
   </style>
 </head>
 <body>
 
-  <div class="page-label">PRE Art of Hair — Weekly Update · KW 25 · 16. Juni 2026</div>
+  <div class="page-label">PRE Art of Hair — Weekly Update · KW 26 · 22. Juni 2026</div>
 
   <div class="story-row">
 
@@ -149,116 +149,141 @@
       <div class="story-num">01 — Opener</div>
       <div class="story s1">
         <div class="sticker" style="top:96px; right:34px; transform:rotate(8deg);">
-          <div class="crop" style="background-image:url('zyhra-2-clean.png'); background-position:50% 30%; background-size:220% auto;"></div>
+          <div class="crop" style="background-image:url('zyhra-hiking.jpeg'); background-position:50% 20%; background-size:220% auto;"></div>
         </div>
         <div class="top">
           <div class="logo">PRE</div>
-          <div class="kw">Weekly Update<br>KW 25</div>
+          <div class="kw">Weekly Update<br>KW 26</div>
         </div>
         <div class="mid">
-          <div class="greeting">Hey du,</div>
+          <div class="greeting">Hallo zusammen,</div>
           <div class="eyebrow">Diese Woche</div>
-          <div class="headline">Kurz &amp;<br><em>frei.</em></div>
-          <div class="sub">Ein paar freie Plätze sind noch da —<br>wer schnell ist, sichert sich einen.</div>
+          <div class="headline">Heiss &amp;<br><em>sonnig.</em></div>
+          <div class="sub">Einen tollen Start in die neue Woche —<br>bleibt hydratisiert und passt auf euch auf.</div>
         </div>
         <div class="bottom">
           <div class="items">
-            <div class="item">Donnerstag</div>
-            <div class="item">Freitag</div>
-            <div class="item">Zitat</div>
-            <div class="item">Kalender</div>
-            <div class="item">Beratungsbuch</div>
+            <div class="item">Sommer-Tipps</div>
+            <div class="item">Persönliches</div>
+            <div class="item">Buchung</div>
+            <div class="item">Termine</div>
+            <div class="item">Ciao</div>
           </div>
         </div>
       </div>
     </div>
 
-    <!-- ══ Story 2: Donnerstag + Freitag ══ -->
+    <!-- ══ Story 2: Sommer-Tipps ══ -->
     <div class="story-wrap">
-      <div class="story-num">02 — Termine</div>
+      <div class="story-num">02 — Sommer-Care</div>
       <div class="story s2">
+        <div class="sticker" style="width:56px; height:56px; top:44px; right:36px; transform:rotate(-8deg);">
+          <div class="crop" style="background-image:url('zyhra-2-clean.png'); background-position:50% 25%; background-size:200% auto;"></div>
+        </div>
         <div class="top">
           <div class="logo">PRE</div>
-          <div class="dot"></div>
+          <div class="season-tag">Sommer 26</div>
         </div>
         <div class="mid">
-          <div class="day-card">
-            <div class="day-big">DO</div>
-            <div class="eyebrow">Für neue Gesichter</div>
-            <div class="day-headline">Donnerstag ist<br><em>für dich.</em></div>
-            <div class="day-sub">Noch nie hier gewesen? Genau dein Tag.</div>
-            <div class="sticker" style="width:50px; height:50px; top:14px; right:14px; transform:rotate(-9deg);">
-              <div class="crop" style="background-image:url('zyhra-5-clean.png'); background-position:50% 15%; background-size:180% auto;"></div>
-            </div>
+          <div class="section-label">Meine Tipps für euch</div>
+          <div class="tip-card">
+            <div class="tip-headline">Stay Hydrated</div>
+            <div class="tip-sub">Viel Wasser trinken — und UV-Schutz nicht vergessen. Für den Körper <em>und</em> die Haare.</div>
           </div>
-          <div class="day-card dark">
-            <div class="day-big">FR</div>
-            <div class="eyebrow">Nur für Stammkunden</div>
-            <div class="day-headline">Ein Schnitt-Slot,<br><em>für dich reserviert.</em></div>
-            <div class="day-sub">Freitag — nur für die, die schon wissen wie's läuft.</div>
-            <div class="sticker" style="width:50px; height:50px; top:14px; right:14px; transform:rotate(7deg);">
-              <div class="crop" style="background-image:url('zyhra-curls.png'); background-position:55% 40%; background-size:260% auto;"></div>
-            </div>
+          <div class="tip-card warm">
+            <div class="tip-headline">Heated Defense</div>
+            <div class="tip-sub">Hitzeschutz für die Haare — kann ich nur empfehlen.</div>
+            <div class="tip-product">Kevin Murphy — Heated Defense</div>
           </div>
         </div>
         <div class="bottom">preartofhair.com</div>
       </div>
     </div>
 
-    <!-- ══ Story 3: Zitat ══ -->
+    <!-- ══ Story 3: Persönliche Note ══ -->
     <div class="story-wrap">
-      <div class="story-num">03 — Zitat</div>
+      <div class="story-num">03 — Persönliches</div>
       <div class="story s3">
         <div class="sticker" style="bottom:96px; right:34px; transform:rotate(-7deg);">
-          <div class="crop" style="background-image:url('zyhra-jump.png'); background-position:50% 30%; background-size:cover;"></div>
+          <div class="crop" style="background-image:url('zyhra-hiking.jpeg'); background-position:55% 50%; background-size:250% auto;"></div>
         </div>
         <div class="quote-mark">"</div>
-        <div class="quote">Haare wachsen<br>zurück.<br>Mut nicht<br>immer.</div>
+        <div class="eyebrow">Eine persönliche Bitte</div>
+        <div class="message">
+          Da es sehr warm ist und<br>
+          mein Körper darauf nicht<br>
+          so positiv reagiert —<br><br>
+          <strong>bitte ich um Rücksicht.</strong><br><br>
+          Ich konzentriere mich<br>voll und ganz auf die Arbeit.
+        </div>
         <div class="divider"></div>
-        <div class="sig">Gedanke der Woche</div>
+        <div class="sig">Danke von Herzen.</div>
         <div class="bottom-logo">PRE</div>
       </div>
     </div>
 
-    <!-- ══ Story 4: Kunden-Review ══ -->
+    <!-- ══ Story 4: Buchungs-Update ══ -->
     <div class="story-wrap">
-      <div class="story-num">04 — Review</div>
-      <div class="story s5">
-        <div class="photo">
-          <div class="top-label">PRE Art of Hair</div>
+      <div class="story-num">04 — Buchung</div>
+      <div class="story s4">
+        <div class="sticker" style="width:56px; height:56px; top:44px; right:36px; transform:rotate(9deg);">
+          <div class="crop" style="background-image:url('zyhra-5-clean.png'); background-position:50% 15%; background-size:180% auto;"></div>
         </div>
-        <div class="body">
-          <div class="review-card">
-            <div class="sticker" style="width:56px; height:56px; top:-18px; right:16px; transform:rotate(8deg);">
-              <div class="crop" style="background-image:url('zyhra-curls.png'); background-position:35% 90%; background-size:300% auto;"></div>
-            </div>
-            <div class="source">Echte Bewertung</div>
-            <img src="review-screenshot.jpeg" alt="5-Sterne Bewertung">
+        <div class="top">
+          <div class="logo">PRE</div>
+          <div class="tag">KW 26<br>Buchung</div>
+        </div>
+        <div class="mid">
+          <div class="headline">Wichtig:<br><em>bitte lesen.</em></div>
+          <div class="alert">
+            <div class="alert-text"><span>Keine Instagram-Anfragen mehr.</span><br>Bitte nutzt die offiziellen Kanäle.</div>
           </div>
-          <div class="warm-note"><b>Das hier hat mich richtig glücklich gemacht.</b><br>Danke, dass du mir dein Vertrauen schenkst — genau dafür mache ich das.</div>
+          <div class="divider"></div>
+          <div class="channel-list">
+            <div class="channel">
+              <div class="channel-dot"></div>
+              <div class="channel-text">Online-Kalender
+                <span>preartofhair.com</span>
+              </div>
+            </div>
+            <div class="channel">
+              <div class="channel-dot"></div>
+              <div class="channel-text">WhatsApp
+                <span>Direkt anfragen</span>
+              </div>
+            </div>
+            <div class="channel">
+              <div class="channel-dot"></div>
+              <div class="channel-text">Webseite
+                <span>preartofhair.com</span>
+              </div>
+            </div>
+          </div>
+          <div class="avail"><b>Diese Woche:</b> Vereinzelte Termine noch frei — schaut gerne im Buchungssystem rein.</div>
         </div>
+        <div class="bottom">preartofhair.com</div>
       </div>
     </div>
 
     <!-- ══ Story 5: Closer ══ -->
     <div class="story-wrap">
       <div class="story-num">05 — Ciao</div>
-      <div class="story s4">
+      <div class="story s5">
         <div class="sticker" style="width:62px; height:62px; top:80px; right:36px; transform:rotate(-6deg);">
-          <div class="crop" style="background-image:url('davines-bottle-nobg.png'); background-position:center 25%; background-size:150% auto;"></div>
+          <div class="crop" style="background-image:url('zyhra-curls.png'); background-position:50% 40%; background-size:260% auto;"></div>
         </div>
         <div class="top">
           <div class="logo">PRE</div>
-          <div class="tag">KW 25<br>Weekly Update</div>
+          <div class="kw-tag">KW 26<br>Weekly Update</div>
         </div>
         <div class="mid">
-          <div class="headline">Schönen<br><em>Start.</em></div>
+          <div class="headline">Geniesst<br><em>die Sonne.</em></div>
           <div class="divider"></div>
           <div class="ps-list">
-            <div class="ps"><b>Psst —</b> auf meinem Online-Kalender ist grad was Neues aufgetaucht.</div>
-            <div class="ps"><b>Backstage:</b> ich schreib an meinem Beratungsbuch. Beratung ist das A und O.</div>
+            <div class="ps"><b>Trinkt Wasser —</b> und gebt euren Haaren etwas Schutz.</div>
+            <div class="ps"><b>Termine:</b> Buchungssystem checken, ein paar Slots sind noch da.</div>
           </div>
-          <div class="sig">In die Woche, in den Tag, in alles was kommt. Ciao. 🖤</div>
+          <div class="sig">In die Woche, in den Tag. Ciao.</div>
         </div>
         <div class="bottom">preartofhair.com</div>
       </div>
