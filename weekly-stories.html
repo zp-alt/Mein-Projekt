@@ -6,7 +6,7 @@
   <title>Weekly Stories – PRE Art of Hair</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400;1,500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400;1,500&display=swap" rel="stylesheet">
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -35,9 +35,6 @@
       box-shadow: 0 12px 40px rgba(0,0,0,0.22);
     }
 
-    /* ══════════════════════════════════════
-       Sticker
-    ══════════════════════════════════════ */
     .sticker {
       position: absolute; z-index: 8;
       width: 80px; height: 80px;
@@ -57,67 +54,68 @@
     .s1 .logo { font-weight: 700; font-size: 22px; letter-spacing: 3px; color: #fff; }
     .s1 .kw { font-size: 10px; letter-spacing: 3px; color: #444; text-transform: uppercase; text-align: right; line-height: 1.7; }
     .s1 .mid { flex: 1; display: flex; flex-direction: column; justify-content: center; }
-    .s1 .greeting { font-family: 'Cormorant Garamond', serif; font-style: italic; font-weight: 400; font-size: 26px; color: rgba(255,255,255,0.75); letter-spacing: 0.3px; margin-bottom: 18px; }
+    .s1 .greeting { font-family: 'Cormorant Garamond', serif; font-style: italic; font-weight: 400; font-size: 26px; color: rgba(255,255,255,0.75); margin-bottom: 18px; }
     .s1 .eyebrow { font-size: 10px; letter-spacing: 4px; text-transform: uppercase; color: #555; margin-bottom: 16px; }
-    .s1 .headline { font-weight: 700; font-size: 50px; color: #fff; line-height: 1.0; letter-spacing: -1px; }
-    .s1 .headline em { font-family: 'Cormorant Garamond', serif; font-style: italic; font-weight: 400; font-size: 56px; color: #c8a96e; display: block; }
-    .s1 .sub { font-size: 14px; font-weight: 400; color: #666; line-height: 1.7; margin-top: 18px; }
-    .s1 .bottom { border-top: 1px solid #222; padding-top: 18px; }
+    .s1 .headline { font-weight: 800; font-size: 52px; color: #fff; line-height: 1.0; letter-spacing: -1.5px; }
+    .s1 .headline em { font-family: 'Cormorant Garamond', serif; font-style: italic; font-weight: 400; font-size: 58px; color: #fff; display: block; }
+    .s1 .sub { font-size: 14px; font-weight: 400; color: #555; line-height: 1.7; margin-top: 18px; }
+    .s1 .bottom { border-top: 1px solid #1e1e1e; padding-top: 18px; }
     .s1 .items { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 4px; }
-    .s1 .item { font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: #555; border: 1px solid #2a2a2a; padding: 5px 10px; border-radius: 2px; white-space: nowrap; }
+    .s1 .item { font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: #444; border: 1px solid #222; padding: 5px 10px; border-radius: 2px; white-space: nowrap; }
 
     /* ══════════════════════════════════════
-       STORY 2 — Sommer-Tipps
+       STORY 2 — WICHTIG (groß + rot)
     ══════════════════════════════════════ */
-    .s2 { background: #faf9f6; display: flex; flex-direction: column; justify-content: space-between; padding: 44px 36px 40px; }
+    .s2 { background: #0f0f0f; display: flex; flex-direction: column; justify-content: space-between; padding: 44px 36px 44px; }
     .s2 .top { display: flex; justify-content: space-between; align-items: center; }
-    .s2 .logo { font-weight: 700; font-size: 22px; letter-spacing: 3px; color: #111; }
-    .s2 .season-tag { font-size: 9px; letter-spacing: 3px; text-transform: uppercase; color: #c8a96e; font-weight: 600; border: 1px solid #c8a96e; padding: 4px 10px; border-radius: 2px; }
-    .s2 .mid { flex: 1; display: flex; flex-direction: column; justify-content: center; gap: 18px; margin-top: 16px; }
-    .s2 .section-label { font-size: 9px; letter-spacing: 4px; text-transform: uppercase; color: #bbb; margin-bottom: 4px; }
-    .s2 .tip-card { border: 1.5px solid #eeebe4; border-radius: 14px; padding: 20px 22px; position: relative; overflow: hidden; }
-    .s2 .tip-card.warm { background: #111; border-color: #111; }
-    .s2 .tip-icon { font-size: 28px; margin-bottom: 10px; }
-    .s2 .tip-headline { font-weight: 700; font-size: 20px; color: #111; line-height: 1.1; letter-spacing: -0.3px; }
-    .s2 .tip-card.warm .tip-headline { color: #fff; }
-    .s2 .tip-sub { font-size: 12.5px; color: #888; line-height: 1.6; margin-top: 6px; }
-    .s2 .tip-card.warm .tip-sub { color: #666; }
-    .s2 .tip-product { font-size: 11px; letter-spacing: 1px; color: #c8a96e; font-weight: 600; margin-top: 8px; }
-    .s2 .bottom { font-size: 10px; letter-spacing: 2px; color: #ccc; text-transform: uppercase; text-align: center; }
+    .s2 .logo { font-weight: 700; font-size: 22px; letter-spacing: 3px; color: #fff; }
+    .s2 .alert-pill { background: #d42b2b; border-radius: 4px; padding: 4px 12px; font-size: 9px; letter-spacing: 3px; text-transform: uppercase; font-weight: 700; color: #fff; }
+    .s2 .mid { flex: 1; display: flex; flex-direction: column; justify-content: center; }
+    .s2 .no-insta { font-weight: 900; font-size: 64px; color: #d42b2b; line-height: 0.95; letter-spacing: -2px; text-transform: uppercase; }
+    .s2 .no-insta span { display: block; }
+    .s2 .no-insta .anfragen { font-size: 48px; }
+    .s2 .no-insta .instagram { font-size: 36px; color: rgba(212,43,43,0.55); }
+    .s2 .divider { width: 48px; height: 2px; background: #d42b2b; margin: 22px 0; }
+    .s2 .wa-box { background: #1a1a1a; border-radius: 12px; padding: 20px 22px; border-left: 4px solid #25D366; }
+    .s2 .wa-label { font-size: 9px; letter-spacing: 3px; text-transform: uppercase; color: #25D366; font-weight: 700; margin-bottom: 8px; }
+    .s2 .wa-text { font-size: 20px; font-weight: 700; color: #fff; line-height: 1.3; }
+    .s2 .wa-sub { font-size: 13px; color: #555; margin-top: 6px; }
+    .s2 .bottom { font-size: 11px; letter-spacing: 1px; color: #333; }
 
     /* ══════════════════════════════════════
-       STORY 3 — Persönliche Note
+       STORY 3 — July / Berlin Teaser
     ══════════════════════════════════════ */
-    .s3 { background: #111; display: flex; flex-direction: column; justify-content: center; padding: 44px 36px 44px; position: relative; }
-    .s3 .quote-mark { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 90px; color: #1c1c1c; line-height: 1; position: absolute; top: 30px; left: 30px; }
-    .s3 .eyebrow { font-size: 9px; letter-spacing: 4px; text-transform: uppercase; color: #c8a96e; margin-bottom: 20px; position: relative; z-index: 2; }
-    .s3 .message { font-size: 18px; font-weight: 400; color: rgba(255,255,255,0.85); line-height: 1.75; position: relative; z-index: 2; }
-    .s3 .message strong { color: #fff; font-weight: 700; }
-    .s3 .divider { width: 36px; height: 1px; background: #2a2a2a; margin: 26px 0 18px; position: relative; z-index: 2; }
-    .s3 .sig { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 22px; color: rgba(255,255,255,0.6); position: relative; z-index: 2; }
-    .s3 .bottom-logo { position: absolute; bottom: 40px; left: 36px; font-weight: 700; font-size: 11px; letter-spacing: 4px; color: #2a2a2a; }
+    .s3 { background: #111; display: flex; flex-direction: column; justify-content: space-between; padding: 44px 36px 44px; }
+    .s3 .top { display: flex; justify-content: space-between; align-items: flex-start; }
+    .s3 .logo { font-weight: 700; font-size: 22px; letter-spacing: 3px; color: #fff; }
+    .s3 .month-tag { font-size: 9px; letter-spacing: 4px; text-transform: uppercase; color: #555; }
+    .s3 .mid { flex: 1; display: flex; flex-direction: column; justify-content: center; }
+    .s3 .eyebrow { font-size: 10px; letter-spacing: 4px; text-transform: uppercase; color: #555; margin-bottom: 16px; }
+    .s3 .city-no { font-weight: 800; font-size: 38px; color: #333; line-height: 1.1; letter-spacing: -1px; text-decoration: line-through; text-decoration-color: #d42b2b; }
+    .s3 .city-yes { font-weight: 800; font-size: 64px; color: #fff; line-height: 1.0; letter-spacing: -2px; margin-top: 8px; }
+    .s3 .city-yes em { font-family: 'Cormorant Garamond', serif; font-style: italic; font-weight: 300; }
+    .s3 .story-line { font-size: 15px; font-weight: 400; color: #555; line-height: 1.7; margin-top: 18px; }
+    .s3 .story-line b { color: rgba(255,255,255,0.8); }
+    .s3 .stay-tuned { margin-top: 28px; display: inline-block; font-size: 10px; letter-spacing: 4px; text-transform: uppercase; color: #fff; border: 1px solid #333; padding: 8px 16px; border-radius: 2px; }
+    .s3 .bottom { font-size: 10px; letter-spacing: 3px; color: #2a2a2a; text-transform: uppercase; }
 
     /* ══════════════════════════════════════
-       STORY 4 — Buchungs-Update
+       STORY 4 — Termine / Booking
     ══════════════════════════════════════ */
     .s4 { background: #faf9f6; display: flex; flex-direction: column; justify-content: space-between; padding: 44px 36px 44px; }
     .s4 .top { display: flex; justify-content: space-between; align-items: flex-start; }
     .s4 .logo { font-weight: 700; font-size: 22px; letter-spacing: 3px; color: #111; }
     .s4 .tag { font-size: 10px; letter-spacing: 3px; color: #bbb; text-transform: uppercase; text-align: right; line-height: 1.7; }
     .s4 .mid { flex: 1; display: flex; flex-direction: column; justify-content: center; }
-    .s4 .headline { font-weight: 700; font-size: 42px; color: #111; line-height: 1.05; letter-spacing: -1px; }
-    .s4 .headline em { font-family: 'Cormorant Garamond', serif; font-style: italic; font-weight: 400; font-size: 46px; color: #111; display: block; margin-top: 2px; }
-    .s4 .alert { margin-top: 22px; background: #111; border-radius: 10px; padding: 16px 18px; }
-    .s4 .alert-text { font-size: 13px; font-weight: 600; color: #fff; line-height: 1.5; }
-    .s4 .alert-text span { color: #c8a96e; }
-    .s4 .divider { width: 36px; height: 1px; background: #e8e4dc; margin: 22px 0 18px; }
-    .s4 .channel-list { display: flex; flex-direction: column; gap: 12px; }
-    .s4 .channel { display: flex; align-items: center; gap: 14px; }
-    .s4 .channel-dot { width: 6px; height: 6px; border-radius: 50%; background: #c8a96e; flex-shrink: 0; }
-    .s4 .channel-text { font-size: 14px; color: #111; font-weight: 500; }
-    .s4 .channel-text span { color: #aaa; font-weight: 400; font-size: 12px; display: block; margin-top: 1px; }
-    .s4 .avail { margin-top: 22px; font-size: 13px; color: #888; line-height: 1.6; }
-    .s4 .avail b { color: #111; font-weight: 600; }
+    .s4 .headline { font-weight: 800; font-size: 46px; color: #111; line-height: 1.0; letter-spacing: -1.5px; }
+    .s4 .headline em { font-family: 'Cormorant Garamond', serif; font-style: italic; font-weight: 300; font-size: 50px; color: #111; display: block; margin-top: 4px; }
+    .s4 .link-box { margin-top: 28px; background: #111; border-radius: 12px; padding: 22px 22px; }
+    .s4 .link-label { font-size: 9px; letter-spacing: 3px; text-transform: uppercase; color: #555; margin-bottom: 10px; }
+    .s4 .link-url { font-size: 15px; font-weight: 600; color: #fff; word-break: break-all; line-height: 1.4; }
+    .s4 .link-hint { font-size: 12px; color: #444; margin-top: 8px; }
+    .s4 .avail { margin-top: 24px; background: #f0ede6; border-radius: 10px; padding: 16px 18px; }
+    .s4 .avail-text { font-size: 14px; color: #111; line-height: 1.6; font-weight: 500; }
+    .s4 .avail-text span { color: #888; font-weight: 400; }
     .s4 .bottom { font-size: 10px; letter-spacing: 3px; color: #ccc; text-transform: uppercase; }
 
     /* ══════════════════════════════════════
@@ -128,19 +126,18 @@
     .s5 .logo { font-weight: 700; font-size: 22px; letter-spacing: 3px; color: #fff; }
     .s5 .kw-tag { font-size: 10px; letter-spacing: 3px; color: #333; text-transform: uppercase; text-align: right; line-height: 1.7; }
     .s5 .mid { flex: 1; display: flex; flex-direction: column; justify-content: center; }
-    .s5 .headline { font-weight: 700; font-size: 48px; color: #fff; line-height: 1.0; letter-spacing: -1px; }
-    .s5 .headline em { font-family: 'Cormorant Garamond', serif; font-style: italic; font-weight: 400; font-size: 54px; color: #c8a96e; display: block; margin-top: 4px; }
-    .s5 .divider { width: 36px; height: 1px; background: #2a2a2a; margin: 22px 0 18px; }
-    .s5 .ps-list { display: flex; flex-direction: column; gap: 14px; }
-    .s5 .ps { font-size: 14px; font-weight: 400; color: #666; line-height: 1.6; }
-    .s5 .ps b { color: #fff; font-weight: 600; }
-    .s5 .sig { margin-top: 20px; font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 22px; color: rgba(255,255,255,0.7); }
+    .s5 .headline { font-weight: 800; font-size: 50px; color: #fff; line-height: 1.0; letter-spacing: -1.5px; }
+    .s5 .headline em { font-family: 'Cormorant Garamond', serif; font-style: italic; font-weight: 300; font-size: 54px; color: #fff; display: block; margin-top: 4px; }
+    .s5 .divider { width: 36px; height: 1px; background: #2a2a2a; margin: 24px 0 20px; }
+    .s5 .note { font-size: 15px; color: #555; line-height: 1.75; }
+    .s5 .note b { color: rgba(255,255,255,0.8); font-weight: 600; }
+    .s5 .sig { margin-top: 22px; font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 24px; color: rgba(255,255,255,0.65); }
     .s5 .bottom { font-size: 10px; letter-spacing: 3px; color: #2a2a2a; text-transform: uppercase; }
   </style>
 </head>
 <body>
 
-  <div class="page-label">PRE Art of Hair — Weekly Update · KW 26 · 22. Juni 2026</div>
+  <div class="page-label">PRE Art of Hair — Weekly Update · KW 27 · 29. Juni 2026</div>
 
   <div class="story-row">
 
@@ -148,24 +145,23 @@
     <div class="story-wrap">
       <div class="story-num">01 — Opener</div>
       <div class="story s1">
-        <div class="sticker" style="top:96px; right:34px; transform:rotate(8deg);">
-          <div class="crop" style="background-image:url('zyhra-hiking.jpeg'); background-position:50% 20%; background-size:220% auto;"></div>
+        <div class="sticker" style="top:92px; right:34px; transform:rotate(7deg);">
+          <div class="crop" style="background-image:url('zyhra-hiking.jpeg'); background-position:48% 18%; background-size:230% auto;"></div>
         </div>
         <div class="top">
           <div class="logo">PRE</div>
-          <div class="kw">Weekly Update<br>KW 26</div>
+          <div class="kw">Weekly Update<br>KW 27</div>
         </div>
         <div class="mid">
-          <div class="greeting">Hallo zusammen,</div>
-          <div class="eyebrow">Diese Woche</div>
-          <div class="headline">Heiss &amp;<br><em>sonnig.</em></div>
-          <div class="sub">Einen tollen Start in die neue Woche —<br>bleibt hydratisiert und passt auf euch auf.</div>
+          <div class="greeting">Hallo, guten Tag.</div>
+          <div class="eyebrow">Neue Woche</div>
+          <div class="headline">Schöner<br><em>Start.</em></div>
+          <div class="sub">Etwas kühler draußen — endlich.<br>Ich freu mich auf euch.</div>
         </div>
         <div class="bottom">
           <div class="items">
-            <div class="item">Sommer-Tipps</div>
-            <div class="item">Persönliches</div>
-            <div class="item">Buchung</div>
+            <div class="item">Wichtig</div>
+            <div class="item">Juli</div>
             <div class="item">Termine</div>
             <div class="item">Ciao</div>
           </div>
@@ -173,93 +169,81 @@
       </div>
     </div>
 
-    <!-- ══ Story 2: Sommer-Tipps ══ -->
+    <!-- ══ Story 2: WICHTIG ══ -->
     <div class="story-wrap">
-      <div class="story-num">02 — Sommer-Care</div>
+      <div class="story-num">02 — Wichtig</div>
       <div class="story s2">
-        <div class="sticker" style="width:56px; height:56px; top:44px; right:36px; transform:rotate(-8deg);">
-          <div class="crop" style="background-image:url('zyhra-2-clean.png'); background-position:50% 25%; background-size:200% auto;"></div>
-        </div>
         <div class="top">
           <div class="logo">PRE</div>
-          <div class="season-tag">Sommer 26</div>
+          <div class="alert-pill">Wichtig</div>
         </div>
         <div class="mid">
-          <div class="section-label">Meine Tipps für euch</div>
-          <div class="tip-card">
-            <div class="tip-headline">Stay Hydrated</div>
-            <div class="tip-sub">Viel Wasser trinken — und UV-Schutz nicht vergessen. Für den Körper <em>und</em> die Haare.</div>
+          <div class="no-insta">
+            <span>Keine</span>
+            <span class="anfragen">Anfragen</span>
+            <span class="instagram">Instagram</span>
           </div>
-          <div class="tip-card warm">
-            <div class="tip-headline">Heated Defense</div>
-            <div class="tip-sub">Hitzeschutz für die Haare — kann ich nur empfehlen.</div>
-            <div class="tip-product">Kevin Murphy — Heated Defense</div>
+          <div class="divider"></div>
+          <div class="wa-box">
+            <div class="wa-label">Bitte hier schreiben</div>
+            <div class="wa-text">WhatsApp</div>
+            <div class="wa-sub">Danke — ich freue mich von euch zu hören.</div>
           </div>
         </div>
         <div class="bottom">preartofhair.com</div>
       </div>
     </div>
 
-    <!-- ══ Story 3: Persönliche Note ══ -->
+    <!-- ══ Story 3: July / Berlin ══ -->
     <div class="story-wrap">
-      <div class="story-num">03 — Persönliches</div>
+      <div class="story-num">03 — Juli-News</div>
       <div class="story s3">
-        <div class="sticker" style="bottom:96px; right:34px; transform:rotate(-7deg);">
-          <div class="crop" style="background-image:url('zyhra-hiking.jpeg'); background-position:55% 50%; background-size:250% auto;"></div>
+        <div class="sticker" style="bottom:88px; right:34px; transform:rotate(-8deg);">
+          <div class="crop" style="background-image:url('zyhra-2-clean.png'); background-position:50% 30%; background-size:220% auto;"></div>
         </div>
-        <div class="quote-mark">"</div>
-        <div class="eyebrow">Eine persönliche Bitte</div>
-        <div class="message">
-          Da es sehr warm ist und<br>
-          mein Körper darauf nicht<br>
-          so positiv reagiert —<br><br>
-          <strong>bitte ich um Rücksicht.</strong><br><br>
-          Ich konzentriere mich<br>voll und ganz auf die Arbeit.
+        <div class="top">
+          <div class="logo">PRE</div>
+          <div class="month-tag">Juli 2026</div>
         </div>
-        <div class="divider"></div>
-        <div class="sig">Danke von Herzen.</div>
-        <div class="bottom-logo">PRE</div>
+        <div class="mid">
+          <div class="eyebrow">Was für eine Story</div>
+          <div class="city-no">New York</div>
+          <div class="city-yes">Ber<em>lin.</em></div>
+          <div class="story-line">
+            New York abgesagt —<br>
+            <b>Berlin zugesagt.</b><br>
+            Mehr dazu kommt.
+          </div>
+          <div class="stay-tuned">Stay Tuned</div>
+        </div>
+        <div class="bottom">preartofhair.com</div>
       </div>
     </div>
 
-    <!-- ══ Story 4: Buchungs-Update ══ -->
+    <!-- ══ Story 4: Termine ══ -->
     <div class="story-wrap">
-      <div class="story-num">04 — Buchung</div>
+      <div class="story-num">04 — Termine</div>
       <div class="story s4">
-        <div class="sticker" style="width:56px; height:56px; top:44px; right:36px; transform:rotate(9deg);">
+        <div class="sticker" style="width:58px; height:58px; top:42px; right:36px; transform:rotate(9deg);">
           <div class="crop" style="background-image:url('zyhra-5-clean.png'); background-position:50% 15%; background-size:180% auto;"></div>
         </div>
         <div class="top">
           <div class="logo">PRE</div>
-          <div class="tag">KW 26<br>Buchung</div>
+          <div class="tag">KW 27<br>Buchung</div>
         </div>
         <div class="mid">
-          <div class="headline">Wichtig:<br><em>bitte lesen.</em></div>
-          <div class="alert">
-            <div class="alert-text"><span>Keine Instagram-Anfragen mehr.</span><br>Bitte nutzt die offiziellen Kanäle.</div>
+          <div class="headline">Termin<br><em>buchen.</em></div>
+          <div class="link-box">
+            <div class="link-label">Online-Kalender</div>
+            <div class="link-url">preartofhair.belbo.com/termin</div>
+            <div class="link-hint">Link in der Bio — oder direkt aufrufen.</div>
           </div>
-          <div class="divider"></div>
-          <div class="channel-list">
-            <div class="channel">
-              <div class="channel-dot"></div>
-              <div class="channel-text">Online-Kalender
-                <span>preartofhair.com</span>
-              </div>
-            </div>
-            <div class="channel">
-              <div class="channel-dot"></div>
-              <div class="channel-text">WhatsApp
-                <span>Direkt anfragen</span>
-              </div>
-            </div>
-            <div class="channel">
-              <div class="channel-dot"></div>
-              <div class="channel-text">Webseite
-                <span>preartofhair.com</span>
-              </div>
+          <div class="avail">
+            <div class="avail-text">
+              Diese Woche noch Termine frei —
+              <span>einfach im Buchungssystem schauen.</span>
             </div>
           </div>
-          <div class="avail"><b>Diese Woche:</b> Vereinzelte Termine noch frei — schaut gerne im Buchungssystem rein.</div>
         </div>
         <div class="bottom">preartofhair.com</div>
       </div>
@@ -269,21 +253,24 @@
     <div class="story-wrap">
       <div class="story-num">05 — Ciao</div>
       <div class="story s5">
-        <div class="sticker" style="width:62px; height:62px; top:80px; right:36px; transform:rotate(-6deg);">
+        <div class="sticker" style="width:62px; height:62px; top:80px; right:36px; transform:rotate(-5deg);">
           <div class="crop" style="background-image:url('zyhra-curls.png'); background-position:50% 40%; background-size:260% auto;"></div>
         </div>
         <div class="top">
           <div class="logo">PRE</div>
-          <div class="kw-tag">KW 26<br>Weekly Update</div>
+          <div class="kw-tag">KW 27<br>Weekly Update</div>
         </div>
         <div class="mid">
-          <div class="headline">Geniesst<br><em>die Sonne.</em></div>
+          <div class="headline">Freue<br><em>mich.</em></div>
           <div class="divider"></div>
-          <div class="ps-list">
-            <div class="ps"><b>Trinkt Wasser —</b> und gebt euren Haaren etwas Schutz.</div>
-            <div class="ps"><b>Termine:</b> Buchungssystem checken, ein paar Slots sind noch da.</div>
+          <div class="note">
+            <b>Endlich etwas kühler</b> —<br>
+            mein Körper dankt es sehr.<br><br>
+            Schreibt auf <b>WhatsApp,</b><br>
+            bucht über den Link —<br>
+            ich bin da.
           </div>
-          <div class="sig">In die Woche, in den Tag. Ciao.</div>
+          <div class="sig">In die Woche. Ciao.</div>
         </div>
         <div class="bottom">preartofhair.com</div>
       </div>
