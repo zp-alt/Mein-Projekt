@@ -63,90 +63,65 @@
     .c1 .swipe { position: absolute; bottom: 26px; right: 28px; font-size: 9px; letter-spacing: 3px; text-transform: uppercase; color: #C4AA80; }
 
     /* ══════════════════════════
-       SLIDE 2 — Körper (Bordo)
+       PHOTO SLIDES — shared base
     ══════════════════════════ */
-    .c2 {
-      background: #5C1A24;
+    .photo-slide {
+      background-size: cover;
       display: flex; flex-direction: column;
       justify-content: space-between;
-      padding: 32px 36px;
+      padding: 28px 32px;
     }
-    .c2 .num { font-size: 64px; font-weight: 900; color: rgba(255,255,255,0.08); line-height: 1; letter-spacing: -3px; }
-    .c2 .mid { flex: 1; display: flex; flex-direction: column; justify-content: center; }
-    .c2 .tag { font-size: 9px; letter-spacing: 4px; text-transform: uppercase; color: rgba(255,255,255,0.35); margin-bottom: 12px; }
-    .c2 .title { font-weight: 800; font-size: 38px; color: #fff; line-height: 1.0; letter-spacing: -1px; }
-    .c2 .body { font-size: 14px; color: rgba(255,255,255,0.55); line-height: 1.7; margin-top: 14px; }
-    .c2 .body b { color: #fff; font-weight: 600; }
-    .c2 .dot { width: 5px; height: 5px; border-radius: 50%; background: rgba(255,255,255,0.3); }
+    .photo-slide::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+      background: linear-gradient(
+        to top,
+        rgba(0,0,0,0.82) 0%,
+        rgba(0,0,0,0.52) 45%,
+        rgba(0,0,0,0.18) 100%
+      );
+    }
+    .photo-slide > * { position: relative; z-index: 1; }
 
-    /* ══════════════════════════
-       SLIDE 3 — Haar (Moos Grün)
-    ══════════════════════════ */
-    .c3 {
-      background: #3E5230;
-      display: flex; flex-direction: column;
-      justify-content: space-between;
-      padding: 32px 36px;
+    .photo-slide .num {
+      font-size: 56px; font-weight: 900;
+      color: rgba(255,255,255,0.12);
+      line-height: 1; letter-spacing: -3px;
     }
-    .c3 .num { font-size: 64px; font-weight: 900; color: rgba(255,255,255,0.08); line-height: 1; letter-spacing: -3px; }
-    .c3 .mid { flex: 1; display: flex; flex-direction: column; justify-content: center; }
-    .c3 .tag { font-size: 9px; letter-spacing: 4px; text-transform: uppercase; color: rgba(255,255,255,0.35); margin-bottom: 12px; }
-    .c3 .title { font-weight: 800; font-size: 38px; color: #fff; line-height: 1.0; letter-spacing: -1px; }
-    .c3 .body { font-size: 14px; color: rgba(255,255,255,0.55); line-height: 1.7; margin-top: 14px; }
-    .c3 .body b { color: #fff; font-weight: 600; }
-    .c3 .dot { width: 5px; height: 5px; border-radius: 50%; background: rgba(255,255,255,0.3); }
+    .photo-slide .mid {
+      flex: 1; display: flex; flex-direction: column; justify-content: flex-end;
+      padding-bottom: 4px;
+    }
+    .photo-slide .tag {
+      font-size: 9px; letter-spacing: 4px; text-transform: uppercase;
+      color: rgba(255,255,255,0.50); margin-bottom: 10px;
+    }
+    .photo-slide .title {
+      font-weight: 800; font-size: 38px; color: #fff;
+      line-height: 1.0; letter-spacing: -1px;
+    }
+    .photo-slide .title em {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic; font-weight: 300;
+      font-size: 42px; display: block; letter-spacing: -1px;
+    }
+    .photo-slide .body {
+      font-size: 13px; color: rgba(255,255,255,0.62);
+      line-height: 1.7; margin-top: 12px;
+    }
+    .photo-slide .body b { color: #fff; font-weight: 600; }
+    .photo-slide .dot {
+      display: none;
+    }
 
-    /* ══════════════════════════
-       SLIDE 4 — Kleidung (Marinen Blau)
-    ══════════════════════════ */
-    .c4 {
-      background: #142038;
-      display: flex; flex-direction: column;
-      justify-content: space-between;
-      padding: 32px 36px;
-    }
-    .c4 .num { font-size: 64px; font-weight: 900; color: rgba(255,255,255,0.07); line-height: 1; letter-spacing: -3px; }
-    .c4 .mid { flex: 1; display: flex; flex-direction: column; justify-content: center; }
-    .c4 .tag { font-size: 9px; letter-spacing: 4px; text-transform: uppercase; color: rgba(255,255,255,0.35); margin-bottom: 12px; }
-    .c4 .title { font-weight: 800; font-size: 38px; color: #fff; line-height: 1.0; letter-spacing: -1px; }
-    .c4 .title em { font-family: 'Cormorant Garamond', serif; font-style: italic; font-weight: 300; font-size: 42px; display: block; }
-    .c4 .body { font-size: 14px; color: rgba(255,255,255,0.55); line-height: 1.7; margin-top: 14px; }
-    .c4 .body b { color: #fff; font-weight: 600; }
-    .c4 .dot { width: 5px; height: 5px; border-radius: 50%; background: rgba(255,255,255,0.3); }
-
-    /* ══════════════════════════
-       SLIDE 5 — Intellekt (Braun)
-    ══════════════════════════ */
-    .c5 {
-      background: #5C3418;
-      display: flex; flex-direction: column;
-      justify-content: space-between;
-      padding: 32px 36px;
-    }
-    .c5 .num { font-size: 64px; font-weight: 900; color: rgba(255,255,255,0.08); line-height: 1; letter-spacing: -3px; }
-    .c5 .mid { flex: 1; display: flex; flex-direction: column; justify-content: center; }
-    .c5 .tag { font-size: 9px; letter-spacing: 4px; text-transform: uppercase; color: rgba(255,255,255,0.35); margin-bottom: 12px; }
-    .c5 .title { font-weight: 800; font-size: 30px; color: #fff; line-height: 1.1; letter-spacing: -0.5px; }
-    .c5 .body { font-size: 14px; color: rgba(255,255,255,0.55); line-height: 1.7; margin-top: 14px; }
-    .c5 .body b { color: #fff; font-weight: 600; }
-    .c5 .dot { width: 5px; height: 5px; border-radius: 50%; background: rgba(255,255,255,0.3); }
-
-    /* ══════════════════════════
-       SLIDE 6 — Emotion (Beige)
-    ══════════════════════════ */
-    .c6 {
-      background: #D4C4A4;
-      display: flex; flex-direction: column;
-      justify-content: space-between;
-      padding: 32px 36px;
-    }
-    .c6 .num { font-size: 64px; font-weight: 900; color: rgba(0,0,0,0.08); line-height: 1; letter-spacing: -3px; }
-    .c6 .mid { flex: 1; display: flex; flex-direction: column; justify-content: center; }
-    .c6 .tag { font-size: 9px; letter-spacing: 4px; text-transform: uppercase; color: #A89268; margin-bottom: 12px; }
-    .c6 .title { font-weight: 800; font-size: 30px; color: #2A1F10; line-height: 1.1; letter-spacing: -0.5px; }
-    .c6 .body { font-size: 14px; color: #7A6845; line-height: 1.7; margin-top: 14px; }
-    .c6 .body b { color: #2A1F10; font-weight: 600; }
-    .c6 .dot { width: 5px; height: 5px; border-radius: 50%; background: #8A7450; }
+    /* individual photo positions */
+    .c2 { background-image: url(hot-img-8119.jpeg); background-position: 65% top; }
+    .c3 { background-image: url(hot-img-8130.jpeg); background-position: center center; }
+    .c4 { background-image: url(hot-img-8129.jpeg); background-position: center 20%; }
+    .c5 { background-image: url(hot-img-8131.jpeg); background-position: center top; }
+    .c6 { background-image: url(hot-img-8132.jpeg); background-position: center center; }
 
     /* ══════════════════════════
        SLIDE 7 — Closer (Champagner)
@@ -186,7 +161,7 @@
     <!-- Slide 2: Körper -->
     <div class="slide-wrap">
       <div class="slide-num">02</div>
-      <div class="slide c2">
+      <div class="slide c2 photo-slide">
         <div class="num">01</div>
         <div class="mid">
           <div class="tag">Energie investieren</div>
@@ -205,7 +180,7 @@
     <!-- Slide 3: Haar -->
     <div class="slide-wrap">
       <div class="slide-num">03</div>
-      <div class="slide c3">
+      <div class="slide c3 photo-slide">
         <div class="num">02</div>
         <div class="mid">
           <div class="tag">Ausdruck & Identität</div>
@@ -224,7 +199,7 @@
     <!-- Slide 4: Kleidung -->
     <div class="slide-wrap">
       <div class="slide-num">04</div>
-      <div class="slide c4">
+      <div class="slide c4 photo-slide">
         <div class="num">03</div>
         <div class="mid">
           <div class="tag">Stil — nicht Preis</div>
@@ -243,7 +218,7 @@
     <!-- Slide 5: Intellekt -->
     <div class="slide-wrap">
       <div class="slide-num">05</div>
-      <div class="slide c5">
+      <div class="slide c5 photo-slide">
         <div class="num">04</div>
         <div class="mid">
           <div class="tag">Unwiderstehlich</div>
@@ -261,7 +236,7 @@
     <!-- Slide 6: Emotion -->
     <div class="slide-wrap">
       <div class="slide-num">06</div>
-      <div class="slide c6">
+      <div class="slide c6 photo-slide">
         <div class="num">05</div>
         <div class="mid">
           <div class="tag">Tiefe & Präsenz</div>
@@ -273,7 +248,7 @@
           </div>
         </div>
         <div class="dot"></div>
-        <div class="pre-mark light">PRE</div>
+        <div class="pre-mark">PRE</div>
       </div>
     </div>
 
