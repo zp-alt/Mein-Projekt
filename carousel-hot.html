@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Carousel – You are so hot</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,700&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400;1,500&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: #c8c8c8;
+      font-family: 'Barlow', sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 48px 20px 64px;
+      gap: 12px;
+    }
+
+    .page-label {
+      font-size: 11px; font-weight: 500; letter-spacing: 4px;
+      text-transform: uppercase; color: #888; margin-bottom: 24px;
+    }
+
+    .row { display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; }
+    .slide-wrap { display: flex; flex-direction: column; align-items: center; gap: 8px; }
+    .slide-num { font-size: 10px; letter-spacing: 3px; text-transform: uppercase; color: #aaa; font-weight: 500; }
+
+    .slide {
+      width: 360px; height: 360px;
+      border-radius: 4px;
+      overflow: hidden; position: relative;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.25);
+      flex-shrink: 0;
+    }
+    .pre-mark {
+      position: absolute; bottom: 18px; right: 20px; z-index: 10;
+      font-weight: 700; font-size: 10px; letter-spacing: 3px;
+      color: rgba(255,255,255,0.15);
+    }
+    .pre-mark.dark { color: rgba(0,0,0,0.12); }
+
+    /* ══════════════════════════
+       SLIDE 1 — Cover / Hook
+    ══════════════════════════ */
+    .c1 {
+      background: #0d0d0d;
+      display: flex; flex-direction: column;
+      justify-content: center;
+      padding: 44px 40px;
+    }
+    .c1 .label { font-size: 9px; letter-spacing: 4px; text-transform: uppercase; color: #333; margin-bottom: 24px; }
+    .c1 .hook {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-weight: 400;
+      font-size: 36px;
+      color: #fff;
+      line-height: 1.2;
+      letter-spacing: 0.3px;
+    }
+    .c1 .reread {
+      margin-top: 22px;
+      font-size: 10px; letter-spacing: 4px; text-transform: uppercase;
+      color: #444;
+    }
+    .c1 .swipe { position: absolute; bottom: 26px; right: 28px; font-size: 9px; letter-spacing: 3px; text-transform: uppercase; color: #2a2a2a; }
+
+    /* ══════════════════════════
+       SLIDE 2 — Körper
+    ══════════════════════════ */
+    .c2 {
+      background: #111;
+      display: flex; flex-direction: column;
+      justify-content: space-between;
+      padding: 32px 36px;
+    }
+    .c2 .num { font-size: 64px; font-weight: 900; color: #1a1a1a; line-height: 1; letter-spacing: -3px; }
+    .c2 .mid { flex: 1; display: flex; flex-direction: column; justify-content: center; }
+    .c2 .tag { font-size: 9px; letter-spacing: 4px; text-transform: uppercase; color: #444; margin-bottom: 12px; }
+    .c2 .title { font-weight: 800; font-size: 38px; color: #fff; line-height: 1.0; letter-spacing: -1px; }
+    .c2 .body { font-size: 14px; color: #555; line-height: 1.7; margin-top: 14px; }
+    .c2 .body b { color: rgba(255,255,255,0.75); font-weight: 600; }
+    .c2 .dot { width: 5px; height: 5px; border-radius: 50%; background: #fff; }
+
+    /* ══════════════════════════
+       SLIDE 3 — Haar
+    ══════════════════════════ */
+    .c3 {
+      background: #faf9f6;
+      display: flex; flex-direction: column;
+      justify-content: space-between;
+      padding: 32px 36px;
+    }
+    .c3 .num { font-size: 64px; font-weight: 900; color: #eeebe4; line-height: 1; letter-spacing: -3px; }
+    .c3 .mid { flex: 1; display: flex; flex-direction: column; justify-content: center; }
+    .c3 .tag { font-size: 9px; letter-spacing: 4px; text-transform: uppercase; color: #ccc; margin-bottom: 12px; }
+    .c3 .title { font-weight: 800; font-size: 38px; color: #111; line-height: 1.0; letter-spacing: -1px; }
+    .c3 .body { font-size: 14px; color: #888; line-height: 1.7; margin-top: 14px; }
+    .c3 .body b { color: #111; font-weight: 600; }
+    .c3 .dot { width: 5px; height: 5px; border-radius: 50%; background: #111; }
+
+    /* ══════════════════════════
+       SLIDE 4 — Kleidung
+    ══════════════════════════ */
+    .c4 {
+      background: #111;
+      display: flex; flex-direction: column;
+      justify-content: space-between;
+      padding: 32px 36px;
+    }
+    .c4 .num { font-size: 64px; font-weight: 900; color: #1a1a1a; line-height: 1; letter-spacing: -3px; }
+    .c4 .mid { flex: 1; display: flex; flex-direction: column; justify-content: center; }
+    .c4 .tag { font-size: 9px; letter-spacing: 4px; text-transform: uppercase; color: #444; margin-bottom: 12px; }
+    .c4 .title { font-weight: 800; font-size: 38px; color: #fff; line-height: 1.0; letter-spacing: -1px; }
+    .c4 .title em { font-family: 'Cormorant Garamond', serif; font-style: italic; font-weight: 300; font-size: 42px; display: block; }
+    .c4 .body { font-size: 14px; color: #555; line-height: 1.7; margin-top: 14px; }
+    .c4 .body b { color: rgba(255,255,255,0.75); font-weight: 600; }
+    .c4 .dot { width: 5px; height: 5px; border-radius: 50%; background: #fff; }
+
+    /* ══════════════════════════
+       SLIDE 5 — Intellekt
+    ══════════════════════════ */
+    .c5 {
+      background: #faf9f6;
+      display: flex; flex-direction: column;
+      justify-content: space-between;
+      padding: 32px 36px;
+    }
+    .c5 .num { font-size: 64px; font-weight: 900; color: #eeebe4; line-height: 1; letter-spacing: -3px; }
+    .c5 .mid { flex: 1; display: flex; flex-direction: column; justify-content: center; }
+    .c5 .tag { font-size: 9px; letter-spacing: 4px; text-transform: uppercase; color: #ccc; margin-bottom: 12px; }
+    .c5 .title { font-weight: 800; font-size: 30px; color: #111; line-height: 1.1; letter-spacing: -0.5px; }
+    .c5 .body { font-size: 14px; color: #888; line-height: 1.7; margin-top: 14px; }
+    .c5 .body b { color: #111; font-weight: 600; }
+    .c5 .dot { width: 5px; height: 5px; border-radius: 50%; background: #111; }
+
+    /* ══════════════════════════
+       SLIDE 6 — Emotion
+    ══════════════════════════ */
+    .c6 {
+      background: #111;
+      display: flex; flex-direction: column;
+      justify-content: space-between;
+      padding: 32px 36px;
+    }
+    .c6 .num { font-size: 64px; font-weight: 900; color: #1a1a1a; line-height: 1; letter-spacing: -3px; }
+    .c6 .mid { flex: 1; display: flex; flex-direction: column; justify-content: center; }
+    .c6 .tag { font-size: 9px; letter-spacing: 4px; text-transform: uppercase; color: #444; margin-bottom: 12px; }
+    .c6 .title { font-weight: 800; font-size: 30px; color: #fff; line-height: 1.1; letter-spacing: -0.5px; }
+    .c6 .body { font-size: 14px; color: #555; line-height: 1.7; margin-top: 14px; }
+    .c6 .body b { color: rgba(255,255,255,0.75); font-weight: 600; }
+    .c6 .dot { width: 5px; height: 5px; border-radius: 50%; background: #fff; }
+
+    /* ══════════════════════════
+       SLIDE 7 — Closer
+    ══════════════════════════ */
+    .c7 {
+      background: #0d0d0d;
+      display: flex; flex-direction: column;
+      justify-content: center;
+      padding: 44px 40px;
+    }
+    .c7 .closer-label { font-size: 9px; letter-spacing: 4px; text-transform: uppercase; color: #333; margin-bottom: 20px; }
+    .c7 .closer-main {
+      font-weight: 900; font-size: 46px; color: #fff;
+      line-height: 1.0; letter-spacing: -2px;
+    }
+    .c7 .closer-main em {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic; font-weight: 300;
+      font-size: 50px; display: block;
+      color: #fff; letter-spacing: -1px;
+    }
+    .c7 .divider { width: 32px; height: 1px; background: #2a2a2a; margin: 22px 0; }
+    .c7 .closer-sub { font-size: 14px; color: #444; line-height: 1.75; }
+    .c7 .closer-sub b { color: rgba(255,255,255,0.6); font-weight: 600; }
+  </style>
+</head>
+<body>
+
+  <div class="page-label">Carousel — You are so hot as you can handle</div>
+
+  <div class="row">
+
+    <!-- Slide 1: Cover -->
+    <div class="slide-wrap">
+      <div class="slide-num">01</div>
+      <div class="slide c1">
+        <div class="label">Lies nochmal.</div>
+        <div class="hook">"You are so hot<br>as you can<br>handle."</div>
+        <div class="reread">Reread again.</div>
+        <div class="swipe">Swipe &rarr;</div>
+        <div class="pre-mark">PRE</div>
+      </div>
+    </div>
+
+    <!-- Slide 2: Körper -->
+    <div class="slide-wrap">
+      <div class="slide-num">02</div>
+      <div class="slide c2">
+        <div class="num">01</div>
+        <div class="mid">
+          <div class="tag">Energie investieren</div>
+          <div class="title">Dein<br>Körper.</div>
+          <div class="body">
+            Wie viel Energie steckst du in ihn?<br>
+            <b>Sport. Bewegung. Schlaf.</b><br>
+            Nicht für andere — für dich.
+          </div>
+        </div>
+        <div class="dot"></div>
+        <div class="pre-mark">PRE</div>
+      </div>
+    </div>
+
+    <!-- Slide 3: Haar -->
+    <div class="slide-wrap">
+      <div class="slide-num">03</div>
+      <div class="slide c3">
+        <div class="num">02</div>
+        <div class="mid">
+          <div class="tag">Ausdruck & Identität</div>
+          <div class="title">Dein<br>Haar.</div>
+          <div class="body">
+            Haare sind kein Detail.<br>
+            <b>Sie sind Ausdruck von wer du bist.</b><br>
+            Pflege sie wie dein Zuhause.
+          </div>
+        </div>
+        <div class="dot"></div>
+        <div class="pre-mark">PRE</div>
+      </div>
+    </div>
+
+    <!-- Slide 4: Kleidung -->
+    <div class="slide-wrap">
+      <div class="slide-num">04</div>
+      <div class="slide c4">
+        <div class="num">03</div>
+        <div class="mid">
+          <div class="tag">Stil — nicht Preis</div>
+          <div class="title">Dein<br><em>Style.</em></div>
+          <div class="body">
+            Nicht das Teuerste.<br>
+            <b>Das was zu dir passt.</b><br>
+            Kleidung die dich trägt — nicht umgekehrt.
+          </div>
+        </div>
+        <div class="dot"></div>
+        <div class="pre-mark">PRE</div>
+      </div>
+    </div>
+
+    <!-- Slide 5: Intellekt -->
+    <div class="slide-wrap">
+      <div class="slide-num">05</div>
+      <div class="slide c5">
+        <div class="num">04</div>
+        <div class="mid">
+          <div class="tag">Unwiderstehlich</div>
+          <div class="title">Intellektuelle<br>Sexyness.</div>
+          <div class="body">
+            Neugier. Haltung. Meinung.<br>
+            <b>Jemand der denkt<br>und es zeigt — das zieht an.</b>
+          </div>
+        </div>
+        <div class="dot"></div>
+        <div class="pre-mark">PRE</div>
+      </div>
+    </div>
+
+    <!-- Slide 6: Emotion -->
+    <div class="slide-wrap">
+      <div class="slide-num">06</div>
+      <div class="slide c6">
+        <div class="num">05</div>
+        <div class="mid">
+          <div class="tag">Tiefe & Präsenz</div>
+          <div class="title">Emotionale<br>Sexyness.</div>
+          <div class="body">
+            Wer weiß wer er ist,<br>
+            braucht nichts zu beweisen.<br>
+            <b>Diese Ruhe. Diese Tiefe.<br>Das ist es.</b>
+          </div>
+        </div>
+        <div class="dot"></div>
+        <div class="pre-mark">PRE</div>
+      </div>
+    </div>
+
+    <!-- Slide 7: Closer -->
+    <div class="slide-wrap">
+      <div class="slide-num">07</div>
+      <div class="slide c7">
+        <div class="closer-label">Dein Level.</div>
+        <div class="closer-main">Investiere<br><em>in dich.</em></div>
+        <div class="divider"></div>
+        <div class="closer-sub">
+          Du bist so attraktiv<br>
+          wie die Energie die du<br>
+          <b>dir selbst gibst.</b>
+        </div>
+        <div class="pre-mark">PRE</div>
+      </div>
+    </div>
+
+  </div>
+
+</body>
+</html>
