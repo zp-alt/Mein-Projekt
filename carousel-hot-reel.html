@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Reel – You are so hot</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,700&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400;1,500&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: #aaa;
+      font-family: 'Barlow', sans-serif;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      padding: 32px;
+      align-items: flex-start;
+    }
+
+    .slide {
+      width: 360px;
+      height: 640px;
+      border-radius: 4px;
+      overflow: hidden;
+      position: relative;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+      flex-shrink: 0;
+    }
+
+    .pre-mark {
+      position: absolute; bottom: 24px; right: 24px; z-index: 10;
+      font-weight: 700; font-size: 10px; letter-spacing: 3px;
+      color: rgba(255,255,255,0.18);
+    }
+    .pre-mark.light { color: rgba(0,0,0,0.15); }
+
+    /* ══════════════════════════
+       SLIDE 1 — Cover (Champagner)
+    ══════════════════════════ */
+    .c1 {
+      background: #E8D9B8;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 56px 48px;
+    }
+    .c1 .pre-label {
+      font-size: 9px; letter-spacing: 5px; text-transform: uppercase;
+      color: #A89268; margin-bottom: 48px;
+    }
+    .c1 .hook {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic; font-weight: 400;
+      font-size: 44px; color: #2A1F10;
+      line-height: 1.18; letter-spacing: 0.3px;
+    }
+    .c1 .reread {
+      margin-top: 36px;
+      font-size: 10px; letter-spacing: 5px;
+      text-transform: uppercase; color: #B0996A;
+    }
+    .c1 .divider {
+      width: 32px; height: 1px; background: #C4AA80; margin: 28px 0;
+    }
+    .c1 .sub {
+      font-size: 13px; color: #9A8060; line-height: 1.7;
+    }
+
+    /* ══════════════════════════
+       PHOTO SLIDES — shared base
+    ══════════════════════════ */
+    .photo-slide {
+      background-size: cover;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 36px 40px 44px;
+    }
+    .photo-slide::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+      background: linear-gradient(
+        to top,
+        rgba(0,0,0,0.88) 0%,
+        rgba(0,0,0,0.55) 38%,
+        rgba(0,0,0,0.15) 70%,
+        rgba(0,0,0,0.05) 100%
+      );
+    }
+    .photo-slide > * { position: relative; z-index: 1; }
+
+    .photo-slide .num {
+      font-size: 72px; font-weight: 900;
+      color: rgba(255,255,255,0.10);
+      line-height: 1; letter-spacing: -4px;
+      align-self: flex-start;
+    }
+    .photo-slide .bottom {
+      display: flex;
+      flex-direction: column;
+    }
+    .photo-slide .tag {
+      font-size: 9px; letter-spacing: 4px; text-transform: uppercase;
+      color: rgba(255,255,255,0.50); margin-bottom: 12px;
+    }
+    .photo-slide .title {
+      font-weight: 800; font-size: 46px; color: #fff;
+      line-height: 1.0; letter-spacing: -1.5px;
+    }
+    .photo-slide .title em {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic; font-weight: 300;
+      font-size: 52px; display: block; letter-spacing: -1px;
+    }
+    .photo-slide .body {
+      font-size: 14px; color: rgba(255,255,255,0.60);
+      line-height: 1.75; margin-top: 16px;
+    }
+    .photo-slide .body b { color: #fff; font-weight: 600; }
+
+    /* individual photo positions */
+    .c2 { background-image: url(hot-img-8119.jpeg); background-position: 70% top; }
+    .c3 { background-image: url(hot-img-8130.jpeg); background-position: center center; }
+    .c4 { background-image: url(hot-img-8129.jpeg); background-position: center 15%; }
+    .c5 { background-image: url(hot-img-8131.jpeg); background-position: center top; }
+    .c6 { background-image: url(hot-img-8132.jpeg); background-position: center center; }
+
+    /* ══════════════════════════
+       SLIDE 7 — Closer (Champagner)
+    ══════════════════════════ */
+    .c7 {
+      background: #E8D9B8;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 56px 48px;
+    }
+    .c7 .closer-label {
+      font-size: 9px; letter-spacing: 5px;
+      text-transform: uppercase; color: #A89268; margin-bottom: 24px;
+    }
+    .c7 .closer-main {
+      font-weight: 900; font-size: 56px; color: #2A1F10;
+      line-height: 1.0; letter-spacing: -2.5px;
+    }
+    .c7 .closer-main em {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic; font-weight: 300;
+      font-size: 62px; display: block;
+      color: #2A1F10; letter-spacing: -1.5px;
+    }
+    .c7 .divider { width: 36px; height: 1px; background: #C4AA80; margin: 32px 0; }
+    .c7 .closer-sub { font-size: 15px; color: #7A6845; line-height: 1.8; }
+    .c7 .closer-sub b { color: #2A1F10; font-weight: 600; }
+  </style>
+</head>
+<body>
+
+  <!-- Slide 1: Cover -->
+  <div class="slide c1">
+    <div class="pre-label">PRE Art of Hair</div>
+    <div class="hook">"You are so hot<br>as you can<br>handle."</div>
+    <div class="divider"></div>
+    <div class="sub">Reread again.<br>Wirklich.</div>
+    <div class="pre-mark light">PRE</div>
+  </div>
+
+  <!-- Slide 2: Körper -->
+  <div class="slide c2 photo-slide">
+    <div class="num">01</div>
+    <div class="bottom">
+      <div class="tag">Energie investieren</div>
+      <div class="title">Dein<br>Körper.</div>
+      <div class="body">
+        Wie viel Energie steckst du in ihn?<br>
+        <b>Sport. Bewegung. Schlaf.</b><br>
+        Nicht für andere — für dich.
+      </div>
+    </div>
+    <div class="pre-mark">PRE</div>
+  </div>
+
+  <!-- Slide 3: Haar -->
+  <div class="slide c3 photo-slide">
+    <div class="num">02</div>
+    <div class="bottom">
+      <div class="tag">Ausdruck & Identität</div>
+      <div class="title">Dein<br>Haar.</div>
+      <div class="body">
+        Haare sind kein Detail.<br>
+        <b>Sie sind Ausdruck von wer du bist.</b><br>
+        Pflege sie wie dein Zuhause.
+      </div>
+    </div>
+    <div class="pre-mark">PRE</div>
+  </div>
+
+  <!-- Slide 4: Style -->
+  <div class="slide c4 photo-slide">
+    <div class="num">03</div>
+    <div class="bottom">
+      <div class="tag">Stil — nicht Preis</div>
+      <div class="title">Dein<br><em>Style.</em></div>
+      <div class="body">
+        Nicht das Teuerste.<br>
+        <b>Das was zu dir passt.</b><br>
+        Kleidung die dich trägt — nicht umgekehrt.
+      </div>
+    </div>
+    <div class="pre-mark">PRE</div>
+  </div>
+
+  <!-- Slide 5: Intellekt -->
+  <div class="slide c5 photo-slide">
+    <div class="num">04</div>
+    <div class="bottom">
+      <div class="tag">Unwiderstehlich</div>
+      <div class="title">Intellektuelle<br>Sexyness.</div>
+      <div class="body">
+        Neugier. Haltung. Meinung.<br>
+        <b>Jemand der denkt<br>und es zeigt — das zieht an.</b>
+      </div>
+    </div>
+    <div class="pre-mark">PRE</div>
+  </div>
+
+  <!-- Slide 6: Emotion -->
+  <div class="slide c6 photo-slide">
+    <div class="num">05</div>
+    <div class="bottom">
+      <div class="tag">Tiefe & Präsenz</div>
+      <div class="title">Emotionale<br>Sexyness.</div>
+      <div class="body">
+        Wer weiß wer er ist,<br>
+        braucht nichts zu beweisen.<br>
+        <b>Diese Ruhe. Diese Tiefe.<br>Das ist es.</b>
+      </div>
+    </div>
+    <div class="pre-mark">PRE</div>
+  </div>
+
+  <!-- Slide 7: Closer -->
+  <div class="slide c7">
+    <div class="closer-label">Dein Level.</div>
+    <div class="closer-main">Investiere<br><em>in dich.</em></div>
+    <div class="divider"></div>
+    <div class="closer-sub">
+      Du bist so attraktiv<br>
+      wie die Energie die du<br>
+      <b>dir selbst gibst.</b>
+    </div>
+    <div class="pre-mark light">PRE</div>
+  </div>
+
+</body>
+</html>
