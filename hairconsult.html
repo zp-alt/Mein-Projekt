@@ -1,0 +1,756 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>PRE — Hair Identity</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
+
+    :root {
+      --bg: #0e0e0e;
+      --card: #181818;
+      --border: rgba(255,255,255,0.07);
+      --text: #ffffff;
+      --muted: rgba(255,255,255,0.42);
+      --accent: #E8D9B8;
+      --gold: #C4AA80;
+      --gold-low: rgba(196,170,128,0.10);
+      --gold-mid: rgba(196,170,128,0.22);
+    }
+
+    html { height: 100%; }
+
+    body {
+      height: 100%;
+      overflow: hidden;
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Barlow', sans-serif;
+      position: relative;
+    }
+
+    /* ─── SCREENS ─── */
+    .screen {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 40px 28px;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.35s ease, transform 0.35s ease;
+      transform: translateY(18px);
+      overflow-y: auto;
+      -webkit-overflow-scrolling: touch;
+    }
+    .screen.active {
+      opacity: 1;
+      pointer-events: all;
+      transform: translateY(0);
+    }
+    .screen.exit {
+      opacity: 0;
+      transform: translateY(-18px);
+      pointer-events: none;
+    }
+
+    /* ─── WELCOME ─── */
+    #s-welcome { text-align: center; gap: 0; }
+
+    .pre-logo {
+      font-size: 9px;
+      letter-spacing: 6px;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 64px;
+    }
+
+    #s-welcome h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-weight: 300;
+      font-size: clamp(38px, 10vw, 56px);
+      line-height: 1.1;
+      color: var(--accent);
+      margin-bottom: 20px;
+    }
+
+    #s-welcome p {
+      font-size: 13px;
+      color: var(--muted);
+      letter-spacing: 0.5px;
+      line-height: 1.8;
+      margin-bottom: 60px;
+    }
+
+    .btn-primary {
+      background: transparent;
+      border: 1px solid var(--gold);
+      color: var(--gold);
+      font-family: 'Barlow', sans-serif;
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 5px;
+      text-transform: uppercase;
+      padding: 18px 44px;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .btn-primary:active { background: var(--gold-low); }
+
+    /* ─── NAME ─── */
+    #s-name { text-align: center; gap: 0; }
+
+    #s-name h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-weight: 300;
+      font-size: clamp(28px, 8vw, 42px);
+      color: var(--accent);
+      margin-bottom: 10px;
+    }
+
+    #s-name p {
+      font-size: 13px;
+      color: var(--muted);
+      margin-bottom: 44px;
+    }
+
+    .name-input {
+      width: 100%;
+      max-width: 300px;
+      background: transparent;
+      border: none;
+      border-bottom: 1px solid rgba(255,255,255,0.18);
+      color: var(--text);
+      font-family: 'Barlow', sans-serif;
+      font-size: 24px;
+      font-weight: 300;
+      text-align: center;
+      padding: 10px 0;
+      outline: none;
+      margin-bottom: 52px;
+      caret-color: var(--gold);
+    }
+    .name-input::placeholder { color: rgba(255,255,255,0.14); }
+
+    /* ─── QUIZ ─── */
+    #s-quiz {
+      justify-content: flex-start;
+      padding: 0;
+      align-items: stretch;
+    }
+
+    .quiz-top {
+      padding: 24px 28px 0;
+      flex-shrink: 0;
+    }
+
+    .progress-bar {
+      width: 100%;
+      height: 1px;
+      background: rgba(255,255,255,0.07);
+      margin-bottom: 20px;
+    }
+    .progress-fill {
+      height: 100%;
+      background: var(--gold);
+      transition: width 0.5s ease;
+    }
+
+    .q-meta {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 32px;
+    }
+    .q-number {
+      font-size: 10px;
+      letter-spacing: 3px;
+      color: var(--gold);
+      font-weight: 500;
+    }
+    .q-brand {
+      font-size: 9px;
+      letter-spacing: 3px;
+      color: rgba(255,255,255,0.12);
+      font-weight: 600;
+    }
+
+    .q-text {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-weight: 300;
+      font-size: clamp(22px, 6vw, 30px);
+      color: var(--accent);
+      line-height: 1.3;
+      padding: 0 28px;
+      margin-bottom: 24px;
+      flex-shrink: 0;
+    }
+
+    .options {
+      padding: 0 28px 40px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      overflow-y: auto;
+      flex: 1;
+    }
+
+    .option {
+      width: 100%;
+      background: transparent;
+      border: 1px solid var(--border);
+      color: rgba(255,255,255,0.80);
+      font-family: 'Barlow', sans-serif;
+      font-size: 14px;
+      font-weight: 400;
+      text-align: left;
+      padding: 16px 20px;
+      cursor: pointer;
+      transition: all 0.18s;
+      line-height: 1.5;
+      border-radius: 2px;
+    }
+    .option:active, .option:hover { background: var(--gold-low); border-color: rgba(196,170,128,0.25); color: #fff; }
+    .option.selected { background: var(--gold-mid); border-color: var(--gold); color: #fff; }
+
+    /* ─── LOADING ─── */
+    #s-loading { text-align: center; gap: 28px; }
+
+    .loading-brand {
+      font-size: 9px;
+      letter-spacing: 6px;
+      text-transform: uppercase;
+      color: var(--gold);
+    }
+
+    .loading-dots {
+      display: flex;
+      gap: 10px;
+      justify-content: center;
+    }
+    .loading-dots span {
+      width: 5px; height: 5px;
+      border-radius: 50%;
+      background: var(--gold);
+      animation: dotpulse 1.2s ease-in-out infinite;
+    }
+    .loading-dots span:nth-child(2) { animation-delay: 0.2s; }
+    .loading-dots span:nth-child(3) { animation-delay: 0.4s; }
+    @keyframes dotpulse {
+      0%, 80%, 100% { opacity: 0.12; transform: scale(0.7); }
+      40% { opacity: 1; transform: scale(1); }
+    }
+
+    .loading-msg {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-weight: 300;
+      font-size: 20px;
+      color: rgba(255,255,255,0.35);
+      transition: opacity 0.5s;
+    }
+
+    /* ─── RESULT ─── */
+    #s-result {
+      justify-content: flex-start;
+      padding-top: 60px;
+      padding-bottom: 60px;
+      text-align: center;
+      gap: 0;
+      overflow-y: auto;
+    }
+
+    .result-brand {
+      font-size: 9px;
+      letter-spacing: 6px;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 44px;
+    }
+
+    .result-greeting {
+      font-size: 13px;
+      color: var(--muted);
+      letter-spacing: 1px;
+      margin-bottom: 4px;
+    }
+    .result-client-name {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-weight: 300;
+      font-size: 22px;
+      color: rgba(255,255,255,0.55);
+      margin-bottom: 28px;
+    }
+
+    .result-you-are {
+      font-size: 10px;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.25);
+      margin-bottom: 12px;
+    }
+
+    #result-archetype-name {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-weight: 300;
+      font-size: clamp(46px, 13vw, 66px);
+      color: var(--accent);
+      line-height: 1.0;
+      margin-bottom: 14px;
+    }
+
+    #result-tagline {
+      font-size: 13px;
+      font-weight: 300;
+      letter-spacing: 1.5px;
+      color: rgba(255,255,255,0.45);
+      margin-bottom: 44px;
+    }
+
+    .result-divider {
+      width: 36px;
+      height: 1px;
+      background: var(--gold);
+      margin: 0 auto 36px;
+    }
+
+    #result-desc {
+      font-size: 15px;
+      color: rgba(255,255,255,0.68);
+      line-height: 1.9;
+      max-width: 340px;
+      margin: 0 auto 44px;
+    }
+
+    .hair-vision-label {
+      font-size: 9px;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 14px;
+    }
+
+    #result-hair {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-weight: 300;
+      font-size: 19px;
+      color: rgba(255,255,255,0.50);
+      line-height: 1.7;
+      max-width: 300px;
+      margin: 0 auto 56px;
+    }
+
+    .btn-book {
+      display: block;
+      width: 100%;
+      max-width: 280px;
+      margin: 0 auto 16px;
+      background: var(--gold);
+      border: none;
+      color: #0e0e0e;
+      font-family: 'Barlow', sans-serif;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 5px;
+      text-transform: uppercase;
+      padding: 20px;
+      cursor: pointer;
+      transition: opacity 0.2s;
+    }
+    .btn-book:active { opacity: 0.85; }
+
+    .btn-restart {
+      background: none;
+      border: none;
+      color: rgba(255,255,255,0.20);
+      font-family: 'Barlow', sans-serif;
+      font-size: 10px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      cursor: pointer;
+      padding: 10px;
+    }
+  </style>
+</head>
+<body>
+
+<!-- ── WELCOME ── -->
+<div class="screen active" id="s-welcome">
+  <div class="pre-logo">PRE Art of Hair</div>
+  <h1>Find Your<br>Hair Identity.</h1>
+  <p>15 Fragen.<br>Dein Stil. Deine Wahrheit.<br>Dein Haar.</p>
+  <button class="btn-primary" onclick="gotoScreen('s-name')">Starten →</button>
+</div>
+
+<!-- ── NAME ── -->
+<div class="screen" id="s-name">
+  <h2>Wie heißt du?</h2>
+  <p>Damit dein Ergebnis persönlich wird.</p>
+  <input class="name-input" type="text" id="name-input" placeholder="Dein Name" autocomplete="off" autocorrect="off">
+  <button class="btn-primary" onclick="startQuiz()">Weiter →</button>
+</div>
+
+<!-- ── QUIZ ── -->
+<div class="screen" id="s-quiz">
+  <div class="quiz-top">
+    <div class="progress-bar"><div class="progress-fill" id="progress-fill" style="width:0%"></div></div>
+    <div class="q-meta">
+      <div class="q-number" id="q-number">01 / 15</div>
+      <div class="q-brand">PRE</div>
+    </div>
+  </div>
+  <div class="q-text" id="q-text"></div>
+  <div class="options" id="options"></div>
+</div>
+
+<!-- ── LOADING ── -->
+<div class="screen" id="s-loading">
+  <div class="loading-brand">PRE Art of Hair</div>
+  <div class="loading-dots"><span></span><span></span><span></span></div>
+  <div class="loading-msg" id="loading-msg">Wir lesen zwischen den Zeilen...</div>
+</div>
+
+<!-- ── RESULT ── -->
+<div class="screen" id="s-result">
+  <div class="result-brand">PRE Art of Hair</div>
+  <div class="result-greeting">Hallo,</div>
+  <div class="result-client-name" id="result-client-name"></div>
+  <div class="result-you-are">Du bist</div>
+  <div id="result-archetype-name"></div>
+  <div id="result-tagline"></div>
+  <div class="result-divider"></div>
+  <div id="result-desc"></div>
+  <div class="hair-vision-label">Deine Hair Vision</div>
+  <div id="result-hair"></div>
+  <button class="btn-book" onclick="window.open('https://www.belbo.com/pre-art-of-hair','_blank')">Termin buchen →</button>
+  <button class="btn-restart" onclick="restart()">Nochmal starten</button>
+</div>
+
+<script>
+const ARCHETYPES = {
+  editor: {
+    name: "The Editor",
+    tagline: "Klarheit ist deine Superkraft.",
+    desc: "Du reduzierst. Du wählst genau. Du weißt dass echte Schönheit keine Erklärung braucht. Dein Haar ist präzise — eine Entscheidung, keine Zufälligkeit. Clean lines, perfekte Schnitte, zero Kompromisse. Du betrittst einen Raum ohne ein Wort zu sagen — und trotzdem halten alle inne.",
+    hair: "Geometrische Bobs, scharfe Winkel, monochromer Glanz. Weniger — aber das Wenige ist absolut perfekt."
+  },
+  parisienne: {
+    name: "La Parisienne",
+    tagline: "Mühelos ist dein Stil.",
+    desc: "Du machst nichts — und alles sieht trotzdem perfekt aus. Dein Haar ist Ausdruck von Femininität ohne Anstrengung. Warm, soft, natürlich. Du glaubst an Schönheit die aus dir kommt — nicht auf dich draufgelegt wird.",
+    hair: "Weiche Wellen, bewegte Layers, goldene Töne. Hair that looks like you woke up like this."
+  },
+  rebel: {
+    name: "The Rebel",
+    tagline: "Du setzt Zeichen.",
+    desc: "Du brichst Regeln — weil du sie kennst und bewusst ignorierst. Dein Haar ist ein Statement. Es polarisiert. Genau das willst du. Du bist nicht für alle — und das ist deine größte Stärke. Bold ist das Minimum.",
+    hair: "Unerwartete Farben, unkonventionelle Cuts, Kombinationen die noch niemand probiert hat."
+  },
+  nomad: {
+    name: "The Nomad",
+    tagline: "Authentizität ist dein Kompass.",
+    desc: "Du trägst die Welt in dir. Dein Haar ist wie du lebst — frei, ungebunden, lebendig. Keine Perfektion — Präsenz. Texturen, Bewegung, das Gefühl dass du gerade einen Markt in Marrakesch verlassen hast.",
+    hair: "Textured, natural, lived-in. Farben aus der Erde — caramel, terracotta, tiefes Mahagoni."
+  },
+  icon: {
+    name: "The Icon",
+    tagline: "Du wirst in Erinnerung bleiben.",
+    desc: "Du bist Präsenz. Du bist Power. Wenn du einen Raum betrittst, verändert sich die Energie. Dein Haar ist keine Nebensache — es ist Teil deines Auftritts. Klassisch, glamourös, unvergesslich.",
+    hair: "Perfect blowout, Volumen, Struktur. Das Haar das man in Filmen sieht. Timeless glamour."
+  },
+  artiste: {
+    name: "L'Artiste",
+    tagline: "Dein Haar ist deine Leinwand.",
+    desc: "Du denkst in Bildern, in Schichten, in Bedeutungen. Für dich ist Haar kein Accessoire — es ist Ausdrucksmittel. Jeder Schnitt, jede Farbe erzählt eine Geschichte. Und das ist genau so gemeint.",
+    hair: "Kreative Farben, expressives Styling, unique cuts die noch niemand trägt."
+  }
+};
+
+const QUESTIONS = [
+  {
+    text: "Dein Zuhause sieht aus wie...",
+    options: [
+      { text: "Wenig Möbel, viel Licht — keine Unordnung", type: "editor" },
+      { text: "Blumen, Leinen, warme gemütliche Ecken", type: "parisienne" },
+      { text: "Rohe Wände, Statement-Pieces, keine Regeln", type: "rebel" },
+      { text: "Pflanzen, Vintage-Funde, Reise-Souvenirs", type: "nomad" },
+      { text: "Glam, Gold-Akzente — alles hat seinen Platz", type: "icon" },
+      { text: "Bücher überall, Kunstwerke, kreatives Chaos", type: "artiste" }
+    ]
+  },
+  {
+    text: "Welche Filmästhetik liebst du am meisten?",
+    options: [
+      { text: "Lost in Translation — ruhig, präzise, still", type: "editor" },
+      { text: "Amélie — warm, verspielt, romantisch", type: "parisienne" },
+      { text: "Fight Club — roh, mutig, überwältigend", type: "rebel" },
+      { text: "Into the Wild — frei, weit, echt", type: "nomad" },
+      { text: "Breakfast at Tiffany's — glamourös, zeitlos", type: "icon" },
+      { text: "Frida — intensiv, farbig, einzigartig", type: "artiste" }
+    ]
+  },
+  {
+    text: "Du wählst dein Outfit nach...",
+    options: [
+      { text: "Passform und Qualität des Stoffs — nichts anderes zählt", type: "editor" },
+      { text: "Wie es mich fühlen lässt — leicht und frei", type: "parisienne" },
+      { text: "Was andere überrascht oder provoziert", type: "rebel" },
+      { text: "Was sich anfühlt wie eine zweite Haut", type: "nomad" },
+      { text: "Was Eindruck macht — jeder soll es bemerken", type: "icon" },
+      { text: "Was meine Stimmung heute ausdrückt", type: "artiste" }
+    ]
+  },
+  {
+    text: "Welches Gebäude würdest du nie verlassen wollen?",
+    options: [
+      { text: "Ein japanisches Teehaus mitten im Wald", type: "editor" },
+      { text: "Ein haussmannsches Stadthaus in Paris", type: "parisienne" },
+      { text: "Ein Berliner Backsteinloft mit rohem Flair", type: "rebel" },
+      { text: "Eine marokkanische Riad mit blühendem Innenhof", type: "nomad" },
+      { text: "Ein Art-Déco-Hotel in New York", type: "icon" },
+      { text: "Ein altes Künstleratelier voller Geschichte", type: "artiste" }
+    ]
+  },
+  {
+    text: "Dein Instagram-Feed sieht aus wie...",
+    options: [
+      { text: "Schwarz-Weiß, sehr ruhig, fast leer", type: "editor" },
+      { text: "Warm, golden, Picnics und Cafés", type: "parisienne" },
+      { text: "Punk, Street Art, unerwartete Kombinationen", type: "rebel" },
+      { text: "Natur, Fernweh, rohe Authentizität", type: "nomad" },
+      { text: "Glossy, Fashion Weeks, Red Carpet Looks", type: "icon" },
+      { text: "Kunst, Farben, Ausstellungen, Experimentelles", type: "artiste" }
+    ]
+  },
+  {
+    text: "Wenn Geld keine Rolle spielt — welchen Designer trägst du?",
+    options: [
+      { text: "The Row oder Toteme — clean, präzise, still", type: "editor" },
+      { text: "Jacquemus oder Zimmermann — weich, feminin", type: "parisienne" },
+      { text: "Rick Owens oder Vivienne Westwood — subversiv", type: "rebel" },
+      { text: "Dries Van Noten oder Isabel Marant — geerdet, reich", type: "nomad" },
+      { text: "Versace oder Tom Ford — mächtig, unvergesslich", type: "icon" },
+      { text: "Comme des Garçons oder Issey Miyake — konzeptuell", type: "artiste" }
+    ]
+  },
+  {
+    text: "Was ist für dich wirklicher Luxus?",
+    options: [
+      { text: "Zeit. Stille. Raum zum Denken.", type: "editor" },
+      { text: "Ein langer Abend mit Menschen die ich liebe", type: "parisienne" },
+      { text: "Das Gefühl absolut nichts zu müssen", type: "rebel" },
+      { text: "Freiheit von Ort, Zeit und Verpflichtung", type: "nomad" },
+      { text: "Der erste Blick wenn man einen Raum betritt", type: "icon" },
+      { text: "Sich vollständig im kreativen Flow verlieren", type: "artiste" }
+    ]
+  },
+  {
+    text: "Dein Parfum ist...",
+    options: [
+      { text: "Fast nichts — aber das Wenige ist außergewöhnlich", type: "editor" },
+      { text: "Blumig, warm, feminin — man bleibt in Erinnerung", type: "parisienne" },
+      { text: "Leder, Rauch, völlig unerwartet", type: "rebel" },
+      { text: "Holzig, Sandelholz, natürlich und tief", type: "nomad" },
+      { text: "Opulent, schwer, unvergesslich intensiv", type: "icon" },
+      { text: "Wechselnd — je nach Stimmung etwas anderes", type: "artiste" }
+    ]
+  },
+  {
+    text: "In einer Kunstgalerie wirst du angezogen von...",
+    options: [
+      { text: "Minimalismus — eine einzige Linie auf weißem Grund", type: "editor" },
+      { text: "Impressionismus — Licht, Farbe, Gefühl", type: "parisienne" },
+      { text: "Street Art — roh, direkt, politisch", type: "rebel" },
+      { text: "Textile Art — Handarbeit, Traditionen, Kulturen", type: "nomad" },
+      { text: "Klassische Meisterwerke — Kraft und Ewigkeit", type: "icon" },
+      { text: "Alles gleichzeitig — Chaos mit tiefer Bedeutung", type: "artiste" }
+    ]
+  },
+  {
+    text: "Wenn du an dein Haar denkst — du willst...",
+    options: [
+      { text: "Perfektion in der Einfachheit", type: "editor" },
+      { text: "Romantisch und weiblich — natürlich schön", type: "parisienne" },
+      { text: "Mutig und unvergesslich", type: "rebel" },
+      { text: "Natürlich und mühelos — einfach du", type: "nomad" },
+      { text: "Glamourös und präsent — alle sehen es", type: "icon" },
+      { text: "Kreativ und ausdrucksstark — erzähle etwas", type: "artiste" }
+    ]
+  },
+  {
+    text: "Das schönste Kompliment für dich?",
+    options: [
+      { text: "\"Du bist so unglaublich elegant.\"", type: "editor" },
+      { text: "\"Du siehst so natürlich wunderschön aus.\"", type: "parisienne" },
+      { text: "\"Du trägst das mit so viel Selbstvertrauen.\"", type: "rebel" },
+      { text: "\"Du bist so authentisch — so wirklich du.\"", type: "nomad" },
+      { text: "\"Du hast eine Präsenz. Man kann nicht wegsehen.\"", type: "icon" },
+      { text: "\"Du bist so kreativ — wirklich einzigartig.\"", type: "artiste" }
+    ]
+  },
+  {
+    text: "Dein Traumreiseziel?",
+    options: [
+      { text: "Kyoto — stille Gärten, perfekte Einfachheit", type: "editor" },
+      { text: "Provence — Lavendelfelder, Sonnenlicht, Märkte", type: "parisienne" },
+      { text: "Berlin — immer wieder, immer anders", type: "rebel" },
+      { text: "Oaxaca oder Marrakesch — Farben, Texturen, Leben", type: "nomad" },
+      { text: "New York oder Milan zur Fashion Week", type: "icon" },
+      { text: "Venedig zur Biennale — Kunst überall", type: "artiste" }
+    ]
+  },
+  {
+    text: "Musik während du dich fertig machst?",
+    options: [
+      { text: "Stille oder leises Ambient", type: "editor" },
+      { text: "French Pop — Françoise Hardy, Angèle", type: "parisienne" },
+      { text: "PJ Harvey, FKA twigs, The xx", type: "rebel" },
+      { text: "Flamenco, Cumbia, World Music aus aller Welt", type: "nomad" },
+      { text: "Beyoncé, Tina Turner — Power all the way", type: "icon" },
+      { text: "Björk, Kate Bush, Experimentelles", type: "artiste" }
+    ]
+  },
+  {
+    text: "Was nervt dich am meisten bei Haaren?",
+    options: [
+      { text: "Wenn es nicht sitzt — jede Linie muss stimmen", type: "editor" },
+      { text: "Wenn es zu steif oder zu gemacht wirkt", type: "parisienne" },
+      { text: "Wenn es langweilig und vorhersehbar ist", type: "rebel" },
+      { text: "Wenn man sieht dass es zu viel Aufwand war", type: "nomad" },
+      { text: "Wenn man es nicht bemerkt wenn man den Raum betritt", type: "icon" },
+      { text: "Wenn es nichts über die Person erzählt", type: "artiste" }
+    ]
+  },
+  {
+    text: "Du verlässt den Friseursalon und willst dich fühlen wie...",
+    options: [
+      { text: "Präzise. Klar. Unantastbar.", type: "editor" },
+      { text: "Feminin. Leicht. Als ob ich immer so ausgesehen hätte.", type: "parisienne" },
+      { text: "Krass. Mutig. Anders als alle anderen.", type: "rebel" },
+      { text: "Ich selbst — nur die beste Version davon.", type: "nomad" },
+      { text: "Wie eine verdammte Ikone.", type: "icon" },
+      { text: "Wie Kunst. Lebendig und einmalig.", type: "artiste" }
+    ]
+  }
+];
+
+let currentQ = 0;
+let scores = {};
+let clientName = '';
+let isTransitioning = false;
+
+function gotoScreen(id) {
+  const all = document.querySelectorAll('.screen');
+  const target = document.getElementById(id);
+  all.forEach(s => {
+    if (s.classList.contains('active')) {
+      s.classList.add('exit');
+      s.classList.remove('active');
+      setTimeout(() => s.classList.remove('exit'), 400);
+    }
+  });
+  setTimeout(() => {
+    target.scrollTop = 0;
+    target.classList.add('active');
+  }, 120);
+}
+
+function startQuiz() {
+  clientName = document.getElementById('name-input').value.trim() || 'du';
+  currentQ = 0;
+  scores = { editor: 0, parisienne: 0, rebel: 0, nomad: 0, icon: 0, artiste: 0 };
+  renderQuestion();
+  gotoScreen('s-quiz');
+}
+
+function renderQuestion() {
+  const q = QUESTIONS[currentQ];
+  const total = QUESTIONS.length;
+  const pct = (currentQ / total) * 100;
+
+  document.getElementById('q-number').textContent =
+    String(currentQ + 1).padStart(2, '0') + ' / ' + String(total).padStart(2, '0');
+  document.getElementById('progress-fill').style.width = pct + '%';
+  document.getElementById('q-text').textContent = q.text;
+
+  const container = document.getElementById('options');
+  container.innerHTML = '';
+  q.options.forEach(opt => {
+    const btn = document.createElement('button');
+    btn.className = 'option';
+    btn.textContent = opt.text;
+    btn.onclick = () => pick(opt.type, btn);
+    container.appendChild(btn);
+  });
+  document.getElementById('s-quiz').scrollTop = 0;
+  isTransitioning = false;
+}
+
+function pick(type, btn) {
+  if (isTransitioning) return;
+  isTransitioning = true;
+  btn.classList.add('selected');
+  scores[type]++;
+  setTimeout(() => {
+    currentQ++;
+    if (currentQ < QUESTIONS.length) {
+      renderQuestion();
+    } else {
+      showLoading();
+    }
+  }, 300);
+}
+
+function showLoading() {
+  gotoScreen('s-loading');
+  const msgs = [
+    'Wir lesen zwischen den Zeilen...',
+    'Deine Essenz nimmt Form an...',
+    'Deine Hair Identity ist bereit.'
+  ];
+  let i = 0;
+  const el = document.getElementById('loading-msg');
+  el.textContent = msgs[0];
+  const iv = setInterval(() => {
+    i++;
+    if (i < msgs.length) el.textContent = msgs[i];
+  }, 900);
+  setTimeout(() => { clearInterval(iv); showResult(); }, 2700);
+}
+
+function showResult() {
+  const winner = Object.entries(scores).sort((a, b) => b[1] - a[1])[0][0];
+  const arch = ARCHETYPES[winner];
+
+  document.getElementById('result-client-name').textContent = clientName + ',';
+  document.getElementById('result-archetype-name').textContent = arch.name;
+  document.getElementById('result-tagline').textContent = arch.tagline;
+  document.getElementById('result-desc').textContent = arch.desc;
+  document.getElementById('result-hair').textContent = arch.hair;
+
+  gotoScreen('s-result');
+}
+
+function restart() {
+  document.getElementById('name-input').value = '';
+  gotoScreen('s-welcome');
+}
+
+document.getElementById('name-input').addEventListener('keydown', e => {
+  if (e.key === 'Enter') startQuiz();
+});
+</script>
+</body>
+</html>
