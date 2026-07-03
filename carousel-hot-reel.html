@@ -31,11 +31,10 @@
     }
 
     .pre-mark {
-      position: absolute; bottom: 24px; right: 24px; z-index: 10;
+      position: absolute; bottom: 24px; left: 24px; z-index: 20;
       font-weight: 700; font-size: 10px; letter-spacing: 3px;
-      color: rgba(255,255,255,0.18);
+      color: rgba(255,255,255,0.30);
     }
-    .pre-mark.light { color: rgba(0,0,0,0.15); }
 
     /* ══════════════════════════
        SLIDE 1 — Cover (Afro Photo)
@@ -53,7 +52,7 @@
       position: absolute; inset: 0; z-index: 0;
       background: linear-gradient(to top, rgba(0,0,0,0.88) 0%, rgba(0,0,0,0.45) 42%, rgba(0,0,0,0.06) 68%);
     }
-    .c1 > * { position: relative; z-index: 1; }
+    .c1 > *:not(.pre-mark) { position: relative; z-index: 1; }
     .c1 .pre-label {
       font-size: 9px; letter-spacing: 5px; text-transform: uppercase;
       color: rgba(255,255,255,0.42); margin-bottom: 16px;
@@ -68,6 +67,7 @@
       margin-top: 20px;
       font-size: 10px; letter-spacing: 5px;
       text-transform: uppercase; color: rgba(255,255,255,0.48);
+      margin-bottom: 8px;
     }
 
     /* ══════════════════════════
@@ -93,7 +93,7 @@
         rgba(0,0,0,0.05) 100%
       );
     }
-    .photo-slide > * { position: relative; z-index: 1; }
+    .photo-slide > *:not(.pre-mark) { position: relative; z-index: 1; }
 
     .photo-slide .num {
       font-size: 72px; font-weight: 900;
@@ -147,7 +147,7 @@
       position: absolute; inset: 0; z-index: 0;
       background: linear-gradient(to top, rgba(0,0,0,0.90) 0%, rgba(0,0,0,0.52) 42%, rgba(0,0,0,0.10) 68%);
     }
-    .c7 > * { position: relative; z-index: 1; }
+    .c7 > *:not(.pre-mark) { position: relative; z-index: 1; }
     .c7 .closer-label {
       font-size: 9px; letter-spacing: 5px;
       text-transform: uppercase; color: rgba(255,255,255,0.45); margin-bottom: 16px;
