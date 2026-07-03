@@ -44,23 +44,33 @@
     .pre-mark.light { color: rgba(0,0,0,0.15); }
 
     /* ══════════════════════════
-       SLIDE 1 — Cover (Champagner)
+       SLIDE 1 — Cover (Split Photo)
     ══════════════════════════ */
-    .c1 {
-      background: #E8D9B8;
-      display: flex; flex-direction: column;
-      justify-content: center;
-      padding: 44px 40px;
+    .c1 { display: flex; }
+    .c1::before {
+      content: '';
+      position: absolute; inset: 0; z-index: 1;
+      background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.45) 45%, rgba(0,0,0,0.08) 72%);
     }
-    .c1 .label { font-size: 9px; letter-spacing: 4px; text-transform: uppercase; color: #A89268; margin-bottom: 24px; }
+    .c1-half {
+      width: 50%; height: 100%;
+      background-size: cover;
+    }
+    .c1-left  { background-image: url(hot-img-1389.jpeg);     background-position: center top; }
+    .c1-right { background-image: url(hot-img-nicnoa-bw.jpeg); background-position: 45% center; }
+    .c1-text {
+      position: absolute; z-index: 2;
+      bottom: 0; left: 0; right: 0;
+      padding: 22px 28px;
+    }
+    .c1 .label { font-size: 9px; letter-spacing: 4px; text-transform: uppercase; color: rgba(255,255,255,0.42); margin-bottom: 8px; }
     .c1 .hook {
       font-family: 'Cormorant Garamond', serif;
       font-style: italic; font-weight: 400;
-      font-size: 36px; color: #2A1F10;
-      line-height: 1.2; letter-spacing: 0.3px;
+      font-size: 30px; color: #fff;
+      line-height: 1.18;
     }
-    .c1 .reread { margin-top: 22px; font-size: 10px; letter-spacing: 4px; text-transform: uppercase; color: #B0996A; }
-    .c1 .swipe { position: absolute; bottom: 26px; right: 28px; font-size: 9px; letter-spacing: 3px; text-transform: uppercase; color: #C4AA80; }
+    .c1 .reread { margin-top: 12px; font-size: 9px; letter-spacing: 4px; text-transform: uppercase; color: rgba(255,255,255,0.48); }
 
     /* ══════════════════════════
        PHOTO SLIDES — shared base
@@ -150,11 +160,14 @@
     <div class="slide-wrap">
       <div class="slide-num">01</div>
       <div class="slide c1">
-        <div class="label">Lies nochmal.</div>
-        <div class="hook">"You are so hot<br>as you can<br>handle."</div>
-        <div class="reread">Reread again.</div>
-        <div class="swipe">Swipe &rarr;</div>
-        <div class="pre-mark light">PRE</div>
+        <div class="c1-half c1-left"></div>
+        <div class="c1-half c1-right"></div>
+        <div class="c1-text">
+          <div class="label">PRE Art of Hair</div>
+          <div class="hook">"You are so hot<br>as you can<br>handle."</div>
+          <div class="reread">Reread again.</div>
+        </div>
+        <div class="pre-mark">PRE</div>
       </div>
     </div>
 
