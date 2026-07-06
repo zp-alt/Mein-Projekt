@@ -12,7 +12,7 @@ const path = require('path');
   await page.evaluate(() => document.fonts.ready);
   await page.waitForTimeout(1500);
 
-  const slides = ['s1', 's2', 's3'];
+  const slides = ['s1', 's2', 's3', 's4'];
   for (const sel of slides) {
     const el = await page.$('.' + sel);
     const box = await el.boundingBox();
