@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Weekly Update — PRE</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,700&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400;1,500&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: #888;
+      font-family: 'Barlow', sans-serif;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      padding: 32px;
+      align-items: flex-start;
+    }
+
+    .slide {
+      width: 360px;
+      height: 360px;
+      border-radius: 4px;
+      overflow: hidden;
+      position: relative;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.35);
+      flex-shrink: 0;
+    }
+
+    .pre-mark {
+      position: absolute; bottom: 18px; left: 20px; z-index: 20;
+      font-weight: 700; font-size: 10px; letter-spacing: 3px;
+      color: rgba(255,255,255,0.22);
+    }
+
+    /* ══════════════════════════
+       SLIDE 1 — Cover
+    ══════════════════════════ */
+    .s1 {
+      background: #04091C;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 36px 38px 42px;
+    }
+
+    .s1 .kw-label {
+      font-size: 9px; letter-spacing: 5px; text-transform: uppercase;
+      color: rgba(255,255,255,0.22);
+    }
+
+    .s1 .center {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .s1 .update-word {
+      font-size: 9px; letter-spacing: 5px; text-transform: uppercase;
+      color: rgba(255,255,255,0.30); margin-bottom: 14px;
+    }
+
+    .s1 .week-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic; font-weight: 300;
+      font-size: 58px; color: #fff;
+      line-height: 1.05; letter-spacing: -1px;
+    }
+
+    .s1 .divider {
+      width: 36px; height: 1px;
+      background: rgba(255,255,255,0.15);
+      margin: 20px 0;
+    }
+
+    .s1 .tagline {
+      font-size: 12px; font-weight: 400;
+      color: rgba(255,255,255,0.40);
+      line-height: 1.7; letter-spacing: 0.02em;
+    }
+
+    .s1 .date {
+      font-size: 9px; letter-spacing: 3px;
+      color: rgba(255,255,255,0.18);
+      text-transform: uppercase;
+    }
+
+    /* ══════════════════════════
+       SLIDE 2 — Termine
+    ══════════════════════════ */
+    .s2 {
+      background: #060D22;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 36px 38px 42px;
+    }
+
+    .s2 .num {
+      font-size: 64px; font-weight: 900;
+      color: rgba(255,255,255,0.06);
+      line-height: 1; letter-spacing: -3px;
+      align-self: flex-start;
+    }
+
+    .s2 .body {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+    }
+
+    .s2 .tag {
+      font-size: 9px; letter-spacing: 4px; text-transform: uppercase;
+      color: rgba(255,255,255,0.30); margin-bottom: 12px;
+    }
+
+    .s2 .title {
+      font-weight: 800; font-size: 38px; color: #fff;
+      line-height: 1.0; letter-spacing: -1px;
+      margin-bottom: 18px;
+    }
+
+    .s2 .row {
+      display: flex;
+      align-items: baseline;
+      gap: 12px;
+      margin-bottom: 10px;
+    }
+
+    .s2 .row-label {
+      font-size: 9px; letter-spacing: 3px; text-transform: uppercase;
+      color: rgba(255,255,255,0.28); flex-shrink: 0; width: 88px;
+    }
+
+    .s2 .row-val {
+      font-size: 13px; color: rgba(255,255,255,0.65);
+      line-height: 1.5;
+    }
+
+    .s2 .row-val b { color: #fff; font-weight: 600; }
+
+    .s2 .cta {
+      margin-top: 18px;
+      display: inline-block;
+      font-size: 9px; letter-spacing: 4px; text-transform: uppercase;
+      color: rgba(255,255,255,0.32);
+    }
+
+    /* ══════════════════════════
+       SLIDE 3 — Empfehlung (Curls)
+    ══════════════════════════ */
+    .s3 {
+      background-image: url(curls-academy.jpeg);
+      background-size: cover;
+      background-position: center 15%;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 28px 32px 40px;
+    }
+
+    .s3::before {
+      content: '';
+      position: absolute; inset: 0; z-index: 0;
+      background: linear-gradient(
+        to top,
+        rgba(0,0,0,0.94) 0%,
+        rgba(0,0,0,0.68) 42%,
+        rgba(0,0,0,0.22) 72%,
+        rgba(0,0,0,0.04) 100%
+      );
+    }
+
+    .s3 > *:not(.pre-mark) { position: relative; z-index: 1; }
+
+    .s3 .eyebrow {
+      font-size: 9px; letter-spacing: 4px; text-transform: uppercase;
+      color: rgba(255,255,255,0.38); margin-bottom: 10px;
+    }
+
+    .s3 .main {
+      font-weight: 800; font-size: 20px; color: #fff;
+      line-height: 1.25; letter-spacing: -0.2px;
+      margin-bottom: 12px;
+    }
+
+    .s3 .quote {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic; font-weight: 300;
+      font-size: 15px; color: rgba(255,255,255,0.72);
+      line-height: 1.6;
+    }
+
+    .s3 .quote b {
+      font-family: 'Barlow', sans-serif;
+      font-style: normal; font-weight: 600;
+      font-size: 13px; color: #fff;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Slide 1: Cover -->
+  <div class="slide s1">
+    <div class="kw-label">PRE Art of Hair · KW 28</div>
+    <div class="center">
+      <div class="update-word">Weekly Update</div>
+      <div class="week-title">Was diese<br>Woche<br>passiert.</div>
+      <div class="divider"></div>
+      <div class="tagline">
+        Termine · Empfehlungen<br>
+        Was du wissen solltest.
+      </div>
+    </div>
+    <div class="date">07. Juli 2026</div>
+    <div class="pre-mark">PRE</div>
+  </div>
+
+  <!-- Slide 2: Termine -->
+  <div class="slide s2">
+    <div class="num">01</div>
+    <div class="body">
+      <div class="tag">Termine & Verfügbarkeit</div>
+      <div class="title">Dein<br>Termin.</div>
+      <div class="row">
+        <span class="row-label">Diese Woche</span>
+        <span class="row-val">Im <b>Urlaub</b> — nicht erreichbar.</span>
+      </div>
+      <div class="row">
+        <span class="row-label">Ab KW 29</span>
+        <span class="row-val"><b>Termine frei</b> — schaut rein.</span>
+      </div>
+      <div class="cta">→ Link in Bio</div>
+    </div>
+    <div class="pre-mark">PRE</div>
+  </div>
+
+  <!-- Slide 3: Empfehlung Curls -->
+  <div class="slide s3">
+    <div class="eyebrow">Empfehlung der Woche</div>
+    <div class="main">Locken wirklich<br>verstehen.</div>
+    <div class="quote">
+      Der Signatur Cut von <b>Mona Haase</b><br>
+      ist the best way to understand curls —<br>
+      für alle die Locken lernen wollen.
+    </div>
+    <div class="pre-mark">PRE</div>
+  </div>
+
+</body>
+</html>
