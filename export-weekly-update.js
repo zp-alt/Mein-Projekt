@@ -4,7 +4,7 @@ const path = require('path');
 (async () => {
   const browser = await chromium.launch();
   const context = await browser.newContext({
-    viewport: { width: 1400, height: 500 },
+    viewport: { width: 1700, height: 500 },
     deviceScaleFactor: 4
   });
   const page = await context.newPage();
