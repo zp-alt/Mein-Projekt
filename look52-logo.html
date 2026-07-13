@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8"/>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { background: #000; }
+    .wrap {
+      width: 1536px;
+      height: 2260px;
+      position: relative;
+      overflow: hidden;
+    }
+    .photo {
+      position: absolute; inset: 0;
+      background-image: url(look52.jpeg);
+      background-size: cover;
+      background-position: center top;
+    }
+    /* PRE logo — oben links, editorial */
+    .logo {
+      position: absolute;
+      top: 88px;
+      left: 88px;
+    }
+    .logo .mark {
+      font-family: Georgia, "Palatino Linotype", serif;
+      font-style: italic;
+      font-weight: normal;
+      font-size: 68px;
+      color: rgba(10,10,10,0.72);
+      line-height: 1;
+      letter-spacing: -1px;
+    }
+    .logo .rule {
+      width: 36px; height: 1px;
+      background: rgba(10,10,10,0.30);
+      margin: 10px 0 9px;
+    }
+    .logo .sub {
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-size: 11px;
+      letter-spacing: 5px;
+      text-transform: uppercase;
+      color: rgba(10,10,10,0.42);
+      font-weight: 400;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="photo"></div>
+    <div class="logo">
+      <div class="mark">PRE</div>
+      <div class="rule"></div>
+      <div class="sub">Art of Hair</div>
+    </div>
+  </div>
+</body>
+</html>
