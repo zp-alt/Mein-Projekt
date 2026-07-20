@@ -12,7 +12,7 @@ const path = require('path');
   await page.evaluate(() => document.fonts.ready);
   await page.waitForTimeout(1500);
 
-  for (let i = 1; i <= 6; i++) {
+  for (let i = 1; i <= 4; i++) {
     const el = await page.$(`.slide:nth-child(${i})`);
     const box = await el.boundingBox();
     await page.screenshot({
