@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;600;700;900&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: #555;
+      font-family: 'Barlow', -apple-system, sans-serif;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 12px;
+      padding: 24px;
+      align-items: flex-start;
+    }
+
+    .story {
+      width: 270px;
+      height: 480px;
+      position: relative;
+      overflow: hidden;
+      border-radius: 6px;
+      flex-shrink: 0;
+      box-shadow: 0 8px 40px rgba(0,0,0,0.4);
+    }
+
+    .bg {
+      position: absolute;
+      inset: 0;
+      background-size: cover;
+      background-position: center;
+    }
+
+    /* Gradient — dunkler unten für Text */
+    .bg::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        to top,
+        rgba(0,0,0,0.80) 0%,
+        rgba(0,0,0,0.30) 45%,
+        rgba(0,0,0,0.10) 70%,
+        transparent 100%
+      );
+    }
+
+    /* PRE oben links */
+    .pre {
+      position: absolute;
+      top: 20px;
+      left: 22px;
+      z-index: 2;
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.55);
+    }
+
+    /* Text unten */
+    .content {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 0 22px 28px;
+      z-index: 2;
+    }
+
+    .label {
+      font-size: 9px;
+      font-weight: 600;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.45);
+      margin-bottom: 8px;
+    }
+
+    .headline {
+      font-size: 36px;
+      font-weight: 900;
+      color: #fff;
+      line-height: 1.0;
+      letter-spacing: -0.5px;
+      margin-bottom: 10px;
+    }
+
+    .headline .c { color: #C9A87C; }
+
+    .body {
+      font-size: 12px;
+      font-weight: 400;
+      color: rgba(255,255,255,0.72);
+      line-height: 1.65;
+    }
+
+    .body b { color: #fff; font-weight: 600; }
+
+    .cta {
+      margin-top: 12px;
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.40);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- S1: Walchensee — Summit Selfie -->
+  <div class="story">
+    <div class="bg" style="background-image: url(kw31-summit.jpeg); background-position: center 65%;"></div>
+    <div class="pre">PRE Art of Hair</div>
+    <div class="content">
+      <div class="label">Samstag</div>
+      <div class="headline">Walchen<span class="c">see.</span></div>
+      <div class="body">
+        Alleine losgewandert.<br>
+        Neue Leute getroffen.<br>
+        <b>Beste Entscheidung.</b>
+      </div>
+    </div>
+  </div>
+
+  <!-- S2: Thai Tee — Aufladen -->
+  <div class="story">
+    <div class="bg" style="background-image: url(kw31-thai.jpeg); background-position: center center;"></div>
+    <div class="pre">PRE Art of Hair</div>
+    <div class="content">
+      <div class="label">Sonntag</div>
+      <div class="headline">Voll <span class="c">aufge<br>laden.</span></div>
+      <div class="body">
+        Thai Massage. Gut gegessen.<br>
+        Kino — <b>Odyssee</b>. Megageil.<br>
+        So muss ein Sonntag sein.
+      </div>
+    </div>
+  </div>
+
+  <!-- S3: Sonnenuntergang — Montag Mood -->
+  <div class="story">
+    <div class="bg" style="background-image: url(kw31-sunset.jpeg); background-position: center center;"></div>
+    <div class="pre">PRE Art of Hair · KW 31</div>
+    <div class="content">
+      <div class="label">Heute · Montag</div>
+      <div class="headline">Schöner<br><span class="c">Start.</span></div>
+      <div class="body">
+        Entspannt. Aufgeladen.<br>
+        <b>Die Woche gehört uns.</b>
+      </div>
+    </div>
+  </div>
+
+  <!-- S4: Hund im Auto — Diese Woche -->
+  <div class="story">
+    <div class="bg" style="background-image: url(kw31-dog.jpeg); background-position: center 40%;"></div>
+    <div class="pre">PRE Art of Hair</div>
+    <div class="content">
+      <div class="label">Diese Woche</div>
+      <div class="headline">Aus<span class="c">ge<br>bucht.</span></div>
+      <div class="body">
+        Ich teste neue Produkte für euch.<br>
+        <b>Bin sehr gespannt</b> ob sie halten,<br>
+        was sie versprechen.
+      </div>
+      <div class="cta">Nächste Woche: Termine frei → Link in Bio</div>
+    </div>
+  </div>
+
+</body>
+</html>
