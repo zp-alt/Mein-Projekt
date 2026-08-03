@@ -16,20 +16,14 @@
     }
     .photo {
       position: absolute; inset: 0;
-      background-image: url(salon-quote.jpeg);
+      background-image: url(salon-quote-orig.jpeg);
       background-size: cover;
-      background-position: center 30%;
+      background-position: center top;
     }
     .photo::after {
       content: '';
       position: absolute; inset: 0;
-      background: linear-gradient(
-        to top,
-        rgba(0,0,0,0.82) 0%,
-        rgba(0,0,0,0.50) 32%,
-        rgba(0,0,0,0.10) 55%,
-        transparent 75%
-      );
+      background: rgba(0,0,0,0.68);
     }
     .pre-mark {
       position: absolute;
@@ -37,39 +31,43 @@
       font-family: 'Barlow', sans-serif;
       font-weight: 700; font-size: 11px;
       letter-spacing: 4px; text-transform: uppercase;
-      color: rgba(255,255,255,0.40);
+      color: rgba(255,255,255,0.30);
       z-index: 2;
     }
     .content {
       position: absolute;
-      bottom: 0; left: 0; right: 0;
-      padding: 0 56px 72px;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+      padding: 0 72px;
       z-index: 2;
     }
     .eyebrow {
       font-family: 'Barlow', sans-serif;
       font-size: 11px; font-weight: 600;
-      letter-spacing: 6px; text-transform: uppercase;
-      color: rgba(255,255,255,0.35);
-      margin-bottom: 18px;
+      letter-spacing: 8px; text-transform: uppercase;
+      color: rgba(255,255,255,0.38);
+      margin-bottom: 24px;
     }
     .quote {
       font-family: 'Cormorant Garamond', serif;
       font-style: italic; font-weight: 300;
-      font-size: 78px; color: #fff;
-      line-height: 1.0; letter-spacing: -1px;
-      margin-bottom: 20px;
+      font-size: 92px; color: #fff;
+      line-height: 0.98; letter-spacing: -1.5px;
+      margin-bottom: 28px;
     }
     .quote .c { color: #C9A87C; }
     .rule {
       width: 40px; height: 1px;
       background: rgba(255,255,255,0.25);
-      margin-bottom: 18px;
+      margin-bottom: 24px;
     }
     .sub {
       font-family: 'Barlow', sans-serif;
-      font-size: 15px; font-weight: 400;
-      color: rgba(255,255,255,0.55);
+      font-size: 16px; font-weight: 400;
+      color: rgba(255,255,255,0.50);
       letter-spacing: 1px; line-height: 1.6;
     }
   </style>
