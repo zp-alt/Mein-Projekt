@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;600;700;900&family=Cormorant+Garamond:ital,wght@1,300;1,400&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { background: #000; }
+    .wrap {
+      width: 1080px;
+      height: 1350px;
+      position: relative;
+      overflow: hidden;
+    }
+    .photo {
+      position: absolute; inset: 0;
+      background-image: url(salon-quote.jpeg);
+      background-size: cover;
+      background-position: center 30%;
+    }
+    .photo::after {
+      content: '';
+      position: absolute; inset: 0;
+      background: linear-gradient(
+        to top,
+        rgba(0,0,0,0.82) 0%,
+        rgba(0,0,0,0.50) 32%,
+        rgba(0,0,0,0.10) 55%,
+        transparent 75%
+      );
+    }
+    .pre-mark {
+      position: absolute;
+      top: 36px; left: 40px;
+      font-family: 'Barlow', sans-serif;
+      font-weight: 700; font-size: 11px;
+      letter-spacing: 4px; text-transform: uppercase;
+      color: rgba(255,255,255,0.40);
+      z-index: 2;
+    }
+    .content {
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      padding: 0 56px 72px;
+      z-index: 2;
+    }
+    .eyebrow {
+      font-family: 'Barlow', sans-serif;
+      font-size: 11px; font-weight: 600;
+      letter-spacing: 6px; text-transform: uppercase;
+      color: rgba(255,255,255,0.35);
+      margin-bottom: 18px;
+    }
+    .quote {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic; font-weight: 300;
+      font-size: 78px; color: #fff;
+      line-height: 1.0; letter-spacing: -1px;
+      margin-bottom: 20px;
+    }
+    .quote .c { color: #C9A87C; }
+    .rule {
+      width: 40px; height: 1px;
+      background: rgba(255,255,255,0.25);
+      margin-bottom: 18px;
+    }
+    .sub {
+      font-family: 'Barlow', sans-serif;
+      font-size: 15px; font-weight: 400;
+      color: rgba(255,255,255,0.55);
+      letter-spacing: 1px; line-height: 1.6;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="photo"></div>
+    <div class="pre-mark">PRE Art of Hair</div>
+    <div class="content">
+      <div class="eyebrow">Girl to Girl</div>
+      <div class="quote">
+        If it's dead,<br>
+        <span class="c">cut it.</span>
+      </div>
+      <div class="rule"></div>
+      <div class="sub">Hair, habits or people.</div>
+    </div>
+  </div>
+</body>
+</html>
