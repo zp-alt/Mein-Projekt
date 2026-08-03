@@ -181,9 +181,9 @@ def build(data, out):
 
 if __name__ == "__main__":
     data = {
-        "number": "2026-0803",
+        "number": "2026-0803-2",
         "invoice_date": "03.08.2026",
-        "service_date": "29.07.2026",
+        "service_date": "21.07.2026",
         "due_date": "17.08.2026",
         "customer": [
             "New Flag GmbH",
@@ -191,10 +191,10 @@ if __name__ == "__main__":
             "80804 München",
         ],
         "rows": [
-            ("Produkttesting", "3,5 Stunden", "327,50 €", "327,50 €"),
+            ("Styling Event", None, "400,00 €", "400,00 €"),
         ],
-        "net": "275,21 €",
-        "vat": "52,29 €",
-        "gross": "327,50 €",
+        "net": "336,13 €",
+        "vat": "63,87 €",
+        "gross": "400,00 €",
     }
-    build(data, "/home/user/Mein-Projekt/Rechnung_2026-0803_NewFlag.pdf")
+    build(data, "/home/user/Mein-Projekt/Rechnung_2026-0803-2_NewFlag.pdf")
