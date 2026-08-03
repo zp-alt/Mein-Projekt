@@ -193,8 +193,8 @@ if __name__ == "__main__":
         "rows": [
             ("Styling Event", None, "400,00 €", "400,00 €"),
         ],
-        "net": "336,13 €",
-        "vat": "63,87 €",
-        "gross": "400,00 €",
+        "net": "400,00 €",
+        "vat": "76,00 €",
+        "gross": "476,00 €",
     }
     build(data, "/home/user/Mein-Projekt/Rechnung_2026-0803-2_NewFlag.pdf")
