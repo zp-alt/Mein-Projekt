@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;600;700&family=Cormorant+Garamond:ital,wght@0,300;1,200;1,300;1,400&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { background: #000; }
+    .wrap {
+      width: 1080px;
+      height: 1350px;
+      position: relative;
+      overflow: hidden;
+    }
+    .photo {
+      position: absolute; inset: 0;
+      background-image: url(kw30-dscf2193.jpeg);
+      background-size: cover;
+      background-position: center top;
+    }
+    .photo::after {
+      content: '';
+      position: absolute; inset: 0;
+      background: linear-gradient(
+        to bottom,
+        rgba(0,0,0,0.55) 0%,
+        rgba(0,0,0,0.20) 28%,
+        rgba(0,0,0,0.20) 55%,
+        rgba(0,0,0,0.82) 100%
+      );
+    }
+
+    .pre-mark {
+      position: absolute;
+      top: 44px; left: 0; right: 0;
+      text-align: center;
+      font-family: 'Barlow', sans-serif;
+      font-weight: 700;
+      font-size: 11px;
+      letter-spacing: 5px;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.30);
+      z-index: 2;
+    }
+
+    .content {
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      padding: 0 64px 72px;
+      z-index: 2;
+      text-align: center;
+    }
+
+    .eyebrow {
+      font-family: 'Barlow', sans-serif;
+      font-weight: 700;
+      font-size: 11px;
+      letter-spacing: 8px;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.35);
+      margin-bottom: 28px;
+    }
+
+    .headline {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-weight: 200;
+      font-size: 118px;
+      color: #ffffff;
+      line-height: 0.92;
+      letter-spacing: -2px;
+      margin-bottom: 0;
+    }
+    .headline .yellow {
+      color: #FFE033;
+    }
+
+    .rule {
+      width: 44px; height: 1px;
+      background: rgba(255,255,255,0.25);
+      margin: 36px auto 28px;
+    }
+
+    .event-line {
+      font-family: 'Barlow', sans-serif;
+      font-weight: 600;
+      font-size: 12px;
+      letter-spacing: 6px;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.45);
+      margin-bottom: 6px;
+    }
+    .event-date {
+      font-family: 'Barlow', sans-serif;
+      font-weight: 300;
+      font-size: 11px;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.22);
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="photo"></div>
+    <div class="pre-mark">PRE Art of Hair</div>
+
+    <div class="content">
+      <div class="eyebrow">14. August 2026</div>
+      <div class="headline">
+        16 Tage<br>
+        Alpen.<br>
+        Dann Munich.<br>
+        <span class="yellow">Dann feiern wir.</span>
+      </div>
+      <div class="rule"></div>
+      <div class="event-line">PRE — A Midsummer Night</div>
+      <div class="event-date">30. August 2026 · Munich · Only 40 Guests</div>
+    </div>
+  </div>
+</body>
+</html>
