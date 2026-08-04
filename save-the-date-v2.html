@@ -15,22 +15,22 @@
       overflow: hidden;
     }
 
-    /* Base: party atmosphere — full frame */
-    .photo-party {
-      position: absolute; inset: 0;
-      background-image: url(party-silhouettes.jpeg);
-      background-size: cover;
-      background-position: center center;
-    }
-
-    /* Editorial layer: look52 melted in via screen blend */
+    /* Base: editorial photo — dominant */
     .photo-editorial {
       position: absolute; inset: 0;
       background-image: url(look52.jpeg);
       background-size: cover;
       background-position: center center;
+    }
+
+    /* Party layer: warm glow melted over editorial */
+    .photo-party {
+      position: absolute; inset: 0;
+      background-image: url(party-silhouettes.jpeg);
+      background-size: cover;
+      background-position: center center;
       mix-blend-mode: screen;
-      opacity: 0.55;
+      opacity: 0.38;
     }
 
     /* Dark overlay for text legibility */
@@ -149,8 +149,8 @@
 </head>
 <body>
   <div class="wrap">
-    <div class="photo-party"></div>
     <div class="photo-editorial"></div>
+    <div class="photo-party"></div>
     <div class="overlay"></div>
 
     <div class="pre-mark">PRE Art of Hair</div>
