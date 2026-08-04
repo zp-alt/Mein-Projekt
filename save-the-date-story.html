@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;600;700&family=Cormorant+Garamond:ital,wght@0,300;1,200;1,300;1,400&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { background: #000; }
+    .wrap {
+      width: 540px;
+      height: 960px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* Base: editorial photo — dominant */
+    .photo-editorial {
+      position: absolute; inset: 0;
+      background-image: url(look52.jpeg);
+      background-size: cover;
+      background-position: center center;
+    }
+
+    /* Party layer: warm glow melted over editorial */
+    .photo-party {
+      position: absolute; inset: 0;
+      background-image: url(party-silhouettes.jpeg);
+      background-size: cover;
+      background-position: center center;
+      mix-blend-mode: screen;
+      opacity: 0.48;
+    }
+
+    /* Dark overlay for text */
+    .overlay {
+      position: absolute; inset: 0;
+      background: linear-gradient(
+        to bottom,
+        rgba(0,0,0,0.58) 0%,
+        rgba(0,0,0,0.18) 28%,
+        rgba(0,0,0,0.18) 58%,
+        rgba(0,0,0,0.78) 100%
+      );
+      z-index: 2;
+    }
+
+    .pre-mark {
+      position: absolute;
+      top: 44px; left: 0; right: 0;
+      text-align: center;
+      font-family: 'Barlow', sans-serif;
+      font-weight: 700;
+      font-size: 9px;
+      letter-spacing: 6px;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.32);
+      z-index: 10;
+    }
+
+    .center {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      z-index: 10;
+    }
+
+    .a-word {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-weight: 300;
+      font-size: 36px;
+      color: rgba(255,255,255,0.65);
+      letter-spacing: 4px;
+    }
+    .midsummer {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-weight: 200;
+      font-size: 88px;
+      color: #ffffff;
+      line-height: 0.90;
+      letter-spacing: -2px;
+    }
+    .night {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-weight: 200;
+      font-size: 88px;
+      color: #FFE033;
+      line-height: 0.90;
+      letter-spacing: -2px;
+      margin-bottom: 36px;
+    }
+    .rule {
+      width: 40px; height: 1px;
+      background: rgba(255,255,255,0.28);
+      margin-bottom: 30px;
+    }
+    .date {
+      font-family: 'Barlow', sans-serif;
+      font-weight: 700;
+      font-size: 36px;
+      letter-spacing: 5px;
+      color: #ffffff;
+      margin-bottom: 14px;
+    }
+    .save {
+      font-family: 'Barlow', sans-serif;
+      font-weight: 700;
+      font-size: 13px;
+      letter-spacing: 7px;
+      text-transform: uppercase;
+      color: #FFE033;
+    }
+
+    .bottom {
+      position: absolute;
+      bottom: 52px; left: 0; right: 0;
+      text-align: center;
+      z-index: 10;
+    }
+    .city {
+      font-family: 'Barlow', sans-serif;
+      font-weight: 300;
+      font-size: 9px;
+      letter-spacing: 5px;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.22);
+    }
+    .guests {
+      font-family: 'Barlow', sans-serif;
+      font-weight: 600;
+      font-size: 10px;
+      letter-spacing: 5px;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.38);
+      margin-top: 6px;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="photo-editorial"></div>
+    <div class="photo-party"></div>
+    <div class="overlay"></div>
+
+    <div class="pre-mark">PRE Art of Hair</div>
+
+    <div class="center">
+      <div class="a-word">A</div>
+      <div class="midsummer">Midsummer</div>
+      <div class="night">Night</div>
+      <div class="rule"></div>
+      <div class="date">30. August 2026</div>
+      <div class="save">Save the Date</div>
+    </div>
+
+    <div class="bottom">
+      <div class="city">Munich</div>
+      <div class="guests">Limitierte Plätze</div>
+    </div>
+  </div>
+</body>
+</html>
