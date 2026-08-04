@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;600;700&family=Cormorant+Garamond:ital,wght@0,300;1,200;1,300;1,400&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { background: #000; }
+    .wrap {
+      width: 1080px;
+      height: 1350px;
+      position: relative;
+      overflow: hidden;
+    }
+    .photo {
+      position: absolute; inset: 0;
+      background-image: url(look52.jpeg);
+      background-size: cover;
+      background-position: center center;
+    }
+    .photo::after {
+      content: '';
+      position: absolute; inset: 0;
+      background: linear-gradient(
+        to bottom,
+        rgba(0,0,0,0.60) 0%,
+        rgba(0,0,0,0.25) 30%,
+        rgba(0,0,0,0.25) 60%,
+        rgba(0,0,0,0.75) 100%
+      );
+    }
+
+    /* PRE oben mittig */
+    .top {
+      position: absolute;
+      top: 52px; left: 0; right: 0;
+      text-align: center;
+      z-index: 2;
+    }
+    .pre-word {
+      font-family: 'Barlow', sans-serif;
+      font-weight: 700;
+      font-size: 13px;
+      letter-spacing: 10px;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.45);
+    }
+
+    /* Haupttext zentriert */
+    .center {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      z-index: 2;
+    }
+    .a-word {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-weight: 300;
+      font-size: 52px;
+      color: rgba(255,255,255,0.70);
+      letter-spacing: 4px;
+      margin-bottom: 0px;
+    }
+    .midsummer {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-weight: 200;
+      font-size: 130px;
+      color: #ffffff;
+      line-height: 0.9;
+      letter-spacing: -2px;
+    }
+    .night {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-weight: 200;
+      font-size: 130px;
+      color: #C9A87C;
+      line-height: 0.9;
+      letter-spacing: -2px;
+      margin-bottom: 40px;
+    }
+    .rule {
+      width: 50px; height: 1px;
+      background: rgba(255,255,255,0.30);
+      margin-bottom: 32px;
+    }
+    .date {
+      font-family: 'Barlow', sans-serif;
+      font-weight: 300;
+      font-size: 18px;
+      letter-spacing: 8px;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.70);
+    }
+
+    /* Save the date unten */
+    .bottom {
+      position: absolute;
+      bottom: 52px; left: 0; right: 0;
+      text-align: center;
+      z-index: 2;
+    }
+    .save {
+      font-family: 'Barlow', sans-serif;
+      font-weight: 600;
+      font-size: 11px;
+      letter-spacing: 8px;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.35);
+      margin-bottom: 8px;
+    }
+    .city {
+      font-family: 'Barlow', sans-serif;
+      font-weight: 300;
+      font-size: 11px;
+      letter-spacing: 5px;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.22);
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="photo"></div>
+
+    <div class="top">
+      <div class="pre-word">PRE Art of Hair</div>
+    </div>
+
+    <div class="center">
+      <div class="a-word">A</div>
+      <div class="midsummer">Midsummer</div>
+      <div class="night">Night</div>
+      <div class="rule"></div>
+      <div class="date">30. August 2026</div>
+    </div>
+
+    <div class="bottom">
+      <div class="save">Save the Date</div>
+      <div class="city">Munich</div>
+    </div>
+  </div>
+</body>
+</html>
