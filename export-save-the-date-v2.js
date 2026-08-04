@@ -5,7 +5,7 @@ const path = require('path');
   const browser = await chromium.launch();
   const context = await browser.newContext({
     viewport: { width: 1080, height: 1350 },
-    deviceScaleFactor: 1
+    deviceScaleFactor: 2
   });
   const page = await context.newPage();
   await page.goto('file://' + path.resolve(__dirname, 'save-the-date-v2.html'));
