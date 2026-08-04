@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@300;600;700&family=Cormorant+Garamond:ital,wght@1,200;1,300&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { background: #000; }
+    .wrap {
+      width: 270px;
+      height: 480px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* Party image — full bleed, warm and bold */
+    .bg {
+      position: absolute; inset: 0;
+      background-image: url(party-silhouettes.jpeg);
+      background-size: cover;
+      background-position: center center;
+    }
+
+    /* Dark gradient — heavier at top and bottom for text */
+    .bg::after {
+      content: '';
+      position: absolute; inset: 0;
+      background: linear-gradient(
+        to bottom,
+        rgba(0,0,0,0.72) 0%,
+        rgba(0,0,0,0.10) 35%,
+        rgba(0,0,0,0.10) 60%,
+        rgba(0,0,0,0.82) 100%
+      );
+    }
+
+    .top {
+      position: absolute;
+      top: 22px; left: 0; right: 0;
+      text-align: center;
+      z-index: 2;
+      font-family: 'Barlow', sans-serif;
+      font-weight: 700;
+      font-size: 6.5px;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.30);
+    }
+
+    .bottom {
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      padding: 0 28px 30px;
+      z-index: 2;
+      text-align: center;
+    }
+
+    .headline {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-weight: 200;
+      font-size: 52px;
+      color: #ffffff;
+      line-height: 0.92;
+      letter-spacing: -1px;
+      margin-bottom: 14px;
+    }
+    .headline .yellow { color: #FFE033; }
+
+    .rule {
+      width: 28px; height: 1px;
+      background: rgba(255,255,255,0.22);
+      margin: 0 auto 12px;
+    }
+
+    .sub {
+      font-family: 'Barlow', sans-serif;
+      font-weight: 600;
+      font-size: 7px;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.50);
+      margin-bottom: 4px;
+    }
+
+    .date-line {
+      font-family: 'Barlow', sans-serif;
+      font-weight: 300;
+      font-size: 6.5px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.22);
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="bg"></div>
+
+    <div class="top">PRE Art of Hair</div>
+
+    <div class="bottom">
+      <div class="headline">
+        Ich zähl<br>
+        auf <span class="yellow">euch.</span>
+      </div>
+      <div class="rule"></div>
+      <div class="sub">PRE — A Midsummer Night</div>
+      <div class="date-line">30. August 2026 · Munich</div>
+    </div>
+  </div>
+</body>
+</html>
