@@ -158,6 +158,16 @@
   .giftbox .qpanel{ background:#fff; padding:4.5mm 4.5mm 3mm; text-align:center; flex:none; }
   .giftbox .qpanel img.qr{ width:28mm; height:28mm; display:block; }
   .giftbox .qpanel img.doo{ height:4mm; margin-top:2.6mm; }
+  .giftbox .gperk{ display:inline-block; font-weight:900; font-size:10.5pt; color:#fff; letter-spacing:.01em;
+                   border-top:1px solid #4b7d78; padding-top:2.5mm; margin:2.5mm 0 1mm; }
+  /* Bring a Friend */
+  .friendbox{ display:flex; gap:6mm; align-items:center; justify-content:space-between;
+              border:1.4px solid var(--petrol); padding:6mm 7mm; width:calc(100% + 30mm); margin:7mm -15mm 0; }
+  .friendbox .ftitle{ font-weight:900; font-size:14pt; text-transform:uppercase; letter-spacing:.01em; color:var(--petrol); }
+  .friendbox .ftext{ font-weight:300; font-size:9pt; line-height:1.5; color:#3a382f; margin-top:2mm; max-width:96mm; }
+  .friendbox .ftext b{ font-weight:700; color:var(--petrol); }
+  .friendbox .fvalid{ flex:none; text-align:right; font-weight:500; font-size:7.5pt; letter-spacing:.14em;
+                      text-transform:uppercase; color:var(--petrol-soft); line-height:1.6; }
 </style>
 </head>
 <body>
@@ -506,18 +516,26 @@
   </div>
   <div class="bmotif"><span class="c"></span><span class="s"></span><span class="t"></span><span class="l"></span></div>
   <h2>Summer<br><span class="pet">Night.</span></h2>
-  <p class="body">Ein Abend, eine Einladung — und ein kleines Extra für dich. Sichere dir mit deinem Code bei der <em>Summer Night</em> deinen Vorteil: einfach bei der Online-Buchung einlösen. Ich freue mich auf dich.</p>
+  <p class="body">Ein Abend, eine Einladung — und ein kleines Extra für dich. Löse deinen Code einfach bei der Online-Buchung ein.</p>
   <div class="giftbox">
     <div class="gl">
       <div class="glabel">Dein Summer-Night-Code</div>
       <div class="gcode">Preartofhair926</div>
+      <div class="gperk">10 % Rabatt auf deinen Termin</div>
       <div class="gvalid">Gültig bis 30.09.2026</div>
-      <div class="gvia">Scanne den QR-Code oder gib den Code bei deiner Online-Buchung ein.</div>
+      <div class="gvia">Scanne den QR-Code oder gib den Code bei der Online-Buchung ein.</div>
     </div>
     <div class="qpanel">
       <img class="qr" src="assets/qr_code.png" alt="QR-Code" />
       <img class="doo" src="assets/logo_dooup.png" alt="dooup" />
     </div>
+  </div>
+  <div class="friendbox">
+    <div class="fl">
+      <div class="ftitle">Bring a Friend</div>
+      <div class="ftext">Teile PRE mit jemandem, den du magst: Für jede Empfehlung bekommst <b>du 10 %</b> — und dein:e Freund:in <b>ebenfalls 10 %</b>.</div>
+    </div>
+    <div class="fvalid">Gültig<br>bis 30.09.2026</div>
   </div>
   <div class="footer"><span>Summer Night</span><span>15</span></div>
 </section>
