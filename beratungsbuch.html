@@ -170,6 +170,16 @@
                       text-transform:uppercase; color:var(--petrol-soft); line-height:1.6; }
   .friendbox .fhow{ font-weight:300; font-style:italic; font-size:8pt; line-height:1.45; color:#6b675f; margin-top:2.5mm; max-width:96mm; }
   .friendbox .fhow b{ font-style:normal; font-weight:700; color:var(--petrol); }
+
+  /* ---------- Editorial-Seite (Kunst) ---------- */
+  .gallery{ padding:0; position:relative; background:var(--paper); overflow:hidden; }
+  .gallery .big{ position:absolute; top:0; right:0; width:63%; height:100%; object-fit:cover; object-position:center; }
+  .gallery .small{ position:absolute; left:19mm; bottom:24mm; width:55mm; height:71mm; object-fit:cover; object-position:center 30%;
+                   border:3px solid var(--paper); box-shadow:0 4mm 10mm rgba(0,0,0,.30); z-index:2; }
+  .gallery .glabel{ position:absolute; left:9mm; top:64mm; writing-mode:vertical-rl; transform:rotate(180deg);
+                    font-weight:700; font-size:7.5pt; letter-spacing:.34em; text-transform:uppercase; color:var(--petrol); z-index:3; }
+  .gallery .gcap{ position:absolute; right:6mm; bottom:8mm; color:#fff; font-size:6.5pt; letter-spacing:.28em;
+                  text-transform:uppercase; text-shadow:0 1px 6px rgba(0,0,0,.6); z-index:3; }
 </style>
 </head>
 <body>
@@ -541,6 +551,17 @@
     <div class="fvalid">Gültig<br>bis 30.09.2026</div>
   </div>
   <div class="footer"><span>Summer Night</span><span>15</span></div>
+</section>
+
+<!-- 16c · EDITORIAL (Kunst-Seite) -->
+<section class="page gallery">
+  <img class="big" src="assets/art_braid.jpg" alt="" />
+  <div class="geo geo-disc" style="width:15mm;height:15mm;top:15mm;left:13mm"></div>
+  <div class="geo geo-sq" style="width:8mm;height:8mm;top:34mm;left:30mm"></div>
+  <div class="geo geo-tri" style="border-left:4.5mm solid transparent;border-right:4.5mm solid transparent;border-bottom:8mm solid var(--ink);top:44mm;left:14mm"></div>
+  <img class="small" src="assets/art_profile.jpg" alt="" />
+  <div class="glabel">PRE — Art of Hair</div>
+  <div class="gcap">Haar als Kunstform</div>
 </section>
 
 <!-- 17 · RÜCKSEITE -->
