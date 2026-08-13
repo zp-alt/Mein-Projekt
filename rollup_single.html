@@ -16,11 +16,11 @@
   body{ font-family:"Roboto",sans-serif; color:var(--ink); }
   .banner{ position:relative; width:850mm; height:2000mm; overflow:hidden; background:#ffffff; }
 
-  /* ganzes Foto, fuellt die Breite; oben & unten langsam ins Helle ausfaden */
-  .photo{ position:absolute; inset:0; background-image:url('assets/coll_2_head.jpg');
-          background-size:100% auto; background-position:center; background-repeat:no-repeat; z-index:0;
-          -webkit-mask-image:linear-gradient(to bottom, rgba(0,0,0,0) 7%, #000 27%, #000 73%, rgba(0,0,0,0) 93%);
-          mask-image:linear-gradient(to bottom, rgba(0,0,0,0) 7%, #000 27%, #000 73%, rgba(0,0,0,0) 93%); }
+  /* ganzes Foto (Gesicht+Haare komplett sichtbar); nur an den Raendern oben/unten langsam heller/durchsichtig */
+  .photo{ position:absolute; inset:0; background-image:url('assets/coll_2.jpg');
+          background-size:100% auto; background-position:center 42%; background-repeat:no-repeat; z-index:0;
+          -webkit-mask-image:linear-gradient(to bottom, rgba(0,0,0,0) 1%, #000 16%, #000 70%, rgba(0,0,0,0) 96%);
+          mask-image:linear-gradient(to bottom, rgba(0,0,0,0) 1%, #000 16%, #000 70%, rgba(0,0,0,0) 96%); }
 
   .geo{ position:absolute; z-index:3; }
   .ring{ width:270mm; height:270mm; border:11mm solid var(--petrol); border-radius:50%; top:135mm; left:700mm; }
