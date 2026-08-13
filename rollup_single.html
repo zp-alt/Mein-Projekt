@@ -2,7 +2,7 @@
 <html lang="de">
 <head>
 <meta charset="UTF-8" />
-<title>PRE Roll-up Single</title>
+<title>PRE Roll-up Single Fullbleed</title>
 <style>
   @font-face{font-family:"Roboto";font-weight:300;src:url("assets/fonts/Roboto-Light.ttf")}
   @font-face{font-family:"Roboto";font-weight:500;src:url("assets/fonts/Roboto-Medium.ttf")}
@@ -14,30 +14,37 @@
   @page{ size:850mm 2000mm; margin:0; }
   html,body{ background:#888; }
   body{ font-family:"Roboto",sans-serif; color:var(--ink); }
-  .banner{ position:relative; width:850mm; height:2000mm; background:var(--paper); overflow:hidden; }
+  .banner{ position:relative; width:850mm; height:2000mm; overflow:hidden; }
 
-  .logo{ position:absolute; top:120mm; left:50%; transform:translateX(-50%); width:230mm; height:230mm; }
-  .brand{ position:absolute; top:360mm; left:0; right:0; text-align:center; color:var(--ink);
+  .photo{ position:absolute; inset:0; background-image:url('assets/coll_2.jpg');
+          background-size:cover; background-position:center 18%; z-index:0; }
+  .topscrim{ position:absolute; top:0; left:0; right:0; height:640mm; z-index:1;
+             background:linear-gradient(180deg, var(--paper) 12%, rgba(250,248,244,.72) 46%, rgba(250,248,244,0) 100%); }
+  .botscrim{ position:absolute; bottom:0; left:0; right:0; height:600mm; z-index:1;
+             background:linear-gradient(0deg, rgba(15,15,15,.7) 12%, rgba(15,15,15,0) 100%); }
+
+  .geo{ position:absolute; z-index:2; }
+  .ring{ width:280mm; height:280mm; border:11mm solid var(--petrol); border-radius:50%; top:130mm; left:690mm; }
+  .sq{ width:120mm; height:120mm; background:var(--ink); top:150mm; left:40mm; }
+  .tri{ width:0;height:0; border-left:95mm solid transparent; border-right:95mm solid transparent;
+        border-bottom:165mm solid var(--petrol); bottom:150mm; left:36mm; }
+
+  .logo{ position:absolute; top:118mm; left:50%; transform:translateX(-50%); width:225mm; height:225mm; z-index:3; }
+  .brand{ position:absolute; top:356mm; left:0; right:0; text-align:center; color:var(--ink); z-index:3;
           font-family:"Roboto",sans-serif; font-weight:300; font-size:70pt; line-height:1.02; }
   .brand .tog{ font-family:"EBGaramond",serif; font-style:italic; font-weight:400; font-size:108pt; }
 
-  .geo{ position:absolute; z-index:1; }
-  .ring{ width:300mm; height:300mm; border:11mm solid var(--petrol); border-radius:50%; top:120mm; left:660mm; }
-  .sq{ width:150mm; height:150mm; background:var(--ink); top:610mm; left:30mm; }
-  .tri{ width:0;height:0; border-left:105mm solid transparent; border-right:105mm solid transparent;
-        border-bottom:180mm solid var(--petrol); top:600mm; left:520mm; }
-
-  .photo{ position:absolute; left:0; right:0; bottom:0; height:1090mm;
-          background-image:url('assets/coll_2.jpg'); background-size:cover; background-position:center 22%;
-          border-top:7mm solid var(--petrol); z-index:2; }
-
   .foot{ position:absolute; left:0; right:0; bottom:150mm; text-align:center; z-index:3; }
-  .foot .handle{ font-weight:900; font-size:100pt; letter-spacing:.01em; color:#fff; text-shadow:0 3mm 14mm rgba(0,0,0,.55); }
-  .foot .city{ font-weight:500; font-size:40pt; letter-spacing:.3em; text-transform:uppercase; color:#fff; margin-top:14mm; text-shadow:0 2mm 12mm rgba(0,0,0,.55); }
+  .foot .handle{ font-weight:900; font-size:104pt; letter-spacing:.01em; color:#fff; text-shadow:0 3mm 16mm rgba(0,0,0,.6); }
+  .foot .city{ font-weight:500; font-size:40pt; letter-spacing:.3em; text-transform:uppercase; color:#fff; margin-top:14mm; text-shadow:0 2mm 12mm rgba(0,0,0,.6); }
 </style>
 </head>
 <body>
   <div class="banner">
+    <div class="photo"></div>
+    <div class="topscrim"></div>
+    <div class="botscrim"></div>
+
     <div class="geo ring"></div>
     <div class="geo sq"></div>
     <div class="geo tri"></div>
@@ -45,7 +52,6 @@
     <img class="logo" src="assets/pre_logo.png" alt="PRE" />
     <div class="brand">Let&rsquo;s style<br><span class="tog">together</span></div>
 
-    <div class="photo"></div>
     <div class="foot">
       <div class="handle">@pre.munich</div>
       <div class="city">Art of Hair · München</div>
