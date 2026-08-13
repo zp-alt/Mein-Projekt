@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8" />
+<title>PRE Roll-up Collage</title>
+<style>
+  @font-face{font-family:"Roboto";font-weight:300;src:url("assets/fonts/Roboto-Light.ttf")}
+  @font-face{font-family:"Roboto";font-weight:500;src:url("assets/fonts/Roboto-Medium.ttf")}
+  @font-face{font-family:"Roboto";font-weight:700;src:url("assets/fonts/Roboto-Bold.ttf")}
+  @font-face{font-family:"Roboto";font-weight:900;src:url("assets/fonts/Roboto-Black.ttf")}
+  :root{ --ink:#1a1a1a; --paper:#faf8f4; --petrol:#11514c; --petrol-soft:#5d8b86; }
+  *{box-sizing:border-box;margin:0;padding:0;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  @page{ size:850mm 2000mm; margin:0; }
+  html,body{ background:#888; }
+  body{ font-family:"Roboto",sans-serif; color:var(--ink); }
+  .banner{ position:relative; width:850mm; height:2000mm; background:var(--paper); overflow:hidden; }
+
+  .logo{ position:absolute; top:118mm; left:50%; transform:translateX(-50%); width:225mm; height:225mm; }
+  .brand{ position:absolute; top:366mm; left:0; right:0; text-align:center;
+          font-weight:500; font-size:42pt; letter-spacing:.34em; text-transform:uppercase; color:var(--petrol); }
+
+  .geo{ position:absolute; }
+  .ring{ width:180mm; height:180mm; border:6mm solid var(--petrol); border-radius:50%; top:415mm; left:690mm; z-index:1; }
+  .disc{ width:60mm; height:60mm; border-radius:50%; background:var(--petrol); top:1035mm; left:24mm; z-index:1; }
+  .sq{ width:52mm; height:52mm; background:var(--ink); top:1585mm; left:430mm; z-index:1; }
+  .tri{ width:0;height:0; border-left:32mm solid transparent; border-right:32mm solid transparent;
+        border-bottom:56mm solid var(--petrol); top:980mm; left:352mm; z-index:1; }
+
+  .ph{ position:absolute; background-size:cover; background-repeat:no-repeat;
+       border:6mm solid var(--paper); box-shadow:0 7mm 20mm rgba(0,0,0,.22); z-index:2; }
+
+  .foot{ position:absolute; left:0; right:0; bottom:96mm; text-align:center; z-index:3; }
+  .foot .hairline{ width:150mm; height:5mm; background:var(--petrol); margin:0 auto 26mm; }
+  .foot .handle{ font-weight:900; font-size:96pt; letter-spacing:.01em; color:var(--ink); }
+  .foot .city{ font-weight:500; font-size:38pt; letter-spacing:.3em; text-transform:uppercase; color:var(--petrol-soft); margin-top:14mm; }
+</style>
+</head>
+<body>
+  <div class="banner">
+    <div class="geo ring"></div>
+    <div class="geo disc"></div>
+    <div class="geo sq"></div>
+    <div class="geo tri"></div>
+
+    <img class="logo" src="assets/pre_logo.png" alt="PRE" />
+    <div class="brand">Let&rsquo;s style together</div>
+
+    <!-- artistic collage -->
+    <div class="ph" style="left:360mm; top:470mm; width:425mm; height:545mm; background-image:url('assets/coll_2.jpg'); background-position:center 28%"></div>
+    <div class="ph" style="left:58mm;  top:612mm; width:340mm; height:452mm; background-image:url('assets/coll_1.jpg'); background-position:center 30%"></div>
+    <div class="ph" style="left:78mm;  top:1120mm; width:330mm; height:430mm; background-image:url('assets/coll_3.jpg'); background-position:center 22%"></div>
+    <div class="ph" style="left:418mm; top:1055mm; width:372mm; height:565mm; background-image:url('assets/coll_4.jpg'); background-position:center 42%"></div>
+
+    <div class="foot">
+      <div class="hairline"></div>
+      <div class="handle">@pre.munich</div>
+      <div class="city">Art of Hair · München</div>
+    </div>
+  </div>
+</body>
+</html>
