@@ -17,11 +17,9 @@
   .banner{ position:relative; width:850mm; height:2000mm; overflow:hidden; background:#c7c8c6; }
 
   /* weicher Hintergrund fuellt das ganze Plakat */
-  .photobg{ position:absolute; inset:0; background-image:url('assets/coll_2_blur.jpg');
-            background-size:cover; background-position:center 20%; z-index:0; }
-  /* komplettes Foto scharf, nichts abgeschnitten */
-  .photo{ position:absolute; inset:0; background-image:url('assets/coll_2.jpg');
-          background-size:contain; background-repeat:no-repeat; background-position:center 46%; z-index:1; }
+  /* ein einziges, durchgehendes Bild – exakt im Plakat-Format, nichts abgeschnitten */
+  .photo{ position:absolute; inset:0; background-image:url('assets/coll_2_ext.jpg');
+          background-size:cover; background-position:center; z-index:0; }
 
   .geo{ position:absolute; z-index:3; }
   .ring{ width:270mm; height:270mm; border:11mm solid var(--petrol); border-radius:50%; top:135mm; left:700mm; }
@@ -41,7 +39,6 @@
 </head>
 <body>
   <div class="banner">
-    <div class="photobg"></div>
     <div class="photo"></div>
 
     <div class="geo ring"></div>
