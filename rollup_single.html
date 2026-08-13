@@ -14,12 +14,13 @@
   @page{ size:850mm 2000mm; margin:0; }
   html,body{ background:#888; }
   body{ font-family:"Roboto",sans-serif; color:var(--ink); }
-  .banner{ position:relative; width:850mm; height:2000mm; overflow:hidden; background:#c7c8c6; }
+  .banner{ position:relative; width:850mm; height:2000mm; overflow:hidden; background:#d8d8d8; }
 
-  /* weicher Hintergrund fuellt das ganze Plakat */
-  /* ein einziges, durchgehendes Bild – exakt im Plakat-Format, nichts abgeschnitten */
+  /* ein Bild, das oben & unten langsam in den Hintergrund ausfadet (verschwindet) */
   .photo{ position:absolute; inset:0; background-image:url('assets/coll_2_ext.jpg');
-          background-size:cover; background-position:center; z-index:0; }
+          background-size:cover; background-position:center; z-index:0;
+          -webkit-mask-image:linear-gradient(to bottom, rgba(0,0,0,0) 0%, #000 27%, #000 73%, rgba(0,0,0,0) 100%);
+          mask-image:linear-gradient(to bottom, rgba(0,0,0,0) 0%, #000 27%, #000 73%, rgba(0,0,0,0) 100%); }
 
   .geo{ position:absolute; z-index:3; }
   .ring{ width:270mm; height:270mm; border:11mm solid var(--petrol); border-radius:50%; top:135mm; left:700mm; }
@@ -33,8 +34,8 @@
   .brand .tog{ font-family:"EBGaramond",serif; font-style:italic; font-weight:400; font-size:104pt; }
 
   .foot{ position:absolute; left:0; right:0; bottom:150mm; text-align:center; z-index:4; }
-  .foot .handle{ font-weight:900; font-size:104pt; letter-spacing:.01em; color:#fff; text-shadow:0 3mm 16mm rgba(0,0,0,.6); }
-  .foot .city{ font-weight:500; font-size:40pt; letter-spacing:.3em; text-transform:uppercase; color:#fff; margin-top:14mm; text-shadow:0 2mm 12mm rgba(0,0,0,.6); }
+  .foot .handle{ font-weight:900; font-size:104pt; letter-spacing:.01em; color:var(--ink); }
+  .foot .city{ font-weight:500; font-size:40pt; letter-spacing:.3em; text-transform:uppercase; color:var(--petrol-soft); margin-top:14mm; }
 </style>
 </head>
 <body>
