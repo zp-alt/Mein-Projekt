@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8" />
+<title>PRE Roll-up Single</title>
+<style>
+  @font-face{font-family:"Roboto";font-weight:300;src:url("assets/fonts/Roboto-Light.ttf")}
+  @font-face{font-family:"Roboto";font-weight:500;src:url("assets/fonts/Roboto-Medium.ttf")}
+  @font-face{font-family:"Roboto";font-weight:700;src:url("assets/fonts/Roboto-Bold.ttf")}
+  @font-face{font-family:"Roboto";font-weight:900;src:url("assets/fonts/Roboto-Black.ttf")}
+  @font-face{font-family:"EBGaramond";font-style:italic;font-weight:400;src:url("assets/fonts/EBGaramond-Italic.otf")}
+  :root{ --ink:#1a1a1a; --paper:#faf8f4; --petrol:#11514c; --petrol-soft:#5d8b86; }
+  *{box-sizing:border-box;margin:0;padding:0;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  @page{ size:850mm 2000mm; margin:0; }
+  html,body{ background:#888; }
+  body{ font-family:"Roboto",sans-serif; color:var(--ink); }
+  .banner{ position:relative; width:850mm; height:2000mm; background:var(--paper); overflow:hidden; }
+
+  .logo{ position:absolute; top:120mm; left:50%; transform:translateX(-50%); width:230mm; height:230mm; }
+  .brand{ position:absolute; top:360mm; left:0; right:0; text-align:center; color:var(--ink);
+          font-family:"Roboto",sans-serif; font-weight:300; font-size:70pt; line-height:1.02; }
+  .brand .tog{ font-family:"EBGaramond",serif; font-style:italic; font-weight:400; font-size:108pt; }
+
+  .geo{ position:absolute; z-index:1; }
+  .ring{ width:300mm; height:300mm; border:11mm solid var(--petrol); border-radius:50%; top:120mm; left:660mm; }
+  .sq{ width:150mm; height:150mm; background:var(--ink); top:610mm; left:30mm; }
+  .tri{ width:0;height:0; border-left:105mm solid transparent; border-right:105mm solid transparent;
+        border-bottom:180mm solid var(--petrol); top:600mm; left:520mm; }
+
+  .photo{ position:absolute; left:0; right:0; bottom:0; height:1090mm;
+          background-image:url('assets/coll_2.jpg'); background-size:cover; background-position:center 22%;
+          border-top:7mm solid var(--petrol); z-index:2; }
+
+  .foot{ position:absolute; left:0; right:0; bottom:150mm; text-align:center; z-index:3; }
+  .foot .handle{ font-weight:900; font-size:100pt; letter-spacing:.01em; color:#fff; text-shadow:0 3mm 14mm rgba(0,0,0,.55); }
+  .foot .city{ font-weight:500; font-size:40pt; letter-spacing:.3em; text-transform:uppercase; color:#fff; margin-top:14mm; text-shadow:0 2mm 12mm rgba(0,0,0,.55); }
+</style>
+</head>
+<body>
+  <div class="banner">
+    <div class="geo ring"></div>
+    <div class="geo sq"></div>
+    <div class="geo tri"></div>
+
+    <img class="logo" src="assets/pre_logo.png" alt="PRE" />
+    <div class="brand">Let&rsquo;s style<br><span class="tog">together</span></div>
+
+    <div class="photo"></div>
+    <div class="foot">
+      <div class="handle">@pre.munich</div>
+      <div class="city">Art of Hair · München</div>
+    </div>
+  </div>
+</body>
+</html>
