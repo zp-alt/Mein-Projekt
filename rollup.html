@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8" />
+<title>PRE Roll-up</title>
+<style>
+  @font-face{font-family:"Roboto";font-weight:300;src:url("assets/fonts/Roboto-Light.ttf")}
+  @font-face{font-family:"Roboto";font-weight:400;src:url("assets/fonts/Roboto-Regular.ttf")}
+  @font-face{font-family:"Roboto";font-weight:500;src:url("assets/fonts/Roboto-Medium.ttf")}
+  @font-face{font-family:"Roboto";font-weight:700;src:url("assets/fonts/Roboto-Bold.ttf")}
+  @font-face{font-family:"Roboto";font-weight:900;src:url("assets/fonts/Roboto-Black.ttf")}
+  :root{ --ink:#1a1a1a; --paper:#faf8f4; --petrol:#11514c; --petrol-soft:#5d8b86; }
+  *{box-sizing:border-box;margin:0;padding:0;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  @page{ size:850mm 2000mm; margin:0; }
+  html,body{ background:#888; }
+  body{ font-family:"Roboto",sans-serif; color:var(--ink); }
+  .banner{ position:relative; width:850mm; height:2000mm; background:var(--paper); overflow:hidden;
+           padding:120mm 75mm 0; display:flex; flex-direction:column; }
+
+  .logo{ width:230mm; height:230mm; display:block; }
+  .geo{ position:absolute; }
+  .geo.sq{ width:52mm; height:52mm; background:var(--ink); top:150mm; right:80mm; }
+  .geo.tri{ width:0;height:0; border-left:34mm solid transparent; border-right:34mm solid transparent;
+            border-bottom:60mm solid var(--petrol); top:230mm; right:88mm; }
+  .geo.ring{ width:150mm; height:150mm; border:6mm solid var(--petrol); border-radius:50%; top:-40mm; right:-40mm; }
+
+  h1{ font-weight:900; font-size:300pt; line-height:.92; letter-spacing:-.02em; text-transform:uppercase; margin-top:34mm; }
+  h1 .pet{ color:var(--petrol); }
+  .sub{ font-weight:300; font-size:62pt; line-height:1.28; margin-top:26mm; max-width:660mm; }
+  .sub b{ font-weight:900; }
+  .rule{ width:150mm; height:5mm; background:var(--petrol); margin:30mm 0 0; }
+
+  .photo{ position:absolute; left:0; right:0; bottom:0; height:1000mm;
+          background-image:url('assets/banner_photo.jpg'); background-size:cover; background-position:center 22%;
+          border-top:6mm solid var(--petrol); }
+  .overlay{ position:absolute; left:0; right:0; bottom:210mm; text-align:center; z-index:2; }
+  .overlay .handle{ font-weight:900; font-size:70pt; letter-spacing:.02em; color:#fff; text-shadow:0 3mm 12mm rgba(0,0,0,.55); }
+  .overlay .tag{ font-weight:500; font-size:44pt; letter-spacing:.24em; text-transform:uppercase; color:#fff; margin-top:10mm; text-shadow:0 2mm 10mm rgba(0,0,0,.55); }
+  .base{ position:absolute; left:75mm; bottom:70mm; z-index:2; font-weight:500; font-size:40pt;
+         letter-spacing:.26em; text-transform:uppercase; color:#fff; text-shadow:0 2mm 10mm rgba(0,0,0,.6); }
+</style>
+</head>
+<body>
+  <div class="banner">
+    <div class="geo ring"></div>
+    <img class="logo" src="assets/pre_logo.png" alt="PRE" />
+    <div class="geo sq"></div>
+    <div class="geo tri"></div>
+    <h1>Deine<br><span class="pet">PRE-miere.</span></h1>
+    <div class="sub">Mach ein Foto, poste es —<br>kostet dich nichts. <b>PRE out.</b></div>
+    <div class="rule"></div>
+
+    <div class="photo"></div>
+    <div class="overlay">
+      <div class="handle">@preartofhair</div>
+      <div class="tag">#PRESummerNight</div>
+    </div>
+    <div class="base">Art of Hair · München</div>
+  </div>
+</body>
+</html>
