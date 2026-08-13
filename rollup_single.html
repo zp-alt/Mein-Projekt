@@ -17,16 +17,11 @@
   .banner{ position:relative; width:850mm; height:2000mm; overflow:hidden; background:#c7c8c6; }
 
   /* weicher Hintergrund fuellt das ganze Plakat */
-  .photobg{ position:absolute; inset:-40mm; background-image:url('assets/coll_2.jpg');
-            background-size:cover; background-position:center 20%; filter:blur(26px) brightness(.9); z-index:0; }
+  .photobg{ position:absolute; inset:0; background-image:url('assets/coll_2_blur.jpg');
+            background-size:cover; background-position:center 20%; z-index:0; }
   /* komplettes Foto scharf, nichts abgeschnitten */
   .photo{ position:absolute; inset:0; background-image:url('assets/coll_2.jpg');
           background-size:contain; background-repeat:no-repeat; background-position:center 46%; z-index:1; }
-
-  .topscrim{ position:absolute; top:0; left:0; right:0; height:560mm; z-index:2;
-             background:linear-gradient(180deg, rgba(250,248,244,.92) 8%, rgba(250,248,244,.55) 42%, rgba(250,248,244,0) 100%); }
-  .botscrim{ position:absolute; bottom:0; left:0; right:0; height:520mm; z-index:2;
-             background:linear-gradient(0deg, rgba(15,15,15,.72) 12%, rgba(15,15,15,0) 100%); }
 
   .geo{ position:absolute; z-index:3; }
   .ring{ width:270mm; height:270mm; border:11mm solid var(--petrol); border-radius:50%; top:135mm; left:700mm; }
@@ -48,8 +43,6 @@
   <div class="banner">
     <div class="photobg"></div>
     <div class="photo"></div>
-    <div class="topscrim"></div>
-    <div class="botscrim"></div>
 
     <div class="geo ring"></div>
     <div class="geo sq"></div>
