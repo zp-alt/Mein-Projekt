@@ -15,33 +15,23 @@
       overflow: hidden;
     }
 
-    /* Base: editorial photo */
-    .photo-editorial {
+    /* Sunset photo — full bleed */
+    .photo {
       position: absolute; inset: 0;
-      background-image: url(look52.jpeg);
+      background-image: url(sunset-zyhra.jpeg);
       background-size: cover;
-      background-position: center top;
+      background-position: center 30%;
     }
 
-    /* Party glow */
-    .photo-party {
-      position: absolute; inset: 0;
-      background-image: url(party-silhouettes.jpeg);
-      background-size: cover;
-      background-position: center center;
-      opacity: 0.38;
-      mix-blend-mode: screen;
-    }
-
-    /* Dark overlay */
+    /* Gradient overlay — heavy at bottom for text */
     .overlay {
       position: absolute; inset: 0;
       background: linear-gradient(
         to bottom,
-        rgba(0,0,0,0.75) 0%,
-        rgba(0,0,0,0.20) 35%,
-        rgba(0,0,0,0.55) 65%,
-        rgba(0,0,0,0.90) 100%
+        rgba(0,0,0,0.45) 0%,
+        rgba(0,0,0,0.05) 30%,
+        rgba(0,0,0,0.10) 55%,
+        rgba(0,0,0,0.88) 100%
       );
     }
 
@@ -59,12 +49,13 @@
       font-size: 10px;
       letter-spacing: 6px;
       text-transform: uppercase;
-      color: rgba(255,255,255,0.30);
+      color: rgba(255,255,255,0.50);
     }
 
-    .middle {
+    .bottom-block {
       display: flex;
       flex-direction: column;
+      gap: 0;
     }
 
     .headline {
@@ -72,36 +63,37 @@
       font-style: italic;
       font-weight: 300;
       font-size: 58px;
-      line-height: 1.1;
+      line-height: 1.08;
       color: #fff;
       letter-spacing: -0.5px;
-      margin-bottom: 36px;
+      margin-bottom: 30px;
     }
     .headline .yellow { color: #FFE033; }
 
     .rule {
       width: 40px;
       height: 1px;
-      background: rgba(255,255,255,0.20);
-      margin-bottom: 36px;
+      background: rgba(255,255,255,0.22);
+      margin-bottom: 28px;
     }
 
     .body {
       font-family: 'Barlow', sans-serif;
       font-weight: 300;
-      font-size: 14px;
-      line-height: 1.85;
-      color: rgba(255,255,255,0.60);
+      font-size: 13px;
+      line-height: 1.9;
+      color: rgba(255,255,255,0.65);
       letter-spacing: 0.3px;
+      margin-bottom: 36px;
     }
     .body b {
       font-weight: 600;
-      color: rgba(255,255,255,0.92);
+      color: rgba(255,255,255,0.95);
     }
 
-    .bottom {
-      border-top: 1px solid rgba(255,255,255,0.10);
-      padding-top: 22px;
+    .event-bar {
+      border-top: 1px solid rgba(255,255,255,0.12);
+      padding-top: 20px;
     }
     .event-name {
       font-family: 'Barlow', sans-serif;
@@ -124,14 +116,13 @@
 </head>
 <body>
   <div class="wrap">
-    <div class="photo-editorial"></div>
-    <div class="photo-party"></div>
+    <div class="photo"></div>
     <div class="overlay"></div>
     <div class="content">
 
       <div class="label">PRE Art of Hair</div>
 
-      <div class="middle">
+      <div class="bottom-block">
         <div class="headline">
           Kurz<br>
           aufladen.<br>
@@ -142,14 +133,12 @@
           Ab morgen bin ich bis zum 24. August<br>
           in den Alpen und lade meine Batterien auf.<br><br>
           <b>Am 30. August feiern wir zusammen —<br>
-          ich freu mich auf euch.</b><br><br>
-          Save the Date. 🖤
+          ich freu mich auf euch. 🖤</b>
         </div>
-      </div>
-
-      <div class="bottom">
-        <div class="event-name">PRE — A Midsummer Night</div>
-        <div class="event-date">30. August 2026 · Munich</div>
+        <div class="event-bar">
+          <div class="event-name">PRE — A Midsummer Night</div>
+          <div class="event-date">30. August 2026 · Munich</div>
+        </div>
       </div>
 
     </div>
