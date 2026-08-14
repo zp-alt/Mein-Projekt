@@ -2,7 +2,7 @@ const { chromium } = require('/opt/node22/lib/node_modules/playwright');
 const path = require('path');
 (async () => {
   const browser = await chromium.launch();
-  const context = await browser.newContext({ viewport: { width: 540, height: 960 }, deviceScaleFactor: 2 });
+  const context = await browser.newContext({ viewport: { width: 540, height: 960 }, deviceScaleFactor: 4 });
   const page = await context.newPage();
   await page.goto('file://' + path.resolve(__dirname, 'story-aug14-urlaub.html'));
   await page.evaluate(() => document.fonts.ready);
