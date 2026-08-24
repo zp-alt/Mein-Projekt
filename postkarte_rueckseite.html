@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html><head><meta charset="UTF-8"><style>
+@font-face{font-family:"Montserrat";font-weight:300;src:url("assets/fonts/Montserrat-Light.ttf")}
+@font-face{font-family:"Montserrat";font-weight:400;src:url("assets/fonts/Montserrat-Regular.ttf")}
+@font-face{font-family:"Montserrat";font-weight:500;src:url("assets/fonts/Montserrat-Medium.woff")}
+@font-face{font-family:"EBGaramond";font-style:italic;font-weight:400;src:url("assets/fonts/EBGaramond-Italic.otf")}
+:root{--ink:#141414;--paper:#faf8f4;--petrol:#11514c;--petrol-soft:#5d8b86}
+*{box-sizing:border-box;margin:0;padding:0;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+@page{size:105mm 148mm;margin:0}
+.back{position:relative;width:105mm;height:148mm;background:var(--paper);display:flex;flex-direction:column;
+      align-items:center;justify-content:center;overflow:hidden;padding:14mm}
+.geo{position:absolute}
+.ring{width:34mm;height:34mm;border:2.4mm solid var(--petrol);border-radius:50%;top:-10mm;right:-10mm}
+.tri{width:0;height:0;border-left:9mm solid transparent;border-right:9mm solid transparent;border-bottom:16mm solid var(--petrol);bottom:16mm;left:12mm;opacity:.9}
+.pre{font-family:"Montserrat",sans-serif;font-weight:500;font-size:52pt;letter-spacing:.32em;color:var(--ink);text-indent:.32em}
+.aoh{margin-top:4mm;font-family:"Montserrat",sans-serif;font-weight:500;font-size:9pt;letter-spacing:.42em;text-transform:uppercase;color:var(--petrol)}
+.rule{width:22mm;height:2px;background:var(--petrol);margin:9mm 0}
+.tag{text-align:center;color:var(--ink);line-height:1.05}
+.tag .l1{font-family:"Montserrat",sans-serif;font-weight:300;font-size:23pt}
+.tag .it{font-family:"EBGaramond",serif;font-style:italic;font-weight:400;font-size:33pt}
+.contact{position:absolute;left:9mm;right:9mm;bottom:11mm;text-align:center;
+         font-family:"Montserrat",sans-serif;font-weight:500;font-size:7.5pt;letter-spacing:.18em;text-transform:uppercase;color:var(--petrol-soft)}
+</style></head><body>
+  <div class="back">
+    <div class="geo ring"></div>
+    <div class="geo tri"></div>
+    <div class="pre">PRE</div>
+    <div class="aoh">Art of Hair</div>
+    <div class="rule"></div>
+    <div class="tag"><span class="l1">Let&rsquo;s Night</span><br><span class="it">together</span></div>
+    <div class="contact">@pre.munich&nbsp;&nbsp;·&nbsp;&nbsp;preartofhair.com&nbsp;&nbsp;·&nbsp;&nbsp;München</div>
+  </div>
+</body></html>
