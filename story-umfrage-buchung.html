@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;600;700;900&family=Cormorant+Garamond:ital,wght@1,200;1,300&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { background: #000; }
+    .wrap {
+      width: 540px;
+      height: 960px;
+      position: relative;
+      overflow: hidden;
+      background: #0d0d0d;
+    }
+
+    .bg {
+      position: absolute; inset: 0;
+      background-image: url(party-silhouettes.jpeg);
+      background-size: cover;
+      background-position: center;
+      opacity: 0.10;
+    }
+
+    .overlay {
+      position: absolute; inset: 0;
+      background: linear-gradient(160deg, rgba(0,0,0,0.80) 0%, rgba(0,0,0,0.65) 100%);
+    }
+
+    .content {
+      position: absolute; inset: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 72px 56px 80px;
+    }
+
+    .label {
+      font-family: 'Barlow', sans-serif;
+      font-weight: 700;
+      font-size: 10px;
+      letter-spacing: 6px;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.28);
+    }
+
+    .middle {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+
+    .hey {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-weight: 200;
+      font-size: 38px;
+      color: rgba(255,255,255,0.55);
+      margin-bottom: 12px;
+      letter-spacing: 0.5px;
+    }
+
+    .question {
+      font-family: 'Barlow', sans-serif;
+      font-weight: 700;
+      font-size: 36px;
+      line-height: 1.15;
+      color: #fff;
+      letter-spacing: -0.5px;
+      margin-bottom: 44px;
+    }
+    .question .yellow { color: #FFE033; }
+
+    .rule {
+      width: 40px;
+      height: 1px;
+      background: rgba(255,255,255,0.18);
+      margin-bottom: 40px;
+    }
+
+    /* Poll options */
+    .poll {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .option {
+      border: 1px solid rgba(255,255,255,0.18);
+      border-radius: 6px;
+      padding: 18px 28px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .option.yes {
+      border-color: #FFE033;
+      background: rgba(255,224,51,0.08);
+    }
+    .option-text {
+      font-family: 'Barlow', sans-serif;
+      font-weight: 600;
+      font-size: 15px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.75);
+    }
+    .option.yes .option-text {
+      color: #FFE033;
+    }
+
+    .note {
+      margin-top: 28px;
+      font-family: 'Barlow', sans-serif;
+      font-weight: 300;
+      font-size: 11px;
+      letter-spacing: 0.5px;
+      color: rgba(255,255,255,0.30);
+      line-height: 1.7;
+    }
+
+    .bottom {
+      border-top: 1px solid rgba(255,255,255,0.10);
+      padding-top: 20px;
+    }
+    .salon {
+      font-family: 'Barlow', sans-serif;
+      font-weight: 700;
+      font-size: 9px;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.25);
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="bg"></div>
+    <div class="overlay"></div>
+    <div class="content">
+
+      <div class="label">PRE Art of Hair</div>
+
+      <div class="middle">
+        <div class="hey">Hey bella gente —</div>
+        <div class="question">
+          Klappt die<br>
+          <span class="yellow">Online-Buchung</span><br>
+          bei euch?
+        </div>
+        <div class="rule"></div>
+        <div class="poll">
+          <div class="option yes">
+            <div class="option-text">✓ &nbsp; Ja, klappt super!</div>
+          </div>
+          <div class="option">
+            <div class="option-text">✗ &nbsp; Nein, Probleme beim Login</div>
+          </div>
+        </div>
+        <div class="note">
+          Falls ihr Probleme habt — schreibt mir kurz per DM,<br>ich helfe euch sofort weiter. 🖤
+        </div>
+      </div>
+
+      <div class="bottom">
+        <div class="salon">PRE Art of Hair · Munich</div>
+      </div>
+
+    </div>
+  </div>
+</body>
+</html>
