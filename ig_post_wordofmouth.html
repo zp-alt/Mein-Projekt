@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<style>
+  @font-face{font-family:"Roboto";font-weight:300;src:url("assets/fonts/Roboto-Light.ttf")}
+  @font-face{font-family:"Roboto";font-weight:500;src:url("assets/fonts/Roboto-Medium.ttf")}
+  @font-face{font-family:"Roboto";font-weight:700;src:url("assets/fonts/Roboto-Bold.ttf")}
+  @font-face{font-family:"Roboto";font-weight:900;src:url("assets/fonts/Roboto-Black.ttf")}
+  @font-face{font-family:"EBGaramond";font-style:italic;font-weight:400;src:url("assets/fonts/EBGaramond-Italic.otf")}
+  :root{ --ink:#141414; --paper:#f4f1ec; --petrol:#11514c; --petrolsoft:#5d8b86; --line:#d8d3c8; }
+  *{box-sizing:border-box;margin:0;padding:0;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  html,body{margin:0;padding:0}
+  .card{ position:relative; width:1080px; height:1350px; background:var(--paper);
+         font-family:"Roboto",sans-serif; color:var(--ink); overflow:hidden; }
+
+  /* feine Rahmenlinie */
+  .frame{ position:absolute; inset:46px; border:1.5px solid var(--line); pointer-events:none; }
+
+  /* Bauhaus-Formen */
+  .ring{ position:absolute; width:300px; height:300px; border:18px solid var(--petrol); border-radius:50%;
+         top:-90px; right:-70px; }
+  .sq{ position:absolute; width:66px; height:66px; background:var(--ink); left:120px; top:236px; }
+  .tri{ position:absolute; width:0;height:0; border-left:42px solid transparent; border-right:42px solid transparent;
+        border-bottom:74px solid var(--petrol); right:170px; top:600px; }
+  .disc{ position:absolute; width:30px; height:30px; border-radius:50%; background:var(--petrolsoft); right:250px; top:1086px; }
+
+  /* Kopf */
+  .kick{ position:absolute; top:100px; left:120px; font-weight:500; font-size:19px; letter-spacing:.42em;
+         text-transform:uppercase; color:var(--petrol); }
+
+  /* Quote */
+  .quote{ position:absolute; left:120px; right:120px; top:344px; }
+  .quote .q{ font-weight:900; text-transform:uppercase; line-height:1.0; letter-spacing:-.015em; font-size:106px; color:var(--ink); }
+  .quote .q .pet{ color:var(--petrol); }
+  .quote .thin{ font-weight:300; }
+  .rule{ width:120px; height:4px; background:var(--petrol); margin:40px 0 38px; }
+  .sub{ font-family:"EBGaramond",serif; font-style:italic; font-weight:400; font-size:40px; color:#4a463f; letter-spacing:.01em; margin-top:44px; }
+
+  /* Fuss */
+  .foot{ position:absolute; left:120px; right:120px; bottom:104px; display:flex; align-items:flex-end; justify-content:space-between; }
+  .foot .handle{ font-weight:900; font-size:34px; letter-spacing:.01em; color:var(--ink); }
+  .foot .city{ margin-top:10px; font-weight:500; font-size:17px; letter-spacing:.34em; text-transform:uppercase; color:var(--petrolsoft); }
+  .foot .logo{ width:120px; height:120px; display:block; opacity:.96; }
+</style>
+</head>
+<body>
+  <div class="card">
+    <div class="ring"></div>
+    <div class="frame"></div>
+    <div class="sq"></div>
+    <div class="tri"></div>
+    <div class="disc"></div>
+
+    <div class="kick">PRE — Art of Hair</div>
+
+    <div class="quote">
+      <div class="q">The&nbsp;algorithm<br><span class="thin">is</span>&nbsp;cute.</div>
+      <div class="rule"></div>
+      <div class="q">But&nbsp;<span class="pet">word&nbsp;of<br>mouth</span>&nbsp;built<br><span class="thin">my</span>&nbsp;business.</div>
+      <div class="sub">Real work travels by voice, not by feed.</div>
+    </div>
+
+    <div class="foot">
+      <div>
+        <div class="handle">@pre.munich</div>
+        <div class="city">München</div>
+      </div>
+      <img class="logo" src="assets/pre_logo.png" alt="PRE"/>
+    </div>
+  </div>
+</body>
+</html>
