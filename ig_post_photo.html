@@ -7,63 +7,40 @@
   @font-face{font-family:"Roboto";font-weight:500;src:url("assets/fonts/Roboto-Medium.ttf")}
   @font-face{font-family:"Roboto";font-weight:700;src:url("assets/fonts/Roboto-Bold.ttf")}
   @font-face{font-family:"Roboto";font-weight:900;src:url("assets/fonts/Roboto-Black.ttf")}
-  @font-face{font-family:"EBGaramond";font-style:italic;font-weight:400;src:url("assets/fonts/EBGaramond-Italic.otf")}
-  :root{ --paper:#f4f1ec; --petrol:#11514c; --sage:#8cc3bc; }
   *{box-sizing:border-box;margin:0;padding:0;-webkit-print-color-adjust:exact;print-color-adjust:exact}
   html,body{margin:0;padding:0}
   .card{ position:relative; width:1080px; height:1350px; overflow:hidden;
          font-family:"Roboto",sans-serif; color:#fff; background:#1a1a1a; }
 
-  .photo{ position:absolute; inset:0; background-image:url('assets/ig_bob_scene.jpg');
-          background-size:cover; background-position:50% 36%; }
-  /* leichte Gesamt-Abdunklung oben + kräftiger Verlauf unten für Lesbarkeit */
+  .photo{ position:absolute; inset:0; background-image:url('assets/ig_chair_scene.jpg');
+          background-size:cover; background-position:50% 46%; }
+  /* weicher, randloser Verlauf – dunkler in der Mitte, damit die weisse Schrift sauber liest */
   .scrim{ position:absolute; inset:0; background:
-      linear-gradient(to bottom, rgba(18,16,14,.34) 0%, rgba(18,16,14,0) 26%, rgba(18,16,14,0) 40%,
-                      rgba(16,14,12,.62) 64%, rgba(12,11,10,.92) 100%); }
+      radial-gradient(ellipse 92% 52% at 50% 49%, rgba(10,10,12,.52) 0%, rgba(10,10,12,.22) 58%, rgba(10,10,12,.30) 100%); }
 
-  .frame{ position:absolute; inset:44px; border:1.5px solid rgba(255,255,255,.55); pointer-events:none; }
+  .quote{ position:absolute; left:60px; right:60px; top:50%; transform:translateY(-50%); text-align:center; }
+  .quote .q{ font-weight:900; text-transform:uppercase; line-height:1.04; letter-spacing:-.01em; font-size:58px;
+             text-shadow:0 2px 20px rgba(0,0,0,.6); }
+  .rule{ width:84px; height:3px; background:#fff; margin:28px auto; opacity:.95; box-shadow:0 2px 14px rgba(0,0,0,.5); }
 
-  .kick{ position:absolute; top:92px; left:92px; font-weight:700; font-size:19px; letter-spacing:.42em;
-         text-transform:uppercase; color:#fff; text-shadow:0 1px 10px rgba(0,0,0,.45); }
-  .kdot{ display:inline-block; width:9px; height:9px; background:var(--sage); border-radius:50%; margin-left:14px; vertical-align:middle; }
-
-  /* Bauhaus-Dreieck dezent */
-  .tri{ position:absolute; left:92px; bottom:470px; width:0;height:0;
-        border-left:34px solid transparent; border-right:34px solid transparent; border-bottom:60px solid var(--sage); opacity:.92; }
-
-  .quote{ position:absolute; left:92px; right:92px; bottom:214px; }
-  .quote .q{ font-weight:900; text-transform:uppercase; line-height:1.02; letter-spacing:-.01em; font-size:72px;
-             text-shadow:0 2px 22px rgba(0,0,0,.55); }
-  .quote .q .sage{ color:var(--sage); }
-  .rule{ width:96px; height:4px; background:var(--sage); margin:26px 0 26px; box-shadow:0 2px 14px rgba(0,0,0,.5); }
-
-  .foot{ position:absolute; left:92px; right:92px; bottom:104px; display:flex; align-items:flex-end; justify-content:space-between; }
-  .foot .handle{ font-weight:900; font-size:30px; letter-spacing:.01em; color:#fff; text-shadow:0 2px 14px rgba(0,0,0,.5); }
-  .foot .city{ margin-top:8px; font-weight:500; font-size:16px; letter-spacing:.34em; text-transform:uppercase; color:#cfe0dd; }
-  .foot .mark{ text-align:right; font-weight:900; font-size:30px; letter-spacing:.3em; color:#fff; text-shadow:0 2px 14px rgba(0,0,0,.5); }
-  .foot .mark small{ display:block; font-weight:500; font-size:13px; letter-spacing:.26em; color:#cfe0dd; margin-top:6px; }
+  .foot{ position:absolute; left:0; right:0; bottom:86px; text-align:center; }
+  .foot .handle{ font-weight:700; font-size:22px; letter-spacing:.26em; text-transform:uppercase; color:#fff;
+                 text-shadow:0 2px 14px rgba(0,0,0,.55); }
 </style>
 </head>
 <body>
   <div class="card">
     <div class="photo"></div>
     <div class="scrim"></div>
-    <div class="frame"></div>
-
-    <div class="kick">PRE — Art of Hair<span class="kdot"></span></div>
 
     <div class="quote">
       <div class="q">The algorithm<br>is cute.</div>
       <div class="rule"></div>
-      <div class="q">But <span class="sage">word of mouth</span><br>built my business.</div>
+      <div class="q">But word of mouth<br>built my business.</div>
     </div>
 
     <div class="foot">
-      <div>
-        <div class="handle">@pre.munich</div>
-        <div class="city">München</div>
-      </div>
-      <div class="mark">PRE<small>ART OF HAIR</small></div>
+      <div class="handle">@pre.munich&nbsp;&nbsp;·&nbsp;&nbsp;München</div>
     </div>
   </div>
 </body>
