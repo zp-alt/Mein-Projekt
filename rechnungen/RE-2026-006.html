@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="de"><head><meta charset="UTF-8"><title>Rechnung RE-2026-006</title>
+<style>
+@page { size: A4; margin: 0; }
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: "Helvetica Neue", Arial, sans-serif; font-size: 10pt; color: #1a1a1a; width: 210mm; height: 297mm; padding: 20mm 20mm 25mm 25mm; position: relative; }
+.ph { background: #fff3b0; padding: 0 2px; }
+.top { display: flex; justify-content: space-between; align-items: flex-start; }
+.brand { font-size: 18pt; font-weight: 700; letter-spacing: .5px; }
+.sender-small { font-size: 7.5pt; color: #666; border-bottom: 0.5pt solid #999; padding-bottom: 1mm; margin-top: 22mm; display: inline-block; }
+.recipient { margin-top: 3mm; line-height: 1.45; font-size: 10.5pt; }
+.meta { margin-top: 22mm; font-size: 9.5pt; }
+.meta td { padding: 1mm 0; } .meta td:first-child { color: #666; padding-right: 8mm; } .meta td:last-child { text-align: right; }
+h1 { font-size: 16pt; margin-top: 12mm; }
+.intro { margin-top: 5mm; line-height: 1.5; }
+table.items { width: 100%; border-collapse: collapse; margin-top: 7mm; }
+.items th { text-align: left; font-size: 8.5pt; text-transform: uppercase; letter-spacing: .5px; color: #666; border-bottom: 1pt solid #1a1a1a; padding: 2mm 1.5mm; }
+.items td { padding: 3mm 1.5mm; border-bottom: 0.5pt solid #ddd; vertical-align: top; }
+.r { text-align: right; }
+.totals { width: 75mm; margin-left: auto; margin-top: 4mm; border-collapse: collapse; }
+.totals td { padding: 1.5mm 1.5mm; } .totals td:last-child { text-align: right; }
+.totals .grand td { border-top: 1pt solid #1a1a1a; font-weight: 700; font-size: 11.5pt; padding-top: 2.5mm; }
+.pay { margin-top: 12mm; line-height: 1.6; }
+.footer { position: absolute; left: 25mm; right: 20mm; bottom: 12mm; display: flex; justify-content: space-between; font-size: 7.5pt; color: #666; line-height: 1.5; border-top: 0.5pt solid #ccc; padding-top: 3mm; }
+</style></head><body>
+<div class="top">
+  <div>
+    <div class="brand"><span class="ph">[Ihr Firmenname]</span></div>
+  </div>
+  <table class="meta" style="margin-top:0"><tbody>
+    <tr><td>Rechnungsnummer</td><td><b>RE-2026-006</b></td></tr>
+    <tr><td>Rechnungsdatum</td><td>04.11.2026</td></tr>
+    <tr><td>Leistungsdatum</td><td>04.11.2026</td></tr>
+    <tr><td>Fällig am</td><td>19.11.2026</td></tr>
+    <tr><td>USt-IdNr. Kunde</td><td>DE275433655</td></tr>
+  </tbody></table>
+</div>
+
+<div class="sender-small"><span class="ph">[Ihr Firmenname] · [Straße Nr.] · [PLZ Ort]</span></div>
+<div class="recipient">
+  New Flag GmbH<br>
+  Leopoldstraße 154<br>
+  80804 München<br>
+  Deutschland
+</div>
+
+<h1>Rechnung RE-2026-006</h1>
+<p class="intro">Sehr geehrte Damen und Herren,<br>vielen Dank für Ihren Auftrag. Für die erbrachten Leistungen erlauben wir uns, wie folgt zu berechnen:</p>
+
+<table class="items">
+  <thead><tr><th style="width:8%">Pos.</th><th>Beschreibung</th><th class="r" style="width:12%">Menge</th><th class="r" style="width:18%">Einzelpreis</th><th class="r" style="width:18%">Gesamt</th></tr></thead>
+  <tbody>
+    <tr><td>1</td><td><span class="ph">[Leistungsbeschreibung]</span></td><td class="r">1</td><td class="r">165,00 €</td><td class="r">165,00 €</td></tr>
+  </tbody>
+</table>
+
+<table class="totals"><tbody>
+  <tr><td>Nettobetrag</td><td>165,00 €</td></tr>
+  <tr><td>zzgl. 19 % USt.</td><td>31,35 €</td></tr>
+  <tr class="grand"><td>Gesamtbetrag</td><td>196,35 €</td></tr>
+</tbody></table>
+
+<div class="pay">
+  Bitte überweisen Sie den Gesamtbetrag bis zum <b>19.11.2026</b> unter Angabe der Rechnungsnummer <b>RE-2026-006</b> auf das unten genannte Konto.<br><br>
+  Mit freundlichen Grüßen<br>
+  <span class="ph">[Ihr Name]</span>
+</div>
+
+<div class="footer">
+  <div><span class="ph">[Ihr Firmenname]</span><br><span class="ph">[Straße Nr.]</span><br><span class="ph">[PLZ Ort]</span></div>
+  <div><span class="ph">[Telefon]</span><br><span class="ph">[E-Mail]</span><br><span class="ph">[Website]</span></div>
+  <div>Steuernummer / USt-IdNr.:<br><span class="ph">[DE…]</span></div>
+  <div><span class="ph">[Bank]</span><br>IBAN: <span class="ph">[DE.. .... ....]</span><br>BIC: <span class="ph">[……]</span></div>
+</div>
+</body></html>
