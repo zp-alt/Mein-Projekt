@@ -147,8 +147,8 @@ def build(data, out):
     c.setFont("Helvetica", 9)
     c.setFillColor(HexColor("#444444"))
     for ln in [
-        f"Bitte überweisen Sie den Rechnungsbetrag von {data['gross']} innerhalb von 14 Tagen,",
-        f"bis zum {data['due_date']}, ohne Abzug auf das unten genannte Konto.",
+        f"Bitte überweisen Sie den Rechnungsbetrag von {data['gross']} ohne Abzug",
+        f"bis spätestens zum {data['due_date']} auf das unten genannte Konto.",
         f"Verwendungszweck: Rechnungsnummer {data['number']}.",
     ]:
         c.drawString(M, ny, ln)
@@ -181,20 +181,21 @@ def build(data, out):
 
 if __name__ == "__main__":
     data = {
-        "number": "2026-0803-2",
-        "invoice_date": "03.08.2026",
-        "service_date": "21.07.2026",
-        "due_date": "17.08.2026",
+        "number": "RE-2026-006",
+        "invoice_date": "04.11.2026",
+        "service_date": "04.11.2026",
+        "due_date": "19.11.2026",
         "customer": [
             "New Flag GmbH",
-            "Leopoldstr. 154",
+            "Leopoldstraße 154",
             "80804 München",
+            "USt-IdNr.: DE275433655",
         ],
         "rows": [
-            ("Styling Event", None, "400,00 €", "400,00 €"),
+            ("Haircut New Client & Hair Gloss New Client", None, "165,00 €", "165,00 €"),
         ],
-        "net": "400,00 €",
-        "vat": "76,00 €",
-        "gross": "476,00 €",
+        "net": "165,00 €",
+        "vat": "31,35 €",
+        "gross": "196,35 €",
     }
-    build(data, "/home/user/Mein-Projekt/Rechnung_2026-0803-2_NewFlag.pdf")
+    build(data, "/home/user/Mein-Projekt/Rechnung_RE-2026-006_NewFlag.pdf")
